@@ -1,6 +1,6 @@
 /**
  * IBATÍN Asistente Virtual - iBotin
- * Chatbot con respuestas inteligentes (funciona sin servidor)
+ * Chatbot con respuestas inteligentes (con servidor OpenAI + fallback local)
  */
 
 (function() {
@@ -10,8 +10,14 @@
                         window.location.pathname.includes('/proyectos');
     const basePath = isSubfolder ? '../assets/' : 'assets/';
 
+    // Configuración del servidor
+    const SERVER_URL = 'http://localhost:3001';
+    
     let isOpen = false;
     let isLoading = false;
+    let threadId = null;
+    let useServer = true; // Intentar usar servidor por defecto
+    let serverChecked = false;
 
     // Base de conocimiento de IBATÍN
     const knowledge = {
@@ -82,6 +88,149 @@
         ]
     };
 
+    // ==================== FUNCIONES DEL SERVIDOR ====================
+    
+    // Verificar si el servidor está disponible
+    async function checkServer() {
+        if (serverChecked) return useServer;
+        
+        try {
+            const response = await fetch(`${SERVER_URL}/api/health`, {
+                method: 'GET',
+                signal: AbortSignal.timeout(3000) // 3 segundos timeout
+            });
+            useServer = response.ok;
+            console.log(useServer ? '✅ Servidor conectado' : '⚠️ Servidor no disponible, usando modo local');
+        } catch (error) {
+            useServer = false;
+            console.log('⚠️ Servidor no disponible, usando modo local:', error.message);
+        }
+        serverChecked = true;
+        return useServer;
+    }
+
+    // Crear un nuevo thread en OpenAI (con reintentos)
+    async function createThread() {
+        if (!useServer) return null;
+        
+        const maxRetries = 2;
+        
+        for (let attempt = 1; attempt <= maxRetries; attempt++) {
+            try {
+                console.log(`🔄 Creando thread... (intento ${attempt}/${maxRetries})`);
+                const response = await fetch(`${SERVER_URL}/api/thread`, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    signal: AbortSignal.timeout(15000) // 15 segundos timeout
+                });
+                
+                if (!response.ok) {
+                    throw new Error(`HTTP ${response.status}`);
+                }
+                
+                const data = await response.json();
+                
+                if (data.id) {
+                    threadId = data.id;
+                    console.log('✅ Thread creado:', threadId);
+                    updateConnectionStatus(true);
+                    return threadId;
+                } else {
+                    throw new Error('No se recibió ID del thread');
+                }
+            } catch (error) {
+                console.error(`❌ Error creando thread (intento ${attempt}):`, error.message);
+                
+                if (attempt < maxRetries) {
+                    // Esperar antes de reintentar
+                    await new Promise(resolve => setTimeout(resolve, 2000));
+                }
+            }
+        }
+        
+        // Todos los intentos fallaron
+        console.warn('⚠️ No se pudo crear thread, usando modo local');
+        useServer = false;
+        updateConnectionStatus(false);
+        return null;
+    }
+    
+    // Actualizar indicador de estado de conexión
+    function updateConnectionStatus(connected) {
+        const statusIndicator = document.getElementById('chatbot-status');
+        if (statusIndicator) {
+            if (connected) {
+                statusIndicator.innerHTML = '<span class="text-green-400 text-xs">● IA conectada</span>';
+            } else {
+                statusIndicator.innerHTML = '<span class="text-yellow-400 text-xs">● Modo local</span>';
+            }
+        }
+    }
+
+    // Enviar mensaje al servidor y obtener respuesta de OpenAI
+    async function sendToServer(message) {
+        if (!useServer || !threadId) {
+            return null;
+        }
+        
+        try {
+            console.log('📤 Enviando mensaje al servidor...');
+            const response = await fetch(`${SERVER_URL}/api/chat`, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                    threadId: threadId,
+                    message: message
+                }),
+                signal: AbortSignal.timeout(60000) // 60 segundos timeout para respuesta de IA
+            });
+            
+            if (!response.ok) {
+                throw new Error(`HTTP ${response.status}`);
+            }
+            
+            const data = await response.json();
+            
+            if (data.response) {
+                console.log('✅ Respuesta del servidor recibida');
+                return data.response;
+            } else if (data.error) {
+                throw new Error(data.error);
+            }
+            
+            return null;
+        } catch (error) {
+            console.error('❌ Error en comunicación con servidor:', error.message);
+            // No desactivamos el servidor aquí, puede ser un error temporal
+            return null;
+        }
+    }
+
+    // Obtener respuesta (primero servidor, luego fallback local)
+    async function getResponse(message) {
+        // Intentar con el servidor primero
+        if (useServer) {
+            // Si no hay thread, intentar crear uno
+            if (!threadId) {
+                await createThread();
+            }
+            
+            // Si tenemos thread, enviar mensaje
+            if (threadId) {
+                const serverResponse = await sendToServer(message);
+                if (serverResponse) {
+                    return serverResponse;
+                }
+            }
+        }
+        
+        // Fallback a respuestas locales
+        console.log('📚 Usando respuesta local');
+        return findResponse(message);
+    }
+
+    // ==================== FIN FUNCIONES DEL SERVIDOR ====================
+
     function findResponse(message) {
         const lower = message.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
         
@@ -121,7 +270,7 @@
                     <img src="${basePath}ibotin.png" alt="iBotin" class="w-12 h-12 rounded-full border-2 border-white object-cover"/>
                     <div class="flex-1">
                         <h3 class="text-white font-bold">iBotin</h3>
-                        <p class="text-white/70 text-xs">Asistente virtual de IBATÍN</p>
+                        <div id="chatbot-status"><span class="text-white/50 text-xs">● Conectando...</span></div>
                     </div>
                     <button id="chatbot-close" class="text-white/70 hover:text-white transition-colors">
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -181,11 +330,35 @@
             if (bubble) bubble.style.display = 'none';
             if (img) img.classList.remove('chatbot-bounce');
             document.getElementById('chatbot-input').focus();
+            
+            // Inicializar servidor y thread al abrir el chat
+            initializeServer();
         } else {
             win.classList.remove('scale-100', 'opacity-100');
             win.classList.add('scale-0', 'opacity-0');
             if (bubble) bubble.style.display = 'block';
             if (img) img.classList.add('chatbot-bounce');
+        }
+    }
+    
+    // Inicializar conexión con servidor
+    async function initializeServer() {
+        if (serverChecked && threadId) return; // Ya está inicializado
+        
+        try {
+            const serverAvailable = await checkServer();
+            if (serverAvailable) {
+                const thread = await createThread();
+                if (!thread) {
+                    updateConnectionStatus(false);
+                }
+            } else {
+                updateConnectionStatus(false);
+            }
+        } catch (error) {
+            console.error('Error inicializando servidor:', error);
+            useServer = false;
+            updateConnectionStatus(false);
         }
     }
 
@@ -224,9 +397,12 @@
         input.disabled = true;
         addMessage(msg, true);
         showTyping();
-        await new Promise(r => setTimeout(r, 600 + Math.random() * 800));
+        
+        // Obtener respuesta (servidor o fallback local)
+        const response = await getResponse(msg);
+        
         hideTyping();
-        addMessage(findResponse(msg), false);
+        addMessage(response, false);
         isLoading = false;
         input.disabled = false;
         input.focus();
