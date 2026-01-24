@@ -10,8 +10,8 @@
                         window.location.pathname.includes('/proyectos');
     const basePath = isSubfolder ? '../assets/' : 'assets/';
 
-    // Configuración del servidor en Railway
-    const SERVER_URL = 'https://actualizacion-ibatin-production.up.railway.app/api';
+    // Configuración del servidor en Netlify
+    const SERVER_URL = 'https://lucky-licorice-213772.netlify.app/.netlify/functions';
     
     let isOpen = false;
     let isLoading = false;
@@ -95,12 +95,21 @@
         if (serverChecked) return useServer;
         
         try {
-            const response = await fetch(`${SERVER_URL}/health`, {
-                method: 'GET',
-                signal: AbortSignal.timeout(3000) // 3 segundos timeout
+            const response = await fetch(`${SERVER_URL}/create-thread`, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                signal: AbortSignal.timeout(5000) // 5 segundos timeout
             });
-            useServer = response.ok;
-            console.log(useServer ? '✅ Servidor conectado' : '⚠️ Servidor no disponible, usando modo local');
+            if (response.ok) {
+                const data = await response.json();
+                if (data.threadId) {
+                    threadId = data.threadId;
+                    useServer = true;
+                    console.log('✅ Servidor conectado, thread creado:', threadId);
+                }
+            } else {
+                useServer = false;
+            }
         } catch (error) {
             useServer = false;
             console.log('⚠️ Servidor no disponible, usando modo local:', error.message);
@@ -112,13 +121,14 @@
     // Crear un nuevo thread en OpenAI (con reintentos)
     async function createThread() {
         if (!useServer) return null;
+        if (threadId) return threadId; // Ya tenemos uno
         
         const maxRetries = 2;
         
         for (let attempt = 1; attempt <= maxRetries; attempt++) {
             try {
                 console.log(`🔄 Creando thread... (intento ${attempt}/${maxRetries})`);
-                const response = await fetch(`${SERVER_URL}/thread`, {
+                const response = await fetch(`${SERVER_URL}/create-thread`, {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
                     signal: AbortSignal.timeout(15000) // 15 segundos timeout
@@ -130,8 +140,8 @@
                 
                 const data = await response.json();
                 
-                if (data.id) {
-                    threadId = data.id;
+                if (data.threadId) {
+                    threadId = data.threadId;
                     console.log('✅ Thread creado:', threadId);
                     updateConnectionStatus(true);
                     return threadId;
