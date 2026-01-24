@@ -58,6 +58,27 @@
     <style>
         body { font-family: 'Public Sans', sans-serif; }
         .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+        /* Hero Animations */
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes fadeInLeft {
+            from { opacity: 0; transform: translateX(-30px); }
+            to { opacity: 1; transform: translateX(0); }
+        }
+        @keyframes scaleIn {
+            from { opacity: 0; transform: scale(0.9); }
+            to { opacity: 1; transform: scale(1); }
+        }
+        .animate-fade-up { animation: fadeInUp 0.8s ease-out forwards; opacity: 0; }
+        .animate-fade-left { animation: fadeInLeft 0.8s ease-out forwards; opacity: 0; }
+        .animate-scale { animation: scaleIn 0.8s ease-out forwards; opacity: 0; }
+        .delay-100 { animation-delay: 0.1s; }
+        .delay-200 { animation-delay: 0.2s; }
+        .delay-300 { animation-delay: 0.3s; }
+        .delay-400 { animation-delay: 0.4s; }
+        .delay-500 { animation-delay: 0.5s; }
     </style>
 </head>
 <body class="bg-background-light text-slate-800 min-h-screen">
@@ -99,8 +120,8 @@
         <!-- Page Heading -->
         <section class="flex flex-col md:flex-row justify-between items-start md:items-end gap-6 border-b border-slate-200 pb-8">
             <div class="max-w-2xl">
-                <h1 class="text-4xl md:text-5xl font-black leading-tight tracking-tight text-slate-800">Activá tu Ciudadanía: <span class="text-primary-dark">Participación Activa</span></h1>
-                <p class="mt-4 text-slate-500 text-lg leading-relaxed">
+                <h1 class="text-4xl md:text-5xl font-black leading-tight tracking-tight text-slate-800 animate-scale delay-100">Activá tu Ciudadanía: <span class="text-primary-dark">Participación Activa</span></h1>
+                <p class="mt-4 text-slate-500 text-lg leading-relaxed animate-fade-up delay-200">
                     Formá parte de la transformación del Área Metropolitana de Tucumán (AMeT). Tu perspectiva es el motor del cambio urbano.
                 </p>
             </div>
