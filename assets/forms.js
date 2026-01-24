@@ -5,9 +5,57 @@
 (function() {
     // ===== CONFIGURACIÓN =====
     const CONFIG = {
-        // Email de destino para los formularios (simulado - en producción usar backend)
-        contactEmail: 'info@ibatin.org'
+        // Email de destino para los formularios
+        contactEmail: 'ibatinmetropolitano@gmail.com',
+        // Formspree endpoint (crear cuenta gratuita en formspree.io)
+        formspreeEndpoint: 'https://formspree.io/f/ibatinmetropolitano@gmail.com'
     };
+
+    // ===== ENVÍO DE FORMULARIOS VIA FORMSPREE =====
+    async function sendFormData(formData, formType) {
+        const data = Object.fromEntries(formData.entries());
+        data._subject = `[IBATÍN] Nuevo ${formType}`;
+        data._replyto = data.email;
+
+        try {
+            const response = await fetch(`https://formspree.io/f/${CONFIG.contactEmail}`, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Accept': 'application/json'
+                },
+                body: JSON.stringify(data)
+            });
+
+            if (response.ok) {
+                return { success: true };
+            } else {
+                // Fallback: abrir cliente de email
+                const mailtoLink = buildMailtoLink(data, formType);
+                window.location.href = mailtoLink;
+                return { success: true, fallback: true };
+            }
+        } catch (error) {
+            // Fallback: abrir cliente de email
+            const mailtoLink = buildMailtoLink(data, formType);
+            window.location.href = mailtoLink;
+            return { success: true, fallback: true };
+        }
+    }
+
+    // Construir enlace mailto como fallback
+    function buildMailtoLink(data, formType) {
+        const subject = encodeURIComponent(`[IBATÍN] Nuevo ${formType}`);
+        let body = '';
+        
+        for (const [key, value] of Object.entries(data)) {
+            if (key !== '_subject' && key !== '_replyto' && value) {
+                body += `${key}: ${value}\n`;
+            }
+        }
+        
+        return `mailto:${CONFIG.contactEmail}?subject=${subject}&body=${encodeURIComponent(body)}`;
+    }
 
     // ===== MODAL GENÉRICO =====
     function createModal(title, content, onSubmit) {
@@ -94,7 +142,7 @@
     }
 
     // ===== FORMULARIO DE NEWSLETTER =====
-    function handleNewsletter(form) {
+    async function handleNewsletter(form) {
         const emailInput = form.querySelector('input[type="email"]');
         const email = emailInput ? emailInput.value : '';
 
@@ -103,24 +151,26 @@
             return;
         }
 
-        // Simular envío (en producción conectar con backend/servicio de email)
         const button = form.querySelector('button[type="submit"]') || form.querySelector('button');
         const originalText = button.innerHTML;
         button.innerHTML = '<span class="material-symbols-outlined animate-spin">progress_activity</span>';
         button.disabled = true;
 
+        // Enviar suscripción
+        const formData = new FormData();
+        formData.append('email', email);
+        formData.append('tipo', 'Suscripción Newsletter');
+        
+        await sendFormData(formData, 'Suscripción Newsletter');
+
+        emailInput.value = '';
+        button.innerHTML = '<span class="material-symbols-outlined">check</span>';
+        showToast('¡Gracias por suscribirte! Te mantendremos informado.');
+
         setTimeout(() => {
-            emailInput.value = '';
-            button.innerHTML = '<span class="material-symbols-outlined">check</span>';
-
-            // Mostrar toast de éxito
-            showToast('¡Gracias por suscribirte! Te mantendremos informado.');
-
-            setTimeout(() => {
-                button.innerHTML = originalText;
-                button.disabled = false;
-            }, 2000);
-        }, 1000);
+            button.innerHTML = originalText;
+            button.disabled = false;
+        }, 2000);
     }
 
     // ===== TOAST NOTIFICATION =====
@@ -203,9 +253,21 @@
         `;
         createModal('Sumate como Voluntario/a', content);
 
-        document.getElementById('voluntario-form').addEventListener('submit', (e) => {
+        document.getElementById('voluntario-form').addEventListener('submit', async (e) => {
             e.preventDefault();
-            showSuccess('¡Solicitud enviada!');
+            const form = e.target;
+            const btn = form.querySelector('button[type="submit"]');
+            const originalText = btn.innerHTML;
+            btn.innerHTML = '<span class="animate-pulse">Enviando...</span>';
+            btn.disabled = true;
+
+            const result = await sendFormData(new FormData(form), 'Solicitud de Voluntariado');
+            
+            if (result.success) {
+                showSuccess('¡Solicitud enviada!');
+            }
+            btn.innerHTML = originalText;
+            btn.disabled = false;
         });
     };
 
@@ -251,9 +313,21 @@
         `;
         createModal('Registro de Profesionales', content);
 
-        document.getElementById('profesional-form').addEventListener('submit', (e) => {
+        document.getElementById('profesional-form').addEventListener('submit', async (e) => {
             e.preventDefault();
-            showSuccess('¡Perfil registrado!');
+            const form = e.target;
+            const btn = form.querySelector('button[type="submit"]');
+            const originalText = btn.innerHTML;
+            btn.innerHTML = '<span class="animate-pulse">Enviando...</span>';
+            btn.disabled = true;
+
+            const result = await sendFormData(new FormData(form), 'Registro de Profesional');
+            
+            if (result.success) {
+                showSuccess('¡Perfil registrado!');
+            }
+            btn.innerHTML = originalText;
+            btn.disabled = false;
         });
     };
 
@@ -293,9 +367,21 @@
         `;
         createModal('Registro de Nodo Barrial', content);
 
-        document.getElementById('nodo-form').addEventListener('submit', (e) => {
+        document.getElementById('nodo-form').addEventListener('submit', async (e) => {
             e.preventDefault();
-            showSuccess('¡Nodo registrado!');
+            const form = e.target;
+            const btn = form.querySelector('button[type="submit"]');
+            const originalText = btn.innerHTML;
+            btn.innerHTML = '<span class="animate-pulse">Enviando...</span>';
+            btn.disabled = true;
+
+            const result = await sendFormData(new FormData(form), 'Registro de Nodo Barrial');
+            
+            if (result.success) {
+                showSuccess('¡Nodo registrado!');
+            }
+            btn.innerHTML = originalText;
+            btn.disabled = false;
         });
     };
 
@@ -333,9 +419,21 @@
         `;
         createModal('Contacto', content);
 
-        document.getElementById('contacto-form').addEventListener('submit', (e) => {
+        document.getElementById('contacto-form').addEventListener('submit', async (e) => {
             e.preventDefault();
-            showSuccess('¡Mensaje enviado!');
+            const form = e.target;
+            const btn = form.querySelector('button[type="submit"]');
+            const originalText = btn.innerHTML;
+            btn.innerHTML = '<span class="animate-pulse">Enviando...</span>';
+            btn.disabled = true;
+
+            const result = await sendFormData(new FormData(form), 'Mensaje de Contacto');
+            
+            if (result.success) {
+                showSuccess('¡Mensaje enviado!');
+            }
+            btn.innerHTML = originalText;
+            btn.disabled = false;
         });
     };
 
