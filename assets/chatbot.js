@@ -10,9 +10,8 @@
                         window.location.pathname.includes('/proyectos');
     const basePath = isSubfolder ? '../assets/' : 'assets/';
 
-    // Configuración del servidor
-    // Cambiá esta URL cuando tengas Railway configurado
-    const SERVER_URL = 'https://tu-app.railway.app/api'; // ← Tu URL de Railway
+    // Configuración del servidor en Railway
+    const SERVER_URL = 'https://actualizacion-ibatin-production.up.railway.app/api';
     
     let isOpen = false;
     let isLoading = false;
