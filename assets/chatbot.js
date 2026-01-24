@@ -11,7 +11,11 @@
     const basePath = isSubfolder ? '../assets/' : 'assets/';
 
     // Configuración del servidor
-    const SERVER_URL = 'http://localhost:3001';
+    // Detectar automáticamente: en localhost usa el servidor local, en producción usa Vercel
+    const isLocalhost = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1';
+    const SERVER_URL = isLocalhost 
+        ? 'http://localhost:3001/api' 
+        : 'https://actualizacion-ibatin.vercel.app/api'; // ← Cambiá esto por tu URL de Vercel
     
     let isOpen = false;
     let isLoading = false;
@@ -95,7 +99,7 @@
         if (serverChecked) return useServer;
         
         try {
-            const response = await fetch(`${SERVER_URL}/api/health`, {
+            const response = await fetch(`${SERVER_URL}/health`, {
                 method: 'GET',
                 signal: AbortSignal.timeout(3000) // 3 segundos timeout
             });
@@ -118,7 +122,7 @@
         for (let attempt = 1; attempt <= maxRetries; attempt++) {
             try {
                 console.log(`🔄 Creando thread... (intento ${attempt}/${maxRetries})`);
-                const response = await fetch(`${SERVER_URL}/api/thread`, {
+                const response = await fetch(`${SERVER_URL}/thread`, {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
                     signal: AbortSignal.timeout(15000) // 15 segundos timeout
@@ -175,7 +179,7 @@
         
         try {
             console.log('📤 Enviando mensaje al servidor...');
-            const response = await fetch(`${SERVER_URL}/api/chat`, {
+            const response = await fetch(`${SERVER_URL}/chat`, {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({
