@@ -261,7 +261,7 @@
             <p class="text-background-dark/70 text-xl max-w-[600px]">
                 Ibatín fue el primer asentamiento de San Miguel, trasladado en 1685 en busca de un futuro mejor. Hoy, esa memoria es símbolo de transformación.
             </p>
-            <a class="inline-flex items-center gap-4 bg-background-dark text-white px-12 py-5 rounded-2xl font-black text-xl hover:scale-105 transition-transform shadow-2xl" href="../index.html">
+            <a class="inline-flex items-center gap-4 bg-background-dark text-white px-12 py-5 rounded-2xl font-black text-xl hover:scale-105 transition-transform shadow-2xl" href="../participa/index.html">
                 Sumate al proyecto
                 <span class="material-symbols-outlined">arrow_forward</span>
             </a>
@@ -285,32 +285,32 @@
                 <div>
                     <h5 class="text-white font-bold mb-6">Explorar</h5>
                     <ul class="flex flex-col gap-4 text-slate-500 text-sm">
-                        <li><a class="hover:text-primary transition-colors" href="#">Visión AMeT</a></li>
-                        <li><a class="hover:text-primary transition-colors" href="#">Plan Estratégico</a></li>
-                        <li><a class="hover:text-primary transition-colors" href="#">Mapa de Datos</a></li>
-                        <li><a class="hover:text-primary transition-colors" href="#">Gobierno Abierto</a></li>
+                        <li><a class="hover:text-primary transition-colors" href="../index.html">Visión AMeT</a></li>
+                        <li><a class="hover:text-primary transition-colors" href="../proyectos/index.html">Plan Estratégico</a></li>
+                        <li><a class="hover:text-primary transition-colors cursor-pointer" onclick="explorarDatos()">Mapa de Datos</a></li>
+                        <li><a class="hover:text-primary transition-colors" href="../proyectos/index.html#ciudadania">Gobierno Abierto</a></li>
                     </ul>
                 </div>
                 <!-- Comunidad -->
                 <div>
                     <h5 class="text-white font-bold mb-6">Comunidad</h5>
                     <ul class="flex flex-col gap-4 text-slate-500 text-sm">
-                        <li><a class="hover:text-primary transition-colors" href="#">Activá tu Ciudad</a></li>
-                        <li><a class="hover:text-primary transition-colors" href="#">Talleres</a></li>
-                        <li><a class="hover:text-primary transition-colors" href="#">Prensa</a></li>
-                        <li><a class="hover:text-primary transition-colors" href="#">Contacto</a></li>
+                        <li><a class="hover:text-primary transition-colors" href="../participa/index.html">Activá tu Ciudad</a></li>
+                        <li><a class="hover:text-primary transition-colors" href="../participa/index.html">Talleres</a></li>
+                        <li><a class="hover:text-primary transition-colors cursor-pointer" onclick="openContactoForm()">Prensa</a></li>
+                        <li><a class="hover:text-primary transition-colors cursor-pointer" onclick="openContactoForm()">Contacto</a></li>
                     </ul>
                 </div>
                 <!-- Newsletter -->
                 <div>
                     <h5 class="text-white font-bold mb-6">Newsletter</h5>
                     <p class="text-slate-500 text-sm mb-4">Sumate a la construcción de la ciudad que viene.</p>
-                    <div class="flex gap-2">
-                        <input class="bg-white/5 border border-white/10 rounded-lg px-4 py-2 text-sm w-full focus:outline-none focus:border-primary text-white" placeholder="Tu email" type="email"/>
-                        <button class="bg-primary text-background-dark px-4 py-2 rounded-lg hover:brightness-110 transition-all">
+                    <form class="flex gap-2">
+                        <input class="bg-white/5 border border-white/10 rounded-lg px-4 py-2 text-sm w-full focus:outline-none focus:border-primary text-white" placeholder="Tu email" type="email" required/>
+                        <button type="submit" class="bg-primary text-background-dark px-4 py-2 rounded-lg hover:brightness-110 transition-all">
                             <span class="material-symbols-outlined !text-base">send</span>
                         </button>
-                    </div>
+                    </form>
                 </div>
             </div>
             <div class="pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-4 text-slate-600 text-xs">
@@ -345,6 +345,8 @@
         }
     </script>
 
+    <!-- Formularios e Interacciones -->
+    <script src="../assets/forms.js"></script>
     <!-- Asistente Virtual IBATÍN -->
     <script src="../assets/chatbot.js"></script>
 

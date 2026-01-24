@@ -132,7 +132,7 @@
                             <span class="material-symbols-outlined">play_circle</span>
                             Ver Ganadores
                         </a>
-                        <button class="border-2 border-white/30 text-white px-6 py-3 rounded-lg font-bold hover:bg-white/10 transition-all flex items-center justify-center gap-2">
+                        <button onclick="descargarBasesConcurso()" class="border-2 border-white/30 text-white px-6 py-3 rounded-lg font-bold hover:bg-white/10 transition-all flex items-center justify-center gap-2">
                             <span class="material-symbols-outlined">description</span>
                             Bases del Concurso
                         </button>
@@ -269,11 +269,11 @@
                         </div>
 
                         <div class="flex flex-col sm:flex-row gap-4">
-                            <button class="bg-primary-dark text-white px-6 py-3 rounded-lg font-bold hover:bg-primary-darker transition-all flex items-center justify-center gap-2">
+                            <button onclick="verUbicacionesHuertas()" class="bg-primary-dark text-white px-6 py-3 rounded-lg font-bold hover:bg-primary-darker transition-all flex items-center justify-center gap-2">
                                 <span class="material-symbols-outlined">map</span>
                                 Ver Ubicaciones
                             </button>
-                            <button class="border-2 border-primary-dark text-primary-dark px-6 py-3 rounded-lg font-bold hover:bg-primary/10 transition-all flex items-center justify-center gap-2">
+                            <button onclick="openVoluntarioForm()" class="border-2 border-primary-dark text-primary-dark px-6 py-3 rounded-lg font-bold hover:bg-primary/10 transition-all flex items-center justify-center gap-2">
                                 <span class="material-symbols-outlined">volunteer_activism</span>
                                 Quiero Participar
                             </button>
@@ -348,7 +348,7 @@
                         <span class="text-6xl font-black text-primary-dark">7</span>
                         <p class="text-primary-darker font-bold mt-2">Municipios</p>
                         <p class="text-slate-500 text-sm mt-1">trabajando en conjunto</p>
-                        <button class="mt-6 bg-primary-dark text-white px-6 py-2 rounded-lg font-bold hover:bg-primary-darker transition-all">
+                        <button onclick="verAvancesProyecto('gestion')" class="mt-6 bg-primary-dark text-white px-6 py-2 rounded-lg font-bold hover:bg-primary-darker transition-all">
                             Ver Avances
                         </button>
                     </div>
@@ -411,7 +411,7 @@
                         <span class="text-6xl font-black text-primary-dark">+50</span>
                         <p class="text-primary-darker font-bold mt-2">Puntos Verdes</p>
                         <p class="text-slate-500 text-sm mt-1">proyectados en el AMeT</p>
-                        <button class="mt-6 bg-primary-dark text-white px-6 py-2 rounded-lg font-bold hover:bg-primary-darker transition-all">
+                        <button onclick="verMapaPuntosVerdes()" class="mt-6 bg-primary-dark text-white px-6 py-2 rounded-lg font-bold hover:bg-primary-darker transition-all">
                             Ver Mapa
                         </button>
                     </div>
@@ -474,7 +474,7 @@
                         <span class="text-6xl font-black text-primary-dark">120</span>
                         <p class="text-primary-darker font-bold mt-2">Km de Ciclovías</p>
                         <p class="text-slate-500 text-sm mt-1">planificados para 2030</p>
-                        <button class="mt-6 bg-primary-dark text-white px-6 py-2 rounded-lg font-bold hover:bg-primary-darker transition-all">
+                        <button onclick="verRedCiclovias()" class="mt-6 bg-primary-dark text-white px-6 py-2 rounded-lg font-bold hover:bg-primary-darker transition-all">
                             Ver Red
                         </button>
                     </div>
@@ -537,7 +537,7 @@
                         <span class="text-6xl font-black text-primary-dark">+80</span>
                         <p class="text-primary-darker font-bold mt-2">Barrios</p>
                         <p class="text-slate-500 text-sm mt-1">en proceso de mejoramiento</p>
-                        <button class="mt-6 bg-primary-dark text-white px-6 py-2 rounded-lg font-bold hover:bg-primary-darker transition-all">
+                        <button onclick="verAvancesProyecto('habitat')" class="mt-6 bg-primary-dark text-white px-6 py-2 rounded-lg font-bold hover:bg-primary-darker transition-all">
                             Ver Proyectos
                         </button>
                     </div>
@@ -600,7 +600,7 @@
                         <span class="text-6xl font-black text-primary-dark">+500</span>
                         <p class="text-primary-darker font-bold mt-2">Ciudadanos</p>
                         <p class="text-slate-500 text-sm mt-1">participando activamente</p>
-                        <button class="mt-6 bg-primary-dark text-white px-6 py-2 rounded-lg font-bold hover:bg-primary-darker transition-all">
+                        <button onclick="openVoluntarioForm()" class="mt-6 bg-primary-dark text-white px-6 py-2 rounded-lg font-bold hover:bg-primary-darker transition-all">
                             Sumate
                         </button>
                     </div>
@@ -663,7 +663,7 @@
                         <span class="text-6xl font-black text-primary-dark">+100</span>
                         <p class="text-primary-darker font-bold mt-2">Datasets</p>
                         <p class="text-slate-500 text-sm mt-1">disponibles públicamente</p>
-                        <button class="mt-6 bg-primary-dark text-white px-6 py-2 rounded-lg font-bold hover:bg-primary-darker transition-all">
+                        <button onclick="explorarDatos()" class="mt-6 bg-primary-dark text-white px-6 py-2 rounded-lg font-bold hover:bg-primary-darker transition-all">
                             Explorar Datos
                         </button>
                     </div>
@@ -716,6 +716,8 @@
         });
     </script>
 
+    <!-- Formularios e Interacciones -->
+    <script src="../assets/forms.js"></script>
     <!-- Asistente Virtual IBATÍN -->
     <script src="../assets/chatbot.js"></script>
 </body>

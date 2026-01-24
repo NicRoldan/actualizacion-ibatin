@@ -84,10 +84,10 @@
                     Formá parte de la transformación del Área Metropolitana de Tucumán (AMeT). Tu perspectiva es el motor del cambio urbano.
                 </p>
             </div>
-            <button class="bg-primary/20 text-primary-darker px-6 py-3 rounded-lg font-bold flex items-center gap-2 hover:bg-primary/30 transition-all border border-primary-dark/30">
+            <a href="../proyectos/index.html" class="bg-primary/20 text-primary-darker px-6 py-3 rounded-lg font-bold flex items-center gap-2 hover:bg-primary/30 transition-all border border-primary-dark/30">
                 <span class="material-symbols-outlined">explore</span>
                 Ver Proyectos Activos
-            </button>
+            </a>
         </section>
 
         <!-- Quiz & Progress Section -->
@@ -100,55 +100,12 @@
                     </div>
                     <h2 class="text-2xl font-bold mb-6 text-slate-800">¿Cómo podés contribuir según tu perfil?</h2>
                     
-                    <!-- Quiz Step UI -->
-                    <div class="flex flex-col gap-6">
-                        <div class="space-y-4">
-                            <p class="text-lg font-medium text-slate-700">¿Cuál de estas áreas te apasiona más para mejorar tu barrio?</p>
-                            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                                <button class="quiz-option flex items-center gap-4 p-4 rounded-lg border-2 border-primary-dark bg-primary/10 text-left transition-all">
-                                    <span class="material-symbols-outlined text-primary-dark">directions_bus</span>
-                                    <div>
-                                        <p class="font-bold text-slate-800">Movilidad Sustentable</p>
-                                        <p class="text-xs text-slate-500">Ciclovías, transporte público, peatonalidad.</p>
-                                    </div>
-                                </button>
-                                <button class="quiz-option flex items-center gap-4 p-4 rounded-lg border-2 border-slate-200 bg-slate-50 hover:border-primary/50 text-left transition-all">
-                                    <span class="material-symbols-outlined text-slate-500">park</span>
-                                    <div>
-                                        <p class="font-bold text-slate-800">Espacios Verdes</p>
-                                        <p class="text-xs text-slate-500">Plazas, parques y biodiversidad urbana.</p>
-                                    </div>
-                                </button>
-                                <button class="quiz-option flex items-center gap-4 p-4 rounded-lg border-2 border-slate-200 bg-slate-50 hover:border-primary/50 text-left transition-all">
-                                    <span class="material-symbols-outlined text-slate-500">home_work</span>
-                                    <div>
-                                        <p class="font-bold text-slate-800">Vivienda y Hábitat</p>
-                                        <p class="text-xs text-slate-500">Acceso a servicios e infraestructura social.</p>
-                                    </div>
-                                </button>
-                                <button class="quiz-option flex items-center gap-4 p-4 rounded-lg border-2 border-slate-200 bg-slate-50 hover:border-primary/50 text-left transition-all">
-                                    <span class="material-symbols-outlined text-slate-500">groups</span>
-                                    <div>
-                                        <p class="font-bold text-slate-800">Cultura y Comunidad</p>
-                                        <p class="text-xs text-slate-500">Identidad local y redes vecinales.</p>
-                                    </div>
-                                </button>
-                            </div>
-                        </div>
-
-                        <div class="flex items-center justify-between pt-6 border-t border-slate-200">
-                            <div class="flex-1 max-w-xs">
-                                <div class="flex justify-between text-xs font-bold mb-2 text-slate-600">
-                                    <span>PROGRESO</span>
-                                    <span>33%</span>
-                                </div>
-                                <div class="h-2 w-full bg-slate-200 rounded-full overflow-hidden">
-                                    <div class="h-full bg-primary-dark transition-all duration-500" style="width: 33%"></div>
-                                </div>
-                            </div>
-                            <button class="bg-primary-dark text-white px-8 py-2 rounded-lg font-bold hover:bg-primary-darker transition-all">
-                                Siguiente
-                            </button>
+                    <!-- Quiz Container - Renderizado dinámicamente -->
+                    <div class="quiz-container">
+                        <!-- El quiz se carga desde forms.js -->
+                        <div class="text-center py-8 text-slate-400">
+                            <span class="material-symbols-outlined text-4xl animate-spin">progress_activity</span>
+                            <p class="mt-2">Cargando quiz...</p>
                         </div>
                     </div>
                 </div>
@@ -257,24 +214,16 @@
             line3.classList.toggle('-translate-y-2');
         });
 
-        // Quiz option selection
-        const quizOptions = document.querySelectorAll('.quiz-option');
-        quizOptions.forEach(option => {
-            option.addEventListener('click', () => {
-                quizOptions.forEach(opt => {
-                    opt.classList.remove('border-primary-dark', 'bg-primary/10');
-                    opt.classList.add('border-slate-200', 'bg-slate-50');
-                    opt.querySelector('.material-symbols-outlined').classList.remove('text-primary-dark');
-                    opt.querySelector('.material-symbols-outlined').classList.add('text-slate-500');
-                });
-                option.classList.remove('border-slate-200', 'bg-slate-50');
-                option.classList.add('border-primary-dark', 'bg-primary/10');
-                option.querySelector('.material-symbols-outlined').classList.remove('text-slate-500');
-                option.querySelector('.material-symbols-outlined').classList.add('text-primary-dark');
-            });
-        });
     </script>
 
+    <!-- Formularios e Interacciones -->
+    <script src="../assets/forms.js"></script>
+    <script>
+        // Inicializar quiz cuando el DOM esté listo
+        if (typeof initQuiz === 'function') {
+            initQuiz();
+        }
+    </script>
     <!-- Asistente Virtual IBATÍN -->
     <script src="../assets/chatbot.js"></script>
 </body>

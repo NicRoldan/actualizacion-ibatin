@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html class="dark" lang="es">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>La UNT se suma al Concurso de Ideas | IBATÍN</title>
+    <link rel="icon" type="image/png" href="../favicon.png"/>
+    <link rel="apple-touch-icon" href="../icon.png"/>
+    <meta name="description" content="La Universidad Nacional de Tucumán se suma al concurso de ideas para mejorar el área metropolitana de Tucumán."/>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;500;700;900&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700" rel="stylesheet"/>
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#9ca87a",
+                        "primary-dark": "#7b8c5e",
+                        "primary-darker": "#5a6b4a",
+                        "accent": "#d5d5a5",
+                        "background-light": "#f6f8f4",
+                        "background-dark": "#1a2418",
+                    },
+                    fontFamily: {
+                        "display": ["Public Sans", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+    <style>
+        body {
+            font-family: "Public Sans", sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-background-light text-slate-800 min-h-screen">
+
+    <!-- Header -->
+    <header class="fixed top-0 w-full z-50 border-b border-primary-dark/20 bg-white/80 backdrop-blur-md">
+        <div class="max-w-[1280px] mx-auto px-6 h-20 flex items-center justify-between">
+            <a class="flex items-center gap-3" href="../index.html">
+                <h2 class="text-primary-darker text-2xl font-black tracking-tighter uppercase">IBATÍN</h2>
+            </a>
+            <nav class="hidden lg:flex items-center gap-10">
+                <a class="text-sm font-medium text-slate-500 hover:text-primary-dark transition-colors" href="../index.html">Inicio</a>
+                <a class="text-sm font-medium text-slate-500 hover:text-primary-dark transition-colors" href="../seccion 2/index.html">Pensar el AMeT</a>
+                <a class="text-sm font-medium text-slate-500 hover:text-primary-dark transition-colors" href="../proyectos/index.html">Nuestros Proyectos</a>
+                <a class="text-sm font-bold text-primary-dark border-b-2 border-primary-dark pb-1" href="index.html">Bitácora</a>
+                <a class="text-sm font-medium text-slate-500 hover:text-primary-dark transition-colors" href="../participa/index.html">Participá</a>
+            </nav>
+            <!-- Botón Hamburguesa -->
+            <button id="menuBtn" class="lg:hidden flex flex-col gap-1.5 p-2" onclick="toggleMenu()">
+                <span class="block w-6 h-0.5 bg-slate-700 transition-all" id="line1"></span>
+                <span class="block w-6 h-0.5 bg-slate-700 transition-all" id="line2"></span>
+                <span class="block w-6 h-0.5 bg-slate-700 transition-all" id="line3"></span>
+            </button>
+        </div>
+        <!-- Menú Móvil -->
+        <div id="mobileMenu" class="lg:hidden hidden absolute top-20 left-0 w-full bg-white/95 backdrop-blur-md border-b border-primary-dark/20">
+            <nav class="flex flex-col p-6 gap-4">
+                <a class="text-lg font-medium text-slate-600 hover:text-primary-dark transition-colors" href="../index.html">Inicio</a>
+                <a class="text-lg font-medium text-slate-600 hover:text-primary-dark transition-colors" href="../seccion 2/index.html">Pensar el AMeT</a>
+                <a class="text-lg font-medium text-slate-600 hover:text-primary-dark transition-colors" href="../proyectos/index.html">Nuestros Proyectos</a>
+                <a class="text-lg font-bold text-primary-dark" href="index.html">Bitácora</a>
+                <a class="text-lg font-medium text-slate-600 hover:text-primary-dark transition-colors" href="../participa/index.html">Participá</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="pt-32 pb-24 max-w-[900px] mx-auto px-6">
+        <!-- Breadcrumb -->
+        <div class="flex items-center gap-2 text-sm text-slate-500 mb-8">
+            <a href="../index.html" class="hover:text-primary-dark transition-colors">Inicio</a>
+            <span>/</span>
+            <a href="index.html" class="hover:text-primary-dark transition-colors">Bitácora</a>
+            <span>/</span>
+            <span class="text-slate-800">UNT se suma al Concurso</span>
+        </div>
+
+        <!-- Meta Info -->
+        <div class="flex items-center gap-4 text-xs font-bold text-slate-400 uppercase tracking-widest mb-6">
+            <span>01 Jul 2025</span>
+            <span class="size-1 bg-primary-dark rounded-full"></span>
+            <span class="text-primary-dark">Educación</span>
+        </div>
+
+        <!-- Título -->
+        <h1 class="text-4xl md:text-5xl font-black text-slate-800 leading-tight mb-6">
+            La UNT se suma a un concurso de ideas para mejorar el área metropolitana de Tucumán
+        </h1>
+
+        <!-- Bajada -->
+        <p class="text-xl text-slate-600 leading-relaxed mb-8 font-medium">
+            La Universidad Nacional de Tucumán participará activamente del concurso de Ideas para el Área Metropolitana de Tucumán (AMeT), una iniciativa destinada a generar propuestas para abordar los desafíos urbanos del Gran Tucumán.
+        </p>
+
+        <!-- Autor y fuente -->
+        <div class="flex items-center justify-between border-y border-slate-200 py-4 mb-12">
+            <div class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded-full bg-primary-dark/10 flex items-center justify-center">
+                    <span class="material-symbols-outlined text-primary-dark">article</span>
+                </div>
+                <div>
+                    <p class="text-sm font-bold text-slate-800">Medios UNT</p>
+                    <p class="text-xs text-slate-500">Portal de Medios de la Universidad Nacional de Tucumán</p>
+                </div>
+            </div>
+            <a href="https://medios.unt.edu.ar/2025/07/01/la-unt-se-suma-a-un-concurso-de-ideas-para-mejorar-el-area-metropolitana-de-tucuman/" target="_blank" class="flex items-center gap-2 text-primary-dark font-bold text-sm hover:underline">
+                Ver original <span class="material-symbols-outlined text-base">open_in_new</span>
+            </a>
+        </div>
+
+        <!-- Contenido del artículo -->
+        <article class="prose prose-lg max-w-none">
+            <p class="text-slate-700 leading-relaxed mb-6">
+                La vicerrectora de la Universidad Nacional de Tucumán, Dra. Mercedes Leal, y el decano de la Facultad de Arquitectura y Urbanismo (FAU), Dr. Arq. Juan Bautista Ramazzotti, recibieron la visita de los referentes de la Fundación Ibatín Proyecto Metropolitano, Facundo Cabral y Micaela Jiménez Cinellu, quienes invitaron a la UNT a participar activamente del concurso de Ideas para el Área Metropolitana de Tucumán (AMeT), una iniciativa destinada a generar propuestas para abordar los desafíos urbanos del Gran Tucumán.
+            </p>
+
+            <p class="text-slate-700 leading-relaxed mb-6">
+                El certamen convoca a jóvenes de entre 18 y 35 años a presentar ideas orientadas a transformar el AMeT, un conglomerado urbano que abarca siete municipios y constituye el más grande del NOA. En ese sentido, la UNT tendrá un rol destacado en el desarrollo del concurso.
+            </p>
+
+            <h2 class="text-2xl font-black text-slate-800 mt-10 mb-4">El compromiso de la UNT</h2>
+
+            <p class="text-slate-700 leading-relaxed mb-6">
+                "Estamos muy felices de recibir estas propuestas, porque tienen que ver con el mejoramiento del hábitat tucumano, un tema que necesita ser pensado y proyectado con urgencia", afirmó la Dra. Leal. La vicerrectora subrayó que la convocatoria está abierta a estudiantes y jóvenes profesionales, y destacó que "invita a reflexionar sobre los problemas del territorio en tiempos de profundos cambios sociales, económicos y climáticos".
+            </p>
+
+            <p class="text-slate-700 leading-relaxed mb-6">
+                Desde la UNT, el acompañamiento será transversal. Participarán activamente la Facultad de Arquitectura y Urbanismo y también el Observatorio Ambiental, que nuclea a especialistas de distintas disciplinas. "Lo importante es que estas ideas surjan desde una mirada interdisciplinaria y comprometida. Es una gran oportunidad para construir futuro desde el conocimiento", agregó Leal.
+            </p>
+
+            <h2 class="text-2xl font-black text-slate-800 mt-10 mb-4">La participación de la FAU</h2>
+
+            <p class="text-slate-700 leading-relaxed mb-6">
+                Por su parte, el decano Ramazzotti confirmó que la FAU colaborará en la elaboración de las bases del concurso y en la integración de los jurados evaluadores. "Lo hacemos desde el enfoque que nos es propio: lo arquitectónico, lo urbano y lo territorial. Queremos contribuir a que las propuestas tengan una mirada profunda y contextualizada sobre el hábitat y el territorio", expresó.
+            </p>
+
+            <p class="text-slate-700 leading-relaxed mb-6">
+                Facundo Cabral, presidente de la Fundación Ibatín, resaltó la importancia de incorporar a la comunidad universitaria en esta iniciativa. "La UNT tiene un rol clave en tres aspectos. Primero, en la difusión: muchos de los participantes son estudiantes que seguramente se van a interesar. Segundo, en la construcción de las bases del concurso: concretamente, la FAU y su decano están colaborando para que esas bases sean claras y accesibles. Y por último, el acompañamiento institucional. Que la universidad se involucre es fundamental, porque se trata de sembrar ideas que puedan beneficiarnos a todos", explicó.
+            </p>
+
+            <h2 class="text-2xl font-black text-slate-800 mt-10 mb-4">Una convocatoria abierta</h2>
+
+            <p class="text-slate-700 leading-relaxed mb-6">
+                En el mismo sentido, Jiménez Cinellu, integrante de la Fundación Ibatín, señaló: "La universidad tiene una experticia particular en estas temáticas, pero el concurso está abierto a toda la ciudadanía. Queremos propuestas innovadoras que aporten al desarrollo sustentable del AMeT. Esta es una herramienta de participación para que los jóvenes piensen colectivamente su territorio".
+            </p>
+
+            <p class="text-slate-700 leading-relaxed mb-6">
+                El concurso abordará problemáticas estructurales de la región a través de seis ejes temáticos: gobernanza metropolitana, medio ambiente, movilidad sostenible, turismo, tecnologías para ciudades inteligentes y desarrollo urbano. La convocatoria está destinada a jóvenes residentes del AMeT, con estudios secundarios completos o en curso, que podrán participar de forma individual o en equipos de hasta cinco personas.
+            </p>
+
+            <h2 class="text-2xl font-black text-slate-800 mt-10 mb-4">Premios y cronograma</h2>
+
+            <p class="text-slate-700 leading-relaxed mb-6">
+                Entre los premios se destacan $1.500.000 para el primer puesto, además de una experiencia formativa en Medellín, mentorías para la implementación del proyecto y una beca para la diplomatura en Gestión Metropolitana. También habrá menciones por área temática, que recibirán $250.000, mentorías, participación en el foro metropolitano y becas para formación en gestión.
+            </p>
+
+            <p class="text-slate-700 leading-relaxed mb-6">
+                Las fechas clave del concurso son: la inscripción estará abierta del 1 de julio al 1 de agosto de 2025; el lanzamiento institucional será el 14 de agosto; los proyectos deberán entregarse hasta el 17 de octubre; y la evaluación final y premiación se realizará el 21 de noviembre.
+            </p>
+
+            <p class="text-slate-700 leading-relaxed mb-6">
+                Para más información e inscripciones, se puede visitar @ibatinorg o escribir al correo: concursoibatin@gmail.com.
+            </p>
+        </article>
+
+        <!-- Volver a Bitácora -->
+        <div class="mt-16 pt-8 border-t border-slate-200">
+            <a href="index.html" class="inline-flex items-center gap-2 text-primary-dark font-bold text-sm uppercase tracking-widest hover:gap-4 transition-all">
+                <span class="material-symbols-outlined text-base">arrow_back</span> Volver a Bitácora
+            </a>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-background-dark text-slate-300 py-16">
+        <div class="max-w-[1280px] mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12">
+                <div class="md:col-span-2">
+                    <h2 class="text-white text-2xl font-black tracking-tighter uppercase mb-4">IBATÍN</h2>
+                    <p class="text-sm mb-6">Fundación dedicada a la planificación, investigación y desarrollo sostenible del Área Metropolitana de Tucumán.</p>
+                </div>
+                <div>
+                    <h3 class="text-white font-bold mb-4">Navegación</h3>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="../index.html" class="hover:text-primary transition-colors">Inicio</a></li>
+                        <li><a href="../seccion 2/index.html" class="hover:text-primary transition-colors">Pensar el AMeT</a></li>
+                        <li><a href="../proyectos/index.html" class="hover:text-primary transition-colors">Proyectos</a></li>
+                        <li><a href="index.html" class="hover:text-primary transition-colors">Bitácora</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-white font-bold mb-4">Contacto</h3>
+                    <p class="text-sm">San Miguel de Tucumán<br/>Tucumán, Argentina</p>
+                </div>
+            </div>
+            <div class="border-t border-white/10 mt-12 pt-8 text-center text-sm">
+                <p>© 2026 Fundación IBATÍN. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById('mobileMenu');
+            const line1 = document.getElementById('line1');
+            const line2 = document.getElementById('line2');
+            const line3 = document.getElementById('line3');
+            
+            menu.classList.toggle('hidden');
+            line1.classList.toggle('rotate-45');
+            line1.classList.toggle('translate-y-2');
+            line2.classList.toggle('opacity-0');
+            line3.classList.toggle('-rotate-45');
+            line3.classList.toggle('-translate-y-2');
+        }
+    </script>
+</body>
+</html>

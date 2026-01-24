@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html class="dark" lang="es">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Concurso de Ideas Metropolitanas | IBATÍN</title>
+    <link rel="icon" type="image/png" href="../favicon.png"/>
+    <link rel="apple-touch-icon" href="../icon.png"/>
+    <meta name="description" content="Más de 300 personas participaron del Concurso de Ideas Metropolitanas para jóvenes. Se presentaron en total 142 propuestas."/>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;500;700;900&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700" rel="stylesheet"/>
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#9ca87a",
+                        "primary-dark": "#7b8c5e",
+                        "primary-darker": "#5a6b4a",
+                        "accent": "#d5d5a5",
+                        "background-light": "#f6f8f4",
+                        "background-dark": "#1a2418",
+                    },
+                    fontFamily: {
+                        "display": ["Public Sans", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+    <style>
+        body {
+            font-family: "Public Sans", sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-background-light text-slate-800 min-h-screen">
+
+    <!-- Header -->
+    <header class="fixed top-0 w-full z-50 border-b border-primary-dark/20 bg-white/80 backdrop-blur-md">
+        <div class="max-w-[1280px] mx-auto px-6 h-20 flex items-center justify-between">
+            <a class="flex items-center gap-3" href="../index.html">
+                <h2 class="text-primary-darker text-2xl font-black tracking-tighter uppercase">IBATÍN</h2>
+            </a>
+            <nav class="hidden lg:flex items-center gap-10">
+                <a class="text-sm font-medium text-slate-500 hover:text-primary-dark transition-colors" href="../index.html">Inicio</a>
+                <a class="text-sm font-medium text-slate-500 hover:text-primary-dark transition-colors" href="../seccion 2/index.html">Pensar el AMeT</a>
+                <a class="text-sm font-medium text-slate-500 hover:text-primary-dark transition-colors" href="../proyectos/index.html">Nuestros Proyectos</a>
+                <a class="text-sm font-bold text-primary-dark border-b-2 border-primary-dark pb-1" href="index.html">Bitácora</a>
+                <a class="text-sm font-medium text-slate-500 hover:text-primary-dark transition-colors" href="../participa/index.html">Participá</a>
+            </nav>
+            <!-- Botón Hamburguesa -->
+            <button id="menuBtn" class="lg:hidden flex flex-col gap-1.5 p-2" onclick="toggleMenu()">
+                <span class="block w-6 h-0.5 bg-slate-700 transition-all" id="line1"></span>
+                <span class="block w-6 h-0.5 bg-slate-700 transition-all" id="line2"></span>
+                <span class="block w-6 h-0.5 bg-slate-700 transition-all" id="line3"></span>
+            </button>
+        </div>
+        <!-- Menú Móvil -->
+        <div id="mobileMenu" class="lg:hidden hidden absolute top-20 left-0 w-full bg-white/95 backdrop-blur-md border-b border-primary-dark/20">
+            <nav class="flex flex-col p-6 gap-4">
+                <a class="text-lg font-medium text-slate-600 hover:text-primary-dark transition-colors" href="../index.html">Inicio</a>
+                <a class="text-lg font-medium text-slate-600 hover:text-primary-dark transition-colors" href="../seccion 2/index.html">Pensar el AMeT</a>
+                <a class="text-lg font-medium text-slate-600 hover:text-primary-dark transition-colors" href="../proyectos/index.html">Nuestros Proyectos</a>
+                <a class="text-lg font-bold text-primary-dark" href="index.html">Bitácora</a>
+                <a class="text-lg font-medium text-slate-600 hover:text-primary-dark transition-colors" href="../participa/index.html">Participá</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="pt-32 pb-24 max-w-[900px] mx-auto px-6">
+        <!-- Breadcrumb -->
+        <div class="flex items-center gap-2 text-sm text-slate-500 mb-8">
+            <a href="../index.html" class="hover:text-primary-dark transition-colors">Inicio</a>
+            <span>/</span>
+            <a href="index.html" class="hover:text-primary-dark transition-colors">Bitácora</a>
+            <span>/</span>
+            <span class="text-slate-800">Concurso de Ideas</span>
+        </div>
+
+        <!-- Meta Info -->
+        <div class="flex items-center gap-4 text-xs font-bold text-slate-400 uppercase tracking-widest mb-6">
+            <span>15 Dic 2025</span>
+            <span class="size-1 bg-primary-dark rounded-full"></span>
+            <span class="text-primary-dark">Urbanismo</span>
+        </div>
+
+        <!-- Título -->
+        <h1 class="text-4xl md:text-5xl font-black text-slate-800 leading-tight mb-6">
+            Urbanismo: pensaron un Gran Tucumán con más calidad de vida e integrado
+        </h1>
+
+        <!-- Bajada -->
+        <p class="text-xl text-slate-600 leading-relaxed mb-8 font-medium">
+            Más de 300 personas participaron del Concurso de Ideas Metropolitanas para jóvenes. Se presentaron en total 142 propuestas y la Fundación Ibatín entregó los premios.
+        </p>
+
+        <!-- Autor y fuente -->
+        <div class="flex items-center justify-between border-y border-slate-200 py-4 mb-12">
+            <div class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded-full bg-primary-dark/10 flex items-center justify-center">
+                    <span class="material-symbols-outlined text-primary-dark">article</span>
+                </div>
+                <div>
+                    <p class="text-sm font-bold text-slate-800">Federico Türpe</p>
+                    <p class="text-xs text-slate-500">La Gaceta</p>
+                </div>
+            </div>
+            <a href="https://www.lagaceta.com.ar/nota/1116799/sociedad/urbanismo-pensaron-gran-tucuman-mas-calidad-vida-e-integrado.html" target="_blank" class="flex items-center gap-2 text-primary-dark font-bold text-sm hover:underline">
+                Ver original <span class="material-symbols-outlined text-base">open_in_new</span>
+            </a>
+        </div>
+
+        <!-- Contenido del artículo -->
+        <article class="prose prose-lg max-w-none">
+            <p class="text-slate-700 leading-relaxed mb-6">
+                Contar con dos tarjetas para circular en ómnibus por la misma ciudad, que componen siete municipios, 19 comunas y las administraciones provincial y nacional, además de los servicios de colectivos y de taxis municipales, son sólo una prueba de una metrópolis fragmentada, ineficiente y burocrática. Como el transporte público, deben sumarse temas ambientales, de infraestructura, desarrollo urbano, de movilidad en general, gobernanza, manejo del suelo, del agua, de los residuos y de los servicios públicos, entre otros problemas gravitantes, que se rigen por reparticiones divididas, leyes superpuestas -y a veces contradictorias- generaron la necesidad de empezar a pensar en proyectos consensuados para una misma ciudad.
+            </p>
+
+            <p class="text-slate-700 leading-relaxed mb-6">
+                Así surgió hace un par de años la Fundación Ibatín Proyecto Metropolitano, que viene impulsando una idea que ya funciona exitosamente en muchas ciudades argentinas y del mundo: conectar a los expertos con quienes toman las decisiones políticas, para consensuar iniciativas unificadas en una urbe cohabitada por más de un millón de tucumanos, aunque fraccionada por la burocracia administrativa.
+            </p>
+
+            <h2 class="text-2xl font-black text-slate-800 mt-10 mb-4">El Concurso de Ideas</h2>
+
+            <p class="text-slate-700 leading-relaxed mb-6">
+                Luego de varias acciones, sobre todo espacios de diálogo y exposición de estudios e investigaciones, la Fundación Ibatín lanzó en julio el Concurso de Ideas Metropolitanas para jóvenes de entre 18 y 35 años, cuyo corolario tuvo lugar el 16 de diciembre en la Casa Histórica, con la entrega de premios.
+            </p>
+
+            <p class="text-slate-700 leading-relaxed mb-6">
+                "Es importante destacar que el concurso es de ideas y no de proyectos porque pensamos que la idea iguala, una buena idea puede tener cualquiera, pero un proyecto, en cambio, supone más rudimentos técnicos", explicó Facundo Cabral, presidente de la Fundación.
+            </p>
+
+            <p class="text-slate-700 leading-relaxed mb-6">
+                Cabral explicó que el concurso inició con una etapa de preinscripción, abierta del 1 de julio al 15 de agosto, donde se recibieron 142 propuestas preliminares, entre presentaciones individuales y grupales, discriminadas según los seis ejes temáticos: Medio Ambiente, Desarrollo Urbano, Movilidad Sostenible, Gobernanza Metropolitana, Nuevas Tecnologías para Ciudades Inteligentes y Turismo Sostenible.
+            </p>
+
+            <h2 class="text-2xl font-black text-slate-800 mt-10 mb-4">Las propuestas recibidas</h2>
+
+            <p class="text-slate-700 leading-relaxed mb-6">
+                Se recibieron 90 propuestas individuales, distribuidas del siguiente modo: Medio Ambiente (27); Desarrollo Urbano (17); Movilidad Sostenible (13); Gobernanza Metropolitana (11); Nuevas Tecnologías para Ciudades Inteligentes (18); y Turismo Sostenible (4).
+            </p>
+
+            <p class="text-slate-700 leading-relaxed mb-6">
+                Los trabajos grupales fueron 38: Medio Ambiente (13); Desarrollo Urbano (7); Movilidad Sostenible (6); Gobernanza Metropolitana (3); Nuevas Tecnologías para Ciudades Inteligentes (7); y Turismo Sostenible (2).
+            </p>
+
+            <p class="text-slate-700 leading-relaxed mb-6">
+                En total se presentaron 142 propuestas, lideradas por Medio Ambiente, que sumó 40 trabajos.
+            </p>
+
+            <h2 class="text-2xl font-black text-slate-800 mt-10 mb-4">Los premios</h2>
+
+            <p class="text-slate-700 leading-relaxed mb-6">
+                "Tenemos la satisfacción de que involucramos más de 300 personas en el ejercicio de pensar un área metropolitana más integrada, más vivible" afirmó Cabral con satisfacción.
+            </p>
+
+            <p class="text-slate-700 leading-relaxed mb-6">
+                El ganador del primer puesto se llevó 1,5 millones de pesos; una experiencia en la ciudad de Medellín; una mentoría para su implementación; y una beca para la Diplomatura en Gestión Metropolitana. Luego se entregaron menciones por cada una de las seis áreas temáticas. Estos embolsaron $250.000; una mentoría más las participación en el foro metropolitano; y una beca para la Diplomatura en Gestión Metropolitana.
+            </p>
+
+            <p class="text-slate-700 leading-relaxed mb-6">
+                El concurso impulsado por la Fundación Ibatín contó con el apoyo de organizaciones del tercer sector, especialistas en los temas, universidades y referentes de la región en desarrollo metropolitano y fue patrocinado por la Universidad Nacional de Tucumán y la Legislatura de la Provincia.
+            </p>
+        </article>
+
+        <!-- Volver a Bitácora -->
+        <div class="mt-16 pt-8 border-t border-slate-200">
+            <a href="index.html" class="inline-flex items-center gap-2 text-primary-dark font-bold text-sm uppercase tracking-widest hover:gap-4 transition-all">
+                <span class="material-symbols-outlined text-base">arrow_back</span> Volver a Bitácora
+            </a>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-background-dark text-slate-300 py-16">
+        <div class="max-w-[1280px] mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12">
+                <div class="md:col-span-2">
+                    <h2 class="text-white text-2xl font-black tracking-tighter uppercase mb-4">IBATÍN</h2>
+                    <p class="text-sm mb-6">Fundación dedicada a la planificación, investigación y desarrollo sostenible del Área Metropolitana de Tucumán.</p>
+                </div>
+                <div>
+                    <h3 class="text-white font-bold mb-4">Navegación</h3>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="../index.html" class="hover:text-primary transition-colors">Inicio</a></li>
+                        <li><a href="../seccion 2/index.html" class="hover:text-primary transition-colors">Pensar el AMeT</a></li>
+                        <li><a href="../proyectos/index.html" class="hover:text-primary transition-colors">Proyectos</a></li>
+                        <li><a href="index.html" class="hover:text-primary transition-colors">Bitácora</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-white font-bold mb-4">Contacto</h3>
+                    <p class="text-sm">San Miguel de Tucumán<br/>Tucumán, Argentina</p>
+                </div>
+            </div>
+            <div class="border-t border-white/10 mt-12 pt-8 text-center text-sm">
+                <p>© 2026 Fundación IBATÍN. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById('mobileMenu');
+            const line1 = document.getElementById('line1');
+            const line2 = document.getElementById('line2');
+            const line3 = document.getElementById('line3');
+            
+            menu.classList.toggle('hidden');
+            line1.classList.toggle('rotate-45');
+            line1.classList.toggle('translate-y-2');
+            line2.classList.toggle('opacity-0');
+            line3.classList.toggle('-rotate-45');
+            line3.classList.toggle('-translate-y-2');
+        }
+    </script>
+</body>
+</html>
