@@ -28,6 +28,11 @@
     <meta property="twitter:description" content="Tu perspectiva es el motor del cambio urbano en el Área Metropolitana de Tucumán."/>
     
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    
+    <!-- Preconnect for Performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
     <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;500;700;900&display=swap" rel="stylesheet"/>
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700" rel="stylesheet"/>
     <script>
@@ -83,8 +88,11 @@
 </head>
 <body class="bg-background-light text-slate-800 min-h-screen">
 
+    <!-- Skip to main content link for accessibility -->
+    <a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-[100] focus:bg-primary focus:text-white focus:px-4 focus:py-2 focus:rounded-lg focus:font-bold">Saltar al contenido principal</a>
+
     <!-- Header -->
-    <header class="fixed top-0 w-full z-50 border-b border-primary-dark/20 bg-white/80 backdrop-blur-md">
+    <header class="fixed top-0 w-full z-50 border-b border-primary-dark/20 bg-white/80 backdrop-blur-md" role="banner">
         <div class="max-w-[1280px] mx-auto px-6 h-20 flex items-center justify-between">
             <a class="flex items-center gap-3" href="../index.html">
                 <img src="../assets/logo-ibatin.png" alt="Logo IBATÍN" class="h-10 w-auto">
@@ -97,15 +105,15 @@
                 <a class="text-sm font-bold text-primary-dark border-b-2 border-primary-dark pb-1" href="#">Participá</a>
             </nav>
             <!-- Botón Hamburguesa -->
-            <button id="menuBtn" class="lg:hidden flex flex-col gap-1.5 p-2">
-                <span class="block w-6 h-0.5 bg-slate-700 transition-all" id="line1"></span>
-                <span class="block w-6 h-0.5 bg-slate-700 transition-all" id="line2"></span>
-                <span class="block w-6 h-0.5 bg-slate-700 transition-all" id="line3"></span>
+            <button id="menuBtn" class="lg:hidden flex flex-col gap-1.5 p-2" aria-label="Abrir menú de navegación" aria-expanded="false" aria-controls="mobileMenu">
+                <span class="block w-6 h-0.5 bg-slate-700 transition-all" id="line1" aria-hidden="true"></span>
+                <span class="block w-6 h-0.5 bg-slate-700 transition-all" id="line2" aria-hidden="true"></span>
+                <span class="block w-6 h-0.5 bg-slate-700 transition-all" id="line3" aria-hidden="true"></span>
             </button>
         </div>
         <!-- Menú Móvil -->
-        <div id="mobileMenu" class="lg:hidden hidden absolute top-20 left-0 w-full bg-white/95 backdrop-blur-md border-b border-primary-dark/20">
-            <nav class="flex flex-col p-6 gap-4">
+        <div id="mobileMenu" class="lg:hidden hidden absolute top-20 left-0 w-full bg-white/95 backdrop-blur-md border-b border-primary-dark/20" role="navigation" aria-label="Menú móvil">
+            <nav class="flex flex-col p-6 gap-4" aria-label="Navegación principal móvil">
                 <a class="text-lg font-medium text-slate-600 hover:text-primary-dark transition-colors" href="../index.html">Inicio</a>
                 <a class="text-lg font-medium text-slate-600 hover:text-primary-dark transition-colors" href="../seccion 2/index.html">Pensar el AMeT</a>
                 <a class="text-lg font-medium text-slate-600 hover:text-primary-dark transition-colors" href="../proyectos/index.html">Nuestros Proyectos</a>
@@ -115,7 +123,7 @@
         </div>
     </header>
 
-    <main class="mx-auto w-full max-w-[1280px] px-6 pt-28 pb-10 flex flex-col gap-12">
+    <main class="mx-auto w-full max-w-[1280px] px-6 pt-28 pb-10 flex flex-col gap-12" id="main-content" role="main">
         
         <!-- Page Heading -->
         <section class="flex flex-col md:flex-row justify-between items-start md:items-end gap-6 border-b border-slate-200 pb-8">
@@ -166,7 +174,8 @@
                         src="https://mapa.poblaciones.org/map/96301/?emb=1&co=1#/@-26.918944,-65.24437,10z&l=96302!o1,96303!o0,96304!o0,96305!o0,96306!o0,96307!o0,96308!o0,96309!o0,96310!o0,96311!o0&a1=!v1!t1!i1!m0!c6!e0!w0!s0!p0!fNaN!o1!z0!r0!gNaN"
                         class="absolute inset-0 w-full h-full"
                         style="border: none;"
-                        loading="lazy">
+                        loading="lazy"
+                        title="Mapa interactivo del Área Metropolitana de Tucumán">
                     </iframe>
                     
                     <!-- Map Markers (Floating elements) -->
