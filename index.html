@@ -107,7 +107,7 @@
             font-family: "Public Sans", sans-serif;
         }
         .hero-overlay {
-            background: linear-gradient(180deg, rgba(51, 60, 31, 0.55) 0%, rgba(51, 60, 31, 0.7) 100%);
+            background: linear-gradient(180deg, rgba(51, 60, 31, 0.4) 0%, rgba(51, 60, 31, 0.55) 100%);
         }
         /* Map Background */
         .map-background {
@@ -230,9 +230,9 @@
                 const x = (e.clientX - rect.left) / rect.width - 0.5;
                 const y = (e.clientY - rect.top) / rect.height - 0.5;
                 
-                // Movimiento suave del mapa (max 30px)
-                const moveX = x * 30;
-                const moveY = y * 30;
+                // Movimiento suave del mapa (max 50px)
+                const moveX = x * 50;
+                const moveY = y * 50;
                 
                 mapContainer.style.transform = `translate(${moveX}px, ${moveY}px)`;
             });
