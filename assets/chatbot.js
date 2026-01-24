@@ -11,11 +11,8 @@
     const basePath = isSubfolder ? '../assets/' : 'assets/';
 
     // Configuración del servidor
-    // Detectar automáticamente: en localhost usa el servidor local, en producción usa Vercel
-    const isLocalhost = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1';
-    const SERVER_URL = isLocalhost 
-        ? 'http://localhost:3001/api' 
-        : 'https://actualizacion-ibatin.vercel.app/api'; // ← Cambiá esto por tu URL de Vercel
+    // Cambiá esta URL cuando tengas Railway configurado
+    const SERVER_URL = 'https://tu-app.railway.app/api'; // ← Tu URL de Railway
     
     let isOpen = false;
     let isLoading = false;
