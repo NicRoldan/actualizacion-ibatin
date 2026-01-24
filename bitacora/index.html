@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html class="dark" lang="es">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Bitácora Metropolitana: Noticias y Agenda | IBATÍN</title>
+    <link rel="icon" type="image/png" href="../favicon.png"/>
+    <link rel="apple-touch-icon" href="../icon.png"/>
+    <meta name="description" content="Seguí el pulso de las ideas que están transformando el AMeT. Un registro crítico y propositivo sobre el desarrollo de Tucumán."/>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;500;700;900&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700" rel="stylesheet"/>
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#9ca87a",
+                        "primary-dark": "#7b8c5e",
+                        "primary-darker": "#5a6b4a",
+                        "accent": "#d5d5a5",
+                        "background-light": "#f6f8f4",
+                        "background-dark": "#1a2418",
+                        "card-dark": "#252e22",
+                    },
+                    fontFamily: {
+                        "display": ["Public Sans", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+    <style type="text/tailwindcss">
+        body {
+            font-family: "Public Sans", sans-serif;
+        }
+        .editorial-title {
+            letter-spacing: -0.04em;
+            line-height: 1.1;
+        }
+        .micro-cronica-border {
+            border-left: 4px solid #7b8c5e;
+        }
+    </style>
+</head>
+<body class="bg-background-light text-slate-800 min-h-screen">
+
+    <!-- Header -->
+    <header class="fixed top-0 w-full z-50 border-b border-primary-dark/20 bg-white/80 backdrop-blur-md">
+        <div class="max-w-[1280px] mx-auto px-6 h-20 flex items-center justify-between">
+            <a class="flex items-center gap-3" href="../index.html">
+                <h2 class="text-primary-darker text-2xl font-black tracking-tighter uppercase">IBATÍN</h2>
+            </a>
+            <nav class="hidden lg:flex items-center gap-10">
+                <a class="text-sm font-medium text-slate-500 hover:text-primary-dark transition-colors" href="../index.html">Inicio</a>
+                <a class="text-sm font-medium text-slate-500 hover:text-primary-dark transition-colors" href="../seccion 2/index.html">Pensar el AMeT</a>
+                <a class="text-sm font-medium text-slate-500 hover:text-primary-dark transition-colors" href="../proyectos/index.html">Nuestros Proyectos</a>
+                <a class="text-sm font-bold text-primary-dark border-b-2 border-primary-dark pb-1" href="#">Bitácora</a>
+                <a class="text-sm font-medium text-slate-500 hover:text-primary-dark transition-colors" href="../participa/index.html">Participá</a>
+            </nav>
+            <!-- Botón Hamburguesa -->
+            <button id="menuBtn" class="lg:hidden flex flex-col gap-1.5 p-2" onclick="toggleMenu()">
+                <span class="block w-6 h-0.5 bg-slate-700 transition-all" id="line1"></span>
+                <span class="block w-6 h-0.5 bg-slate-700 transition-all" id="line2"></span>
+                <span class="block w-6 h-0.5 bg-slate-700 transition-all" id="line3"></span>
+            </button>
+        </div>
+        <!-- Menú Móvil -->
+        <div id="mobileMenu" class="lg:hidden hidden absolute top-20 left-0 w-full bg-white/95 backdrop-blur-md border-b border-primary-dark/20">
+            <nav class="flex flex-col p-6 gap-4">
+                <a class="text-lg font-medium text-slate-600 hover:text-primary-dark transition-colors" href="../index.html">Inicio</a>
+                <a class="text-lg font-medium text-slate-600 hover:text-primary-dark transition-colors" href="../seccion 2/index.html">Pensar el AMeT</a>
+                <a class="text-lg font-medium text-slate-600 hover:text-primary-dark transition-colors" href="../proyectos/index.html">Nuestros Proyectos</a>
+                <a class="text-lg font-bold text-primary-dark" href="#">Bitácora</a>
+                <a class="text-lg font-medium text-slate-600 hover:text-primary-dark transition-colors" href="../participa/index.html">Participá</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="pt-32 pb-24 max-w-[1280px] mx-auto px-6">
+        <!-- Hero Section -->
+        <div class="mb-16">
+            <div class="flex items-center gap-2 text-primary-dark font-bold tracking-widest uppercase text-xs mb-4">
+                <span class="w-8 h-[2px] bg-primary-dark"></span>
+                Crónicas del territorio
+            </div>
+            <h1 class="text-5xl md:text-7xl font-black editorial-title mb-6 text-slate-800">Bitácora <br/><span class="text-primary-dark">Metropolitana.</span></h1>
+            <p class="text-slate-500 text-lg md:text-xl max-w-2xl leading-relaxed">
+                Seguí el pulso de las ideas que están transformando el AMeT. Un registro crítico y propositivo sobre el desarrollo de Tucumán.
+            </p>
+        </div>
+
+        <!-- Grid Principal -->
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+            <!-- Columna de Artículos -->
+            <section class="lg:col-span-8 flex flex-col gap-16">
+                <!-- Artículo 1 - Destacado con imagen -->
+                <article class="group">
+                    <div class="flex flex-col gap-4">
+                        <div class="flex items-center gap-4 text-xs font-bold text-slate-400 uppercase tracking-widest">
+                            <span>12 Oct 2024</span>
+                            <span class="size-1 bg-primary-dark rounded-full"></span>
+                            <span class="text-primary-dark">Movilidad</span>
+                        </div>
+                        <h2 class="text-2xl md:text-4xl font-black text-slate-800 group-hover:text-primary-dark transition-colors cursor-pointer">Nuevos Nodos: La red de transporte que el AMeT necesita hoy.</h2>
+                        <div class="aspect-video w-full rounded-2xl overflow-hidden mb-4 grayscale hover:grayscale-0 transition-all duration-500 border border-slate-200">
+                            <img alt="Visualización de nodos urbanos" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC8hE6vB-LIcfcbLN_FCiJm9Lmp3RKhiaqe1qGLZb0jDsGS7otc9oqRHQJ5kdwOkKMeb5xzGdL23vCOOjMNI7Et3gPrB8CRz0lsrW6-owMOZdWyFh1u4r3vIbhEDOM4UfEOWNJU9v8cxQy-qDdA5OziHHzua0nyZuDMOkDpfgKFo7vE9VTvpFhc1c8irPqTVUq3oR_K-YD49Vfya4ns4R1lxFFybKGLA_yzjiTNxVip4tElbNy9KAr6Bm2Yoh8i2-7uq0HiYb8JloyP"/>
+                        </div>
+                        <p class="text-slate-500 text-base md:text-lg leading-relaxed micro-cronica-border pl-6">
+                            La fragmentación del territorio metropolitano exige una respuesta inmediata. Analizamos los puntos críticos de conexión entre San Miguel, Yerba Buena y Tafí Viejo, proyectando una red de intermodalidad que prioriza al peatón y al transporte público de alta frecuencia.
+                        </p>
+                        <a class="flex items-center gap-2 text-primary-dark font-bold text-sm uppercase tracking-widest mt-2" href="#">
+                            Leer Crónica <span class="material-symbols-outlined text-base">arrow_right_alt</span>
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Artículo 2 -->
+                <article class="group">
+                    <div class="flex flex-col gap-4">
+                        <div class="flex items-center gap-4 text-xs font-bold text-slate-400 uppercase tracking-widest">
+                            <span>08 Oct 2024</span>
+                            <span class="size-1 bg-primary-dark rounded-full"></span>
+                            <span class="text-primary-dark">Espacios Verdes</span>
+                        </div>
+                        <h2 class="text-2xl md:text-4xl font-black text-slate-800 group-hover:text-primary-dark transition-colors cursor-pointer">Pulmones Urbanos: Recuperando el borde del río Salí.</h2>
+                        <p class="text-slate-500 text-base md:text-lg leading-relaxed micro-cronica-border pl-6">
+                            El río no es una frontera, es un recurso. El proyecto de recuperación del borde costero busca integrar más de 50 hectáreas de parque lineal, mitigando el impacto ambiental y ofreciendo nuevos espacios de recreación de alta calidad para la zona este.
+                        </p>
+                        <a class="flex items-center gap-2 text-primary-dark font-bold text-sm uppercase tracking-widest mt-2" href="#">
+                            Leer Crónica <span class="material-symbols-outlined text-base">arrow_right_alt</span>
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Artículo 3 -->
+                <article class="group">
+                    <div class="flex flex-col gap-4">
+                        <div class="flex items-center gap-4 text-xs font-bold text-slate-400 uppercase tracking-widest">
+                            <span>05 Oct 2024</span>
+                            <span class="size-1 bg-primary-dark rounded-full"></span>
+                            <span class="text-primary-dark">Participación</span>
+                        </div>
+                        <h2 class="text-2xl md:text-4xl font-black text-slate-800 group-hover:text-primary-dark transition-colors cursor-pointer">Codiseñar la vereda: El éxito de los talleres en Villa Luján.</h2>
+                        <p class="text-slate-500 text-base md:text-lg leading-relaxed micro-cronica-border pl-6">
+                            ¿Cómo imaginan sus calles los vecinos? En la última jornada de 'Activá tu Ciudadanía', más de 200 personas propusieron soluciones de iluminación y accesibilidad para sus cuadras. Los datos ya están en procesamiento.
+                        </p>
+                        <a class="flex items-center gap-2 text-primary-dark font-bold text-sm uppercase tracking-widest mt-2" href="#">
+                            Leer Crónica <span class="material-symbols-outlined text-base">arrow_right_alt</span>
+                        </a>
+                    </div>
+                </article>
+            </section>
+
+            <!-- Sidebar -->
+            <aside class="lg:col-span-4 flex flex-col gap-8">
+                <!-- Agenda Metropolitana -->
+                <div class="bg-white p-6 md:p-8 rounded-2xl border border-slate-200 shadow-sm">
+                    <h3 class="text-xl font-black mb-6 flex items-center gap-2 text-slate-800">
+                        <span class="material-symbols-outlined text-primary-dark">calendar_month</span>
+                        Agenda Metropolitana
+                    </h3>
+                    <div class="flex flex-col gap-6">
+                        <!-- Evento 1 -->
+                        <div class="flex gap-4 group cursor-pointer">
+                            <div class="flex flex-col items-center justify-center min-w-[50px] h-[50px] bg-primary text-white rounded-lg font-black">
+                                <span class="text-xs leading-none">OCT</span>
+                                <span class="text-xl leading-none">15</span>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-sm text-slate-700 group-hover:text-primary-dark transition-colors">Taller de Planificación Participativa</h4>
+                                <p class="text-xs text-slate-400">18:30 HS - Centro Cultural Virla</p>
+                            </div>
+                        </div>
+                        <!-- Evento 2 -->
+                        <div class="flex gap-4 group cursor-pointer">
+                            <div class="flex flex-col items-center justify-center min-w-[50px] h-[50px] bg-slate-100 text-slate-600 rounded-lg font-black border border-slate-200 group-hover:border-primary-dark transition-colors">
+                                <span class="text-xs leading-none">OCT</span>
+                                <span class="text-xl leading-none">22</span>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-sm text-slate-700 group-hover:text-primary-dark transition-colors">Presentación Informe de Movilidad 2024</h4>
+                                <p class="text-xs text-slate-400">10:00 HS - Legislatura de Tucumán</p>
+                            </div>
+                        </div>
+                        <!-- Evento 3 -->
+                        <div class="flex gap-4 group cursor-pointer">
+                            <div class="flex flex-col items-center justify-center min-w-[50px] h-[50px] bg-slate-100 text-slate-600 rounded-lg font-black border border-slate-200 group-hover:border-primary-dark transition-colors">
+                                <span class="text-xs leading-none">NOV</span>
+                                <span class="text-xl leading-none">05</span>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-sm text-slate-700 group-hover:text-primary-dark transition-colors">Caminata Urbana: Reconocimiento Salí</h4>
+                                <p class="text-xs text-slate-400">09:00 HS - Puente Lucas Córdoba</p>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="w-full mt-8 py-3 border border-primary-dark/30 text-primary-dark text-xs font-bold uppercase tracking-widest rounded-lg hover:bg-primary/10 transition-colors">
+                        Ver Calendario Completo
+                    </button>
+                </div>
+
+                <!-- Newsletter -->
+                <div class="bg-primary-dark p-6 md:p-8 rounded-2xl text-white">
+                    <h3 class="text-xl md:text-2xl font-black mb-4 leading-tight">No te pierdas ninguna actualización.</h3>
+                    <p class="text-sm font-medium mb-6 opacity-80">Recibí mensualmente nuestro resumen de micro-crónicas y avisos de participación ciudadana.</p>
+                    <form class="flex flex-col gap-3">
+                        <input class="bg-white/20 border-white/20 placeholder:text-white/50 text-white font-bold rounded-lg focus:ring-white focus:border-white border-2 px-4 py-3" placeholder="Tu email" type="email"/>
+                        <button class="bg-white text-primary-darker font-black py-3 rounded-lg hover:opacity-90 transition-opacity">
+                            Suscribirme ahora
+                        </button>
+                    </form>
+                </div>
+
+                <!-- Temas Destacados -->
+                <div class="p-4">
+                    <h3 class="text-xs font-bold text-slate-400 uppercase tracking-widest mb-6">Temas destacados</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <a class="px-3 py-1 bg-slate-100 border border-slate-200 rounded-full text-xs font-medium text-slate-600 hover:border-primary-dark hover:text-primary-dark transition-all" href="#">Urbanismo</a>
+                        <a class="px-3 py-1 bg-slate-100 border border-slate-200 rounded-full text-xs font-medium text-slate-600 hover:border-primary-dark hover:text-primary-dark transition-all" href="#">Resiliencia</a>
+                        <a class="px-3 py-1 bg-slate-100 border border-slate-200 rounded-full text-xs font-medium text-slate-600 hover:border-primary-dark hover:text-primary-dark transition-all" href="#">Datos Abiertos</a>
+                        <a class="px-3 py-1 bg-slate-100 border border-slate-200 rounded-full text-xs font-medium text-slate-600 hover:border-primary-dark hover:text-primary-dark transition-all" href="#">Movilidad</a>
+                        <a class="px-3 py-1 bg-slate-100 border border-slate-200 rounded-full text-xs font-medium text-slate-600 hover:border-primary-dark hover:text-primary-dark transition-all" href="#">Vivienda</a>
+                        <a class="px-3 py-1 bg-slate-100 border border-slate-200 rounded-full text-xs font-medium text-slate-600 hover:border-primary-dark hover:text-primary-dark transition-all" href="#">Gobernanza</a>
+                    </div>
+                </div>
+            </aside>
+        </div>
+
+        <!-- Sección Repositorio Técnico -->
+        <section class="mt-24 md:mt-32 pt-16 md:pt-24 border-t border-slate-200">
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
+                <div>
+                    <h2 class="text-primary-dark font-bold text-sm tracking-widest uppercase mb-4">Repositorio Técnico</h2>
+                    <h3 class="text-3xl md:text-4xl font-black text-slate-800">Recursos y Documentación</h3>
+                </div>
+                <p class="text-slate-500 max-w-sm text-sm md:text-base">Material descargable para investigadores, estudiantes y ciudadanos interesados en los datos técnicos del AMeT.</p>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+                <!-- Recurso 1 -->
+                <div class="bg-white p-6 rounded-xl border border-slate-200 hover:border-primary-dark/50 transition-colors group shadow-sm">
+                    <div class="flex justify-between items-start mb-4">
+                        <span class="material-symbols-outlined text-primary-dark !text-3xl">map</span>
+                        <button class="text-slate-400 group-hover:text-primary-dark transition-colors">
+                            <span class="material-symbols-outlined">download</span>
+                        </button>
+                    </div>
+                    <h4 class="font-bold text-slate-800 mb-1">Plan Director 2030</h4>
+                    <p class="text-xs text-slate-400">PDF • 24.5 MB</p>
+                </div>
+                <!-- Recurso 2 -->
+                <div class="bg-white p-6 rounded-xl border border-slate-200 hover:border-primary-dark/50 transition-colors group shadow-sm">
+                    <div class="flex justify-between items-start mb-4">
+                        <span class="material-symbols-outlined text-primary-dark !text-3xl">description</span>
+                        <button class="text-slate-400 group-hover:text-primary-dark transition-colors">
+                            <span class="material-symbols-outlined">download</span>
+                        </button>
+                    </div>
+                    <h4 class="font-bold text-slate-800 mb-1">White Paper: Movilidad</h4>
+                    <p class="text-xs text-slate-400">PDF • 4.2 MB</p>
+                </div>
+                <!-- Recurso 3 -->
+                <div class="bg-white p-6 rounded-xl border border-slate-200 hover:border-primary-dark/50 transition-colors group shadow-sm">
+                    <div class="flex justify-between items-start mb-4">
+                        <span class="material-symbols-outlined text-primary-dark !text-3xl">grid_view</span>
+                        <button class="text-slate-400 group-hover:text-primary-dark transition-colors">
+                            <span class="material-symbols-outlined">download</span>
+                        </button>
+                    </div>
+                    <h4 class="font-bold text-slate-800 mb-1">Dataset: Espacios Verdes</h4>
+                    <p class="text-xs text-slate-400">CSV • 1.8 MB</p>
+                </div>
+                <!-- Recurso 4 -->
+                <div class="bg-white p-6 rounded-xl border border-slate-200 hover:border-primary-dark/50 transition-colors group shadow-sm">
+                    <div class="flex justify-between items-start mb-4">
+                        <span class="material-symbols-outlined text-primary-dark !text-3xl">architecture</span>
+                        <button class="text-slate-400 group-hover:text-primary-dark transition-colors">
+                            <span class="material-symbols-outlined">download</span>
+                        </button>
+                    </div>
+                    <h4 class="font-bold text-slate-800 mb-1">Planos: Nodo Central</h4>
+                    <p class="text-xs text-slate-400">DWG/PDF • 12.1 MB</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-primary-darker py-16 border-t border-primary-dark/20">
+        <div class="max-w-[1280px] mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
+                <!-- Logo y descripción -->
+                <div class="col-span-1 md:col-span-1 flex flex-col gap-6">
+                    <h2 class="text-white text-xl font-black">IBATÍN</h2>
+                    <p class="text-white/60 text-sm">
+                        Ibatín es una iniciativa técnica y ciudadana para la evolución del Área Metropolitana de Tucumán.
+                    </p>
+                </div>
+                <!-- Explorar -->
+                <div>
+                    <h5 class="text-white font-bold mb-6">Explorar</h5>
+                    <ul class="flex flex-col gap-4 text-white/60 text-sm">
+                        <li><a class="hover:text-primary transition-colors" href="../seccion 2/index.html">Pensar el AMeT</a></li>
+                        <li><a class="hover:text-primary transition-colors" href="../index.html#areas">Áreas Estratégicas</a></li>
+                        <li><a class="hover:text-primary transition-colors" href="#">Datos Abiertos</a></li>
+                        <li><a class="hover:text-primary transition-colors" href="#">Documentación</a></li>
+                    </ul>
+                </div>
+                <!-- Comunidad -->
+                <div>
+                    <h5 class="text-white font-bold mb-6">Comunidad</h5>
+                    <ul class="flex flex-col gap-4 text-white/60 text-sm">
+                        <li><a class="hover:text-primary transition-colors" href="#">Foro Ciudadano</a></li>
+                        <li><a class="hover:text-primary transition-colors" href="#">Talleres</a></li>
+                        <li><a class="hover:text-primary transition-colors" href="#">Voluntariado</a></li>
+                        <li><a class="hover:text-primary transition-colors" href="#">Contacto</a></li>
+                    </ul>
+                </div>
+                <!-- Redes Sociales -->
+                <div>
+                    <h5 class="text-white font-bold mb-6">Redes Sociales</h5>
+                    <div class="flex gap-4">
+                        <a class="size-10 rounded-full bg-white/10 flex items-center justify-center text-white hover:bg-primary hover:text-primary-darker transition-all" href="#">
+                            <span class="material-symbols-outlined !text-xl">share</span>
+                        </a>
+                        <a class="size-10 rounded-full bg-white/10 flex items-center justify-center text-white hover:bg-primary hover:text-primary-darker transition-all" href="#">
+                            <span class="material-symbols-outlined !text-xl">public</span>
+                        </a>
+                        <a class="size-10 rounded-full bg-white/10 flex items-center justify-center text-white hover:bg-primary hover:text-primary-darker transition-all" href="#">
+                            <span class="material-symbols-outlined !text-xl">mail</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-4 text-white/50 text-xs">
+                <p>© 2025 Fundación IBATÍN – Tucumán, Argentina. Proyecto Metropolitano.</p>
+                <div class="flex gap-8">
+                    <a class="hover:text-primary transition-colors" href="#">Términos</a>
+                    <a class="hover:text-primary transition-colors" href="#">Privacidad</a>
+                    <a class="hover:text-primary transition-colors" href="#">Accesibilidad</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById('mobileMenu');
+            const line1 = document.getElementById('line1');
+            const line2 = document.getElementById('line2');
+            const line3 = document.getElementById('line3');
+            
+            menu.classList.toggle('hidden');
+            
+            if (!menu.classList.contains('hidden')) {
+                line1.style.transform = 'rotate(45deg) translate(5px, 5px)';
+                line2.style.opacity = '0';
+                line3.style.transform = 'rotate(-45deg) translate(5px, -5px)';
+            } else {
+                line1.style.transform = 'none';
+                line2.style.opacity = '1';
+                line3.style.transform = 'none';
+            }
+        }
+    </script>
+
+    <!-- Asistente Virtual IBATÍN -->
+    <script src="../assets/chatbot.js"></script>
+
+</body>
+</html>

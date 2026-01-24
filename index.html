@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html class="dark" lang="es">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>IBATÍN – Proyecto Metropolitano | Área Metropolitana de Tucumán</title>
+    <link rel="icon" type="image/png" href="favicon.png"/>
+    <link rel="apple-touch-icon" href="icon.png"/>
+    <meta name="description" content="Fundación IBATÍN: Gobernanza, planificación y ciudadanía en el Área Metropolitana de Tucumán. Mutar en vez de migrar."/>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;500;700;900&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700" rel="stylesheet"/>
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#9ca87a",
+                        "primary-dark": "#7b8c5e",
+                        "primary-darker": "#5a6b4a",
+                        "accent": "#d5d5a5",
+                        "background-light": "#f6f8f4",
+                        "background-dark": "#1a2418",
+                    },
+                    fontFamily: {
+                        "display": ["Public Sans", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+    <style>
+        body {
+            font-family: "Public Sans", sans-serif;
+        }
+        .hero-overlay {
+            background: linear-gradient(180deg, rgba(16, 34, 34, 0.7) 0%, rgba(16, 34, 34, 0.9) 100%);
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-white min-h-screen">
+
+    <!-- Header -->
+    <header class="fixed top-0 w-full z-50 border-b border-white/10 bg-background-dark/80 backdrop-blur-md">
+        <div class="max-w-[1280px] mx-auto px-6 h-20 flex items-center justify-between">
+            <a class="flex items-center gap-3" href="index.html">
+                <h2 class="text-white text-2xl font-black tracking-tighter uppercase">IBATÍN</h2>
+            </a>
+            <nav class="hidden lg:flex items-center gap-10">
+                <a class="text-sm font-bold text-primary border-b-2 border-primary pb-1" href="#">Inicio</a>
+                <a class="text-sm font-medium text-slate-400 hover:text-primary transition-colors" href="seccion 2/index.html">Pensar el AMeT</a>
+                <a class="text-sm font-medium text-slate-400 hover:text-primary transition-colors" href="proyectos/index.html">Nuestros Proyectos</a>
+                <a class="text-sm font-medium text-slate-400 hover:text-primary transition-colors" href="bitacora/index.html">Bitácora</a>
+                <a class="text-sm font-medium text-slate-400 hover:text-primary transition-colors" href="participa/index.html">Participá</a>
+            </nav>
+            <!-- Botón Hamburguesa -->
+            <button id="menuBtn" class="lg:hidden flex flex-col gap-1.5 p-2" onclick="toggleMenu()">
+                <span class="block w-6 h-0.5 bg-white transition-all" id="line1"></span>
+                <span class="block w-6 h-0.5 bg-white transition-all" id="line2"></span>
+                <span class="block w-6 h-0.5 bg-white transition-all" id="line3"></span>
+            </button>
+        </div>
+        <!-- Menú Móvil -->
+        <div id="mobileMenu" class="lg:hidden hidden absolute top-20 left-0 w-full bg-background-dark/95 backdrop-blur-md border-b border-white/10">
+            <nav class="flex flex-col p-6 gap-4">
+                <a class="text-lg font-bold text-primary" href="#">Inicio</a>
+                <a class="text-lg font-medium text-slate-300 hover:text-primary transition-colors" href="seccion 2/index.html">Pensar el AMeT</a>
+                <a class="text-lg font-medium text-slate-300 hover:text-primary transition-colors" href="proyectos/index.html">Nuestros Proyectos</a>
+                <a class="text-lg font-medium text-slate-300 hover:text-primary transition-colors" href="bitacora/index.html">Bitácora</a>
+                <a class="text-lg font-medium text-slate-300 hover:text-primary transition-colors" href="participa/index.html">Participá</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative h-screen flex flex-col items-center justify-center px-6 overflow-hidden">
+        <div class="absolute inset-0 z-0 bg-cover bg-center" style="background-image: url('assets/fondo-header.png');">
+            <div class="absolute inset-0 hero-overlay"></div>
+        </div>
+        <div class="relative z-10 max-w-[960px] text-center flex flex-col items-center gap-8 pt-20">
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-primary/30 bg-primary/10 text-primary text-xs font-bold tracking-widest uppercase mb-4">
+                <span class="relative flex h-2 w-2">
+                    <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
+                    <span class="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
+                </span>
+                Proyectando el Futuro
+            </div>
+            <h1 class="text-white text-5xl md:text-7xl font-black leading-[1.1] tracking-[-0.04em]">
+                Mutar en vez de migrar. <span class="text-primary">Transformamos el AMeT</span>
+            </h1>
+            <p class="text-slate-300 text-lg md:text-xl max-w-[720px] font-normal leading-relaxed">
+                Somos un espacio de trabajo multidisciplinario conformado por ciudadanas y ciudadanos que creen en la capacidad de transformación de los territorios cuando se articulan ideas, datos, proyectos y voluntades.
+            </p>
+        </div>
+        <!-- Scroll Indicator -->
+        <div class="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce flex flex-col items-center gap-2 opacity-50">
+            <span class="text-[10px] font-bold uppercase tracking-widest">Descubrí más</span>
+            <span class="material-symbols-outlined">expand_more</span>
+        </div>
+    </section>
+
+    <!-- Sección Concurso de Ideas - Ganadores -->
+    <section class="bg-background-dark py-24 border-b border-white/5" id="concurso">
+        <div class="max-w-[1280px] mx-auto px-6">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                <!-- Carrusel de fotos -->
+                <div class="relative">
+                    <div class="overflow-hidden rounded-3xl border border-white/10">
+                        <div id="carrusel" class="flex transition-transform duration-500 ease-out">
+                            <img src="assets/foto1.jpg" alt="Ceremonia de premiación - Concurso de Ideas" class="w-full flex-shrink-0 aspect-[4/3] object-cover"/>
+                            <img src="assets/foto2.jpg" alt="Ganadores del Primer Concurso de Ideas" class="w-full flex-shrink-0 aspect-[4/3] object-cover"/>
+                            <img src="assets/foto3.jpg" alt="Casa Histórica de la Independencia - Evento IBATÍN" class="w-full flex-shrink-0 aspect-[4/3] object-cover"/>
+                        </div>
+                    </div>
+                    <!-- Controles del carrusel -->
+                    <div class="flex justify-center gap-3 mt-6">
+                        <button onclick="moverCarrusel(-1)" class="size-12 rounded-full bg-white/10 border border-white/20 flex items-center justify-center text-white hover:bg-primary hover:text-background-dark transition-all">
+                            <span class="material-symbols-outlined">chevron_left</span>
+                        </button>
+                        <div class="flex items-center gap-2">
+                            <span class="size-2 rounded-full bg-primary" id="dot0"></span>
+                            <span class="size-2 rounded-full bg-white/30" id="dot1"></span>
+                            <span class="size-2 rounded-full bg-white/30" id="dot2"></span>
+                        </div>
+                        <button onclick="moverCarrusel(1)" class="size-12 rounded-full bg-white/10 border border-white/20 flex items-center justify-center text-white hover:bg-primary hover:text-background-dark transition-all">
+                            <span class="material-symbols-outlined">chevron_right</span>
+                        </button>
+                    </div>
+                </div>
+                <!-- Contenido -->
+                <div class="flex flex-col gap-8">
+                    <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-primary/30 bg-primary/10 text-primary text-xs font-bold tracking-widest uppercase w-fit">
+                        <span class="material-symbols-outlined text-sm">emoji_events</span>
+                        Primer Concurso de Ideas
+                    </div>
+                    <h2 class="text-4xl md:text-5xl font-black text-white leading-tight">
+                        Donde hace 200 años se debatía el futuro de una nación, hoy volvimos a encender la conversación.
+                    </h2>
+                    <p class="text-slate-300 text-lg leading-relaxed">
+                        En la Casa Histórica de la Independencia realizamos la ceremonia de premiación del <strong class="text-primary">Primer Concurso de Ideas para el Gran Tucumán</strong>: una invitación a mirar más allá de los límites, a imaginar soluciones integradas y a creer que los problemas metropolitanos se resuelven con mirada colectiva.
+                    </p>
+                    <p class="text-slate-400 leading-relaxed">
+                        Porque el lugar donde vivimos no es solo un espacio geográfico: es el resultado de nuestras decisiones, nuestra creatividad y nuestra voluntad de construir algo mejor, juntos.
+                    </p>
+                    <div class="flex flex-col gap-4 p-6 rounded-2xl bg-[#1c2727] border border-[#3b5454]">
+                        <div class="flex items-center gap-3">
+                            <span class="material-symbols-outlined text-primary">calendar_month</span>
+                            <span class="text-white font-bold">2026: Foro de Ideas Metropolitanas</span>
+                        </div>
+                        <p class="text-slate-400 text-sm">Lanzamos el Foro de Ideas Metropolitanas y sumamos el eje cultura. Esta es solo la primera parada de un viaje que haremos entre todos.</p>
+                    </div>
+                    <p class="text-primary font-bold text-lg italic">
+                        "Sigamos juntos haciendo historia."
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        let posicionCarrusel = 0;
+        const totalSlides = 3;
+        
+        function moverCarrusel(direccion) {
+            posicionCarrusel += direccion;
+            if (posicionCarrusel < 0) posicionCarrusel = totalSlides - 1;
+            if (posicionCarrusel >= totalSlides) posicionCarrusel = 0;
+            
+            const carrusel = document.getElementById('carrusel');
+            carrusel.style.transform = `translateX(-${posicionCarrusel * 100}%)`;
+            
+            // Actualizar indicadores
+            for (let i = 0; i < totalSlides; i++) {
+                const dot = document.getElementById('dot' + i);
+                dot.className = i === posicionCarrusel ? 'size-2 rounded-full bg-primary' : 'size-2 rounded-full bg-white/30';
+            }
+        }
+        
+        // Auto-play del carrusel cada 5 segundos
+        setInterval(() => moverCarrusel(1), 5000);
+        
+        // Menú hamburguesa
+        function toggleMenu() {
+            const menu = document.getElementById('mobileMenu');
+            const line1 = document.getElementById('line1');
+            const line2 = document.getElementById('line2');
+            const line3 = document.getElementById('line3');
+            
+            menu.classList.toggle('hidden');
+            
+            if (!menu.classList.contains('hidden')) {
+                line1.style.transform = 'rotate(45deg) translate(5px, 5px)';
+                line2.style.opacity = '0';
+                line3.style.transform = 'rotate(-45deg) translate(5px, -5px)';
+            } else {
+                line1.style.transform = 'none';
+                line2.style.opacity = '1';
+                line3.style.transform = 'none';
+            }
+        }
+    </script>
+
+    <!-- Áreas Estratégicas -->
+    <main class="max-w-[1280px] mx-auto px-6 py-24" id="areas">
+        <div class="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
+            <div class="max-w-[600px]">
+                <h2 class="text-primary font-bold text-sm tracking-widest uppercase mb-4">Áreas Estratégicas</h2>
+                <h3 class="text-4xl md:text-5xl font-black text-white leading-tight">Seis dimensiones para transformar el AMeT.</h3>
+            </div>
+            <p class="text-slate-400 max-w-[400px]">
+                Abordamos la complejidad del Área Metropolitana de Tucumán desde múltiples dimensiones, articulando datos, propuestas y participación ciudadana.
+            </p>
+        </div>
+        
+        <!-- Grid de 6 Áreas -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <!-- Card 1: Gestión Integral Metropolitana -->
+            <a class="group flex flex-col gap-6 p-8 rounded-2xl bg-[#1c2727] border border-[#3b5454] hover:border-primary transition-all duration-300 hover:-translate-y-2" href="#">
+                <div class="size-14 rounded-xl bg-primary/10 flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-background-dark transition-all duration-300">
+                    <span class="material-symbols-outlined !text-3xl">hub</span>
+                </div>
+                <div class="flex flex-col gap-2">
+                    <h4 class="text-xl font-bold text-white">Gestión Integral Metropolitana</h4>
+                    <p class="text-slate-400 text-sm leading-relaxed">Coordinación, planificación territorial y gobernanza que supere la fragmentación político-administrativa.</p>
+                </div>
+                <div class="mt-auto flex items-center text-primary text-xs font-bold uppercase tracking-widest opacity-0 group-hover:opacity-100 transition-opacity">
+                    Ver más <span class="material-symbols-outlined text-sm ml-1">arrow_forward</span>
+                </div>
+            </a>
+            
+            <!-- Card 2: Economía Circular -->
+            <a class="group flex flex-col gap-6 p-8 rounded-2xl bg-[#1c2727] border border-[#3b5454] hover:border-primary transition-all duration-300 hover:-translate-y-2" href="#">
+                <div class="size-14 rounded-xl bg-primary/10 flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-background-dark transition-all duration-300">
+                    <span class="material-symbols-outlined !text-3xl">recycling</span>
+                </div>
+                <div class="flex flex-col gap-2">
+                    <h4 class="text-xl font-bold text-white">Economía Circular</h4>
+                    <p class="text-slate-400 text-sm leading-relaxed">Gestión de residuos, empleo verde y circuitos de valorización para un desarrollo sostenible.</p>
+                </div>
+                <div class="mt-auto flex items-center text-primary text-xs font-bold uppercase tracking-widest opacity-0 group-hover:opacity-100 transition-opacity">
+                    Explorar <span class="material-symbols-outlined text-sm ml-1">arrow_forward</span>
+                </div>
+            </a>
+            
+            <!-- Card 3: Movilidad Urbana -->
+            <a class="group flex flex-col gap-6 p-8 rounded-2xl bg-[#1c2727] border border-[#3b5454] hover:border-primary transition-all duration-300 hover:-translate-y-2" href="#">
+                <div class="size-14 rounded-xl bg-primary/10 flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-background-dark transition-all duration-300">
+                    <span class="material-symbols-outlined !text-3xl">directions_bus</span>
+                </div>
+                <div class="flex flex-col gap-2">
+                    <h4 class="text-xl font-bold text-white">Movilidad Urbana</h4>
+                    <p class="text-slate-400 text-sm leading-relaxed">Transporte público eficiente, micromovilidad no motorizada y accesibilidad para todos.</p>
+                </div>
+                <div class="mt-auto flex items-center text-primary text-xs font-bold uppercase tracking-widest opacity-0 group-hover:opacity-100 transition-opacity">
+                    Descubrir <span class="material-symbols-outlined text-sm ml-1">arrow_forward</span>
+                </div>
+            </a>
+            
+            <!-- Card 4: Territorio y Hábitat -->
+            <a class="group flex flex-col gap-6 p-8 rounded-2xl bg-[#1c2727] border border-[#3b5454] hover:border-primary transition-all duration-300 hover:-translate-y-2" href="#">
+                <div class="size-14 rounded-xl bg-primary/10 flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-background-dark transition-all duration-300">
+                    <span class="material-symbols-outlined !text-3xl">home_work</span>
+                </div>
+                <div class="flex flex-col gap-2">
+                    <h4 class="text-xl font-bold text-white">Territorio y Hábitat</h4>
+                    <p class="text-slate-400 text-sm leading-relaxed">Asentamientos, vivienda digna e infraestructura básica con atención a poblaciones vulnerables.</p>
+                </div>
+                <div class="mt-auto flex items-center text-primary text-xs font-bold uppercase tracking-widest opacity-0 group-hover:opacity-100 transition-opacity">
+                    Conocer <span class="material-symbols-outlined text-sm ml-1">arrow_forward</span>
+                </div>
+            </a>
+            
+            <!-- Card 5: Ciudadanía y Gobierno Abierto -->
+            <a class="group flex flex-col gap-6 p-8 rounded-2xl bg-[#1c2727] border border-[#3b5454] hover:border-primary transition-all duration-300 hover:-translate-y-2" href="#">
+                <div class="size-14 rounded-xl bg-primary/10 flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-background-dark transition-all duration-300">
+                    <span class="material-symbols-outlined !text-3xl">groups</span>
+                </div>
+                <div class="flex flex-col gap-2">
+                    <h4 class="text-xl font-bold text-white">Ciudadanía y Gobierno Abierto</h4>
+                    <p class="text-slate-400 text-sm leading-relaxed">Participación activa, transparencia y formación cívica. Nadie puede defender lo que no conoce.</p>
+                </div>
+                <div class="mt-auto flex items-center text-primary text-xs font-bold uppercase tracking-widest opacity-0 group-hover:opacity-100 transition-opacity">
+                    Participar <span class="material-symbols-outlined text-sm ml-1">arrow_forward</span>
+                </div>
+            </a>
+            
+            <!-- Card 6: Nuevas Tecnologías -->
+            <a class="group flex flex-col gap-6 p-8 rounded-2xl bg-[#1c2727] border border-[#3b5454] hover:border-primary transition-all duration-300 hover:-translate-y-2" href="#">
+                <div class="size-14 rounded-xl bg-primary/10 flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-background-dark transition-all duration-300">
+                    <span class="material-symbols-outlined !text-3xl">devices</span>
+                </div>
+                <div class="flex flex-col gap-2">
+                    <h4 class="text-xl font-bold text-white">Nuevas Tecnologías</h4>
+                    <p class="text-slate-400 text-sm leading-relaxed">Datos abiertos, sistemas de información geográfica y plataformas digitales para una ciudad inteligente.</p>
+                </div>
+                <div class="mt-auto flex items-center text-primary text-xs font-bold uppercase tracking-widest opacity-0 group-hover:opacity-100 transition-opacity">
+                    Innovar <span class="material-symbols-outlined text-sm ml-1">arrow_forward</span>
+                </div>
+            </a>
+        </div>
+        
+        <!-- Feature Spotlight: Quiénes Somos -->
+        <div class="mt-32 relative rounded-[2rem] overflow-hidden bg-slate-900 border border-white/5 p-12 lg:p-20" id="nosotros">
+            <div class="absolute top-0 right-0 w-1/2 h-full opacity-20 hidden lg:block">
+                <div class="w-full h-full bg-gradient-to-l from-primary/30 to-transparent"></div>
+                <img alt="Colaboración en taller urbano" class="absolute inset-0 w-full h-full object-cover mix-blend-overlay grayscale" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBn9qYE1p8KUB81aTPJM_rv-jmsUbrinsKc5li1m0d1nYo-Mg760kCPmh5cTwNJSykK7bm6Jvz44xtb7-t15Goj1qwZW7qrBeXsr2bPC2LAFS6iuBnFTvcyRFkUGPc1gtPOG8REs1bykK9bbEzcqA7Dfmla9gj9XeVazKrWTMa0yRp39Q4_so0M28Y1fd5sW3AP08aU1PrBnfd9oiMaK1_ea0WyYxZA24ignDisaZPPWRQhJ35oMQrpMCLNYkt8NNwm-Y9wvY7Ll2Jt"/>
+            </div>
+            <div class="relative z-10 max-w-[640px] flex flex-col gap-8">
+                <h3 class="text-4xl md:text-5xl font-black text-white leading-tight">
+                    Ibatín fue el primer asentamiento de San Miguel, hoy es símbolo de transformación.
+                </h3>
+                <p class="text-slate-300 text-lg leading-relaxed">
+                    El nombre remite al primer asentamiento de San Miguel de Tucumán, fundado en 1565. Esa memoria se convierte en símbolo de una nueva apuesta: ya no para irnos, sino para quedarnos y transformar. Generamos un espacio abierto de análisis, diseño y articulación de políticas públicas urbanas orientadas al desarrollo sustentable e inclusivo del AMeT.
+                </p>
+                <div class="grid grid-cols-3 gap-8">
+                    <div class="flex flex-col gap-2">
+                        <span class="text-3xl font-black text-primary">7</span>
+                        <span class="text-xs uppercase tracking-widest text-slate-400 font-bold">Municipios Principales</span>
+                    </div>
+                    <div class="flex flex-col gap-2">
+                        <span class="text-3xl font-black text-primary">5°</span>
+                        <span class="text-xs uppercase tracking-widest text-slate-400 font-bold">Aglomerado Urbano de Argentina</span>
+                    </div>
+                    <div class="flex flex-col gap-2">
+                        <span class="text-3xl font-black text-primary">6</span>
+                        <span class="text-xs uppercase tracking-widest text-slate-400 font-bold">Áreas Estratégicas</span>
+                    </div>
+                </div>
+                <div class="pt-4">
+                    <a href="seccion 2/index.html" class="inline-block bg-primary text-background-dark h-12 px-8 rounded-lg font-bold hover:scale-105 transition-transform leading-[3rem]">
+                        Conocé nuestra metodología
+                    </a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Valores Institucionales -->
+    <section class="bg-background-dark py-24" id="valores">
+        <div class="max-w-[1280px] mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-primary font-bold text-sm tracking-widest uppercase mb-4">Nuestros Valores</h2>
+                <h3 class="text-4xl md:text-5xl font-black text-white leading-tight">Los principios que nos guían</h3>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6">
+                <!-- Participación -->
+                <div class="text-center p-6 rounded-2xl bg-[#1c2727] border border-[#3b5454]">
+                    <span class="material-symbols-outlined text-primary !text-4xl mb-4">diversity_3</span>
+                    <h4 class="text-lg font-bold text-white mb-2">Participación</h4>
+                    <p class="text-slate-400 text-sm">Construcción colectiva del conocimiento y protagonismo ciudadano</p>
+                </div>
+                <!-- Sustentabilidad -->
+                <div class="text-center p-6 rounded-2xl bg-[#1c2727] border border-[#3b5454]">
+                    <span class="material-symbols-outlined text-primary !text-4xl mb-4">eco</span>
+                    <h4 class="text-lg font-bold text-white mb-2">Sustentabilidad</h4>
+                    <p class="text-slate-400 text-sm">Equilibrio entre dimensiones sociales, ambientales y económicas</p>
+                </div>
+                <!-- Equidad -->
+                <div class="text-center p-6 rounded-2xl bg-[#1c2727] border border-[#3b5454]">
+                    <span class="material-symbols-outlined text-primary !text-4xl mb-4">balance</span>
+                    <h4 class="text-lg font-bold text-white mb-2">Equidad</h4>
+                    <p class="text-slate-400 text-sm">Justicia territorial con atención a sectores vulnerables</p>
+                </div>
+                <!-- Transparencia -->
+                <div class="text-center p-6 rounded-2xl bg-[#1c2727] border border-[#3b5454]">
+                    <span class="material-symbols-outlined text-primary !text-4xl mb-4">visibility</span>
+                    <h4 class="text-lg font-bold text-white mb-2">Transparencia</h4>
+                    <p class="text-slate-400 text-sm">Claridad y apertura en los procesos, rendición de cuentas</p>
+                </div>
+                <!-- Innovación -->
+                <div class="text-center p-6 rounded-2xl bg-[#1c2727] border border-[#3b5454]">
+                    <span class="material-symbols-outlined text-primary !text-4xl mb-4">lightbulb</span>
+                    <h4 class="text-lg font-bold text-white mb-2">Innovación</h4>
+                    <p class="text-slate-400 text-sm">Pensamiento crítico y creativo ante los desafíos metropolitanos</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-slate-950 py-16 border-t border-white/5" id="contacto">
+        <div class="max-w-[1280px] mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
+                <!-- Logo y descripción -->
+                <div class="col-span-1 md:col-span-1 flex flex-col gap-6">
+                    <h2 class="text-white text-xl font-black">IBATÍN</h2>
+                    <p class="text-slate-500 text-sm">
+                        Fundación IBATÍN: Gobernanza, planificación y ciudadanía en el Área Metropolitana de Tucumán. Mutar en vez de migrar.
+                    </p>
+                </div>
+                <!-- Explorar -->
+                <div>
+                    <h5 class="text-white font-bold mb-6">Explorar</h5>
+                    <ul class="flex flex-col gap-4 text-slate-500 text-sm">
+                        <li><a class="hover:text-primary transition-colors" href="seccion 2/index.html">Pensar el AMeT</a></li>
+                        <li><a class="hover:text-primary transition-colors" href="#areas">Áreas Estratégicas</a></li>
+                        <li><a class="hover:text-primary transition-colors" href="#">Mapa de Datos</a></li>
+                        <li><a class="hover:text-primary transition-colors" href="#">Gobierno Abierto</a></li>
+                    </ul>
+                </div>
+                <!-- Participá -->
+                <div>
+                    <h5 class="text-white font-bold mb-6">Participá</h5>
+                    <ul class="flex flex-col gap-4 text-slate-500 text-sm">
+                        <li><a class="hover:text-primary transition-colors" href="#">Ciudadanía Activa</a></li>
+                        <li><a class="hover:text-primary transition-colors" href="#">Voluntariado</a></li>
+                        <li><a class="hover:text-primary transition-colors" href="#">Prensa</a></li>
+                        <li><a class="hover:text-primary transition-colors" href="#">Contacto</a></li>
+                    </ul>
+                </div>
+                <!-- Newsletter -->
+                <div>
+                    <h5 class="text-white font-bold mb-6">Newsletter</h5>
+                    <p class="text-slate-500 text-sm mb-4">Recibí las últimas novedades del AMeT.</p>
+                    <div class="flex gap-2">
+                        <input class="bg-white/5 border border-white/10 rounded-lg px-4 py-2 text-sm w-full focus:outline-none focus:border-primary text-white" placeholder="Tu email" type="email"/>
+                        <button class="bg-primary text-background-dark px-4 py-2 rounded-lg hover:brightness-110 transition-all">
+                            <span class="material-symbols-outlined !text-base">send</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-4 text-slate-600 text-xs">
+                <p>© 2025 Fundación IBATÍN – Tucumán, Argentina. Proyecto Metropolitano.</p>
+                <div class="flex gap-8">
+                    <a class="hover:text-primary transition-colors" href="#">Términos</a>
+                    <a class="hover:text-primary transition-colors" href="#">Privacidad</a>
+                    <a class="hover:text-primary transition-colors" href="#">Accesibilidad</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Asistente Virtual IBATÍN -->
+    <script src="assets/chatbot.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,722 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Nuestros Proyectos - Fundación Ibatín</title>
+    <link rel="icon" type="image/png" href="../favicon.png"/>
+    <link rel="apple-touch-icon" href="../icon.png"/>
+    <meta name="description" content="Conocé los proyectos y áreas estratégicas de la Fundación IBATÍN para transformar el Área Metropolitana de Tucumán."/>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;500;700;900&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700" rel="stylesheet"/>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#9ca87a",
+                        "primary-dark": "#7b8c5e",
+                        "primary-darker": "#5a6b4a",
+                        "accent": "#d5d5a5",
+                        "background-light": "#f6f8f4",
+                        "background-dark": "#1a2418",
+                    },
+                    fontFamily: {
+                        "display": ["Public Sans", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+    <style>
+        body { font-family: 'Public Sans', sans-serif; }
+        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+        .editorial-title {
+            letter-spacing: -0.04em;
+            line-height: 1.1;
+        }
+    </style>
+</head>
+<body class="bg-background-light text-slate-800 min-h-screen">
+
+    <!-- Header -->
+    <header class="fixed top-0 w-full z-50 border-b border-primary-dark/20 bg-white/80 backdrop-blur-md">
+        <div class="max-w-[1280px] mx-auto px-6 h-20 flex items-center justify-between">
+            <a class="flex items-center gap-3" href="../index.html">
+                <h2 class="text-primary-darker text-2xl font-black tracking-tighter uppercase">IBATÍN</h2>
+            </a>
+            <nav class="hidden lg:flex items-center gap-10">
+                <a class="text-sm font-medium text-slate-500 hover:text-primary-dark transition-colors" href="../index.html">Inicio</a>
+                <a class="text-sm font-medium text-slate-500 hover:text-primary-dark transition-colors" href="../seccion 2/index.html">Pensar el AMeT</a>
+                <a class="text-sm font-bold text-primary-dark border-b-2 border-primary-dark pb-1" href="#">Nuestros Proyectos</a>
+                <a class="text-sm font-medium text-slate-500 hover:text-primary-dark transition-colors" href="../bitacora/index.html">Bitácora</a>
+                <a class="text-sm font-medium text-slate-500 hover:text-primary-dark transition-colors" href="../participa/index.html">Participá</a>
+            </nav>
+            <!-- Botón Hamburguesa -->
+            <button id="menuBtn" class="lg:hidden flex flex-col gap-1.5 p-2">
+                <span class="block w-6 h-0.5 bg-slate-700 transition-all" id="line1"></span>
+                <span class="block w-6 h-0.5 bg-slate-700 transition-all" id="line2"></span>
+                <span class="block w-6 h-0.5 bg-slate-700 transition-all" id="line3"></span>
+            </button>
+        </div>
+        <!-- Menú Móvil -->
+        <div id="mobileMenu" class="lg:hidden hidden absolute top-20 left-0 w-full bg-white/95 backdrop-blur-md border-b border-primary-dark/20">
+            <nav class="flex flex-col p-6 gap-4">
+                <a class="text-lg font-medium text-slate-600 hover:text-primary-dark transition-colors" href="../index.html">Inicio</a>
+                <a class="text-lg font-medium text-slate-600 hover:text-primary-dark transition-colors" href="../seccion 2/index.html">Pensar el AMeT</a>
+                <a class="text-lg font-bold text-primary-dark" href="#">Nuestros Proyectos</a>
+                <a class="text-lg font-medium text-slate-600 hover:text-primary-dark transition-colors" href="../bitacora/index.html">Bitácora</a>
+                <a class="text-lg font-medium text-slate-600 hover:text-primary-dark transition-colors" href="../participa/index.html">Participá</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="pt-32 pb-24 max-w-[1280px] mx-auto px-6">
+        
+        <!-- Hero Section -->
+        <div class="mb-16">
+            <div class="flex items-center gap-2 text-primary-dark font-bold tracking-widest uppercase text-xs mb-4">
+                <span class="w-8 h-[2px] bg-primary-dark"></span>
+                Áreas Estratégicas
+            </div>
+            <h1 class="text-5xl md:text-7xl font-black editorial-title mb-6 text-slate-800">Nuestros <br/><span class="text-primary-dark">Proyectos.</span></h1>
+            <p class="text-slate-500 text-lg md:text-xl max-w-2xl leading-relaxed">
+                Seis dimensiones para transformar el Área Metropolitana de Tucumán, articulando datos, propuestas y participación ciudadana.
+            </p>
+        </div>
+
+        <!-- CONCURSO DE IDEAS - DESTACADO -->
+        <section class="mb-16 bg-gradient-to-br from-primary-darker to-background-dark rounded-3xl overflow-hidden shadow-2xl">
+            <div class="grid grid-cols-1 lg:grid-cols-2">
+                <!-- Contenido -->
+                <div class="p-8 md:p-12 lg:p-16 flex flex-col justify-center">
+                    <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/20 text-primary text-xs font-bold tracking-widest uppercase w-fit mb-6 animate-pulse">
+                        <span class="material-symbols-outlined text-sm">emoji_events</span>
+                        Proyecto Destacado
+                    </div>
+                    <h2 class="text-3xl md:text-4xl lg:text-5xl font-black text-white leading-tight mb-6">
+                        Concurso de Ideas<br/><span class="text-primary">para el Gran Tucumán</span>
+                    </h2>
+                    <p class="text-white/80 text-lg leading-relaxed mb-6">
+                        Donde hace 200 años se debatía el futuro de una nación, hoy volvimos a encender la conversación. Una invitación a mirar más allá de los límites, a imaginar soluciones integradas y a creer que los problemas metropolitanos se resuelven con mirada colectiva.
+                    </p>
+                    <div class="grid grid-cols-3 gap-4 mb-8">
+                        <div class="text-center p-4 bg-white/10 rounded-xl">
+                            <span class="text-3xl font-black text-primary">+50</span>
+                            <p class="text-white/70 text-sm mt-1">Propuestas</p>
+                        </div>
+                        <div class="text-center p-4 bg-white/10 rounded-xl">
+                            <span class="text-3xl font-black text-primary">12</span>
+                            <p class="text-white/70 text-sm mt-1">Finalistas</p>
+                        </div>
+                        <div class="text-center p-4 bg-white/10 rounded-xl">
+                            <span class="text-3xl font-black text-primary">3</span>
+                            <p class="text-white/70 text-sm mt-1">Ganadores</p>
+                        </div>
+                    </div>
+                    <div class="flex flex-wrap gap-3 mb-8">
+                        <span class="px-3 py-1 bg-primary/20 text-primary text-xs font-bold rounded-full">Innovación</span>
+                        <span class="px-3 py-1 bg-primary/20 text-primary text-xs font-bold rounded-full">Participación</span>
+                        <span class="px-3 py-1 bg-primary/20 text-primary text-xs font-bold rounded-full">Territorio</span>
+                        <span class="px-3 py-1 bg-primary/20 text-primary text-xs font-bold rounded-full">Casa Histórica</span>
+                    </div>
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <a href="../index.html#concurso" class="bg-primary text-background-dark px-6 py-3 rounded-lg font-bold hover:bg-primary-dark hover:text-white transition-all text-center flex items-center justify-center gap-2">
+                            <span class="material-symbols-outlined">play_circle</span>
+                            Ver Ganadores
+                        </a>
+                        <button class="border-2 border-white/30 text-white px-6 py-3 rounded-lg font-bold hover:bg-white/10 transition-all flex items-center justify-center gap-2">
+                            <span class="material-symbols-outlined">description</span>
+                            Bases del Concurso
+                        </button>
+                    </div>
+                </div>
+                <!-- Imagen / Visual -->
+                <div class="relative min-h-[400px] lg:min-h-full">
+                    <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('../assets/foto1.jpg');">
+                        <div class="absolute inset-0 bg-gradient-to-l from-transparent to-primary-darker/80 lg:bg-gradient-to-r"></div>
+                    </div>
+                    <!-- Badge flotante -->
+                    <div class="absolute bottom-6 right-6 bg-white/95 backdrop-blur-sm rounded-xl p-4 shadow-lg max-w-[200px]">
+                        <div class="flex items-center gap-3">
+                            <div class="size-12 rounded-full bg-primary/20 flex items-center justify-center">
+                                <span class="material-symbols-outlined text-primary-dark">location_on</span>
+                            </div>
+                            <div>
+                                <p class="font-bold text-slate-800 text-sm">Casa Histórica</p>
+                                <p class="text-xs text-slate-500">Tucumán, Argentina</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Estadísticas -->
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-6 mb-20">
+            <div class="bg-white p-6 rounded-xl border border-slate-200 shadow-sm text-center">
+                <span class="text-4xl font-black text-primary-dark">6</span>
+                <p class="text-sm text-slate-500 mt-2 font-medium">Áreas Estratégicas</p>
+            </div>
+            <div class="bg-white p-6 rounded-xl border border-slate-200 shadow-sm text-center">
+                <span class="text-4xl font-black text-primary-dark">7</span>
+                <p class="text-sm text-slate-500 mt-2 font-medium">Municipios Articulados</p>
+            </div>
+            <div class="bg-white p-6 rounded-xl border border-slate-200 shadow-sm text-center">
+                <span class="text-4xl font-black text-primary-dark">+20</span>
+                <p class="text-sm text-slate-500 mt-2 font-medium">Proyectos Activos</p>
+            </div>
+            <div class="bg-white p-6 rounded-xl border border-slate-200 shadow-sm text-center">
+                <span class="text-4xl font-black text-primary-dark">5°</span>
+                <p class="text-sm text-slate-500 mt-2 font-medium">Aglomerado de Argentina</p>
+            </div>
+        </div>
+
+        <!-- HUERTAS URBANAS - Proyecto Especial -->
+        <section class="mb-16">
+            <div class="bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden">
+                <div class="grid grid-cols-1 lg:grid-cols-5">
+                    <!-- Visual lado izquierdo -->
+                    <div class="lg:col-span-2 bg-gradient-to-br from-primary to-primary-dark p-8 md:p-12 flex flex-col justify-center relative overflow-hidden">
+                        <div class="absolute top-0 right-0 opacity-10">
+                            <span class="material-symbols-outlined !text-[200px]">eco</span>
+                        </div>
+                        <div class="relative z-10">
+                            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/20 text-white text-xs font-bold tracking-widest uppercase mb-6">
+                                <span class="material-symbols-outlined text-sm">park</span>
+                                Proyecto Activo
+                            </div>
+                            <div class="size-20 rounded-2xl bg-white/20 flex items-center justify-center mb-6">
+                                <span class="material-symbols-outlined !text-5xl text-white">grass</span>
+                            </div>
+                            <h2 class="text-3xl md:text-4xl font-black text-white mb-4">Huertas Urbanas</h2>
+                            <p class="text-white/80 text-lg leading-relaxed">
+                                Cultivando comunidad, cosechando futuro.
+                            </p>
+                            <div class="mt-8 flex gap-6">
+                                <div class="text-center">
+                                    <span class="text-4xl font-black text-white">15</span>
+                                    <p class="text-white/70 text-sm">Huertas</p>
+                                </div>
+                                <div class="text-center">
+                                    <span class="text-4xl font-black text-white">+200</span>
+                                    <p class="text-white/70 text-sm">Familias</p>
+                                </div>
+                                <div class="text-center">
+                                    <span class="text-4xl font-black text-white">5</span>
+                                    <p class="text-white/70 text-sm">Barrios</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Contenido lado derecho -->
+                    <div class="lg:col-span-3 p-8 md:p-12">
+                        <p class="text-slate-600 text-lg leading-relaxed mb-8">
+                            Las huertas urbanas comunitarias son espacios de producción agroecológica que promueven la soberanía alimentaria, la educación ambiental y el fortalecimiento del tejido social en los barrios del Área Metropolitana.
+                        </p>
+                        
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+                            <div class="flex items-start gap-4 p-4 bg-primary/5 rounded-xl">
+                                <div class="size-12 rounded-lg bg-primary/20 flex items-center justify-center flex-shrink-0">
+                                    <span class="material-symbols-outlined text-primary-dark">nutrition</span>
+                                </div>
+                                <div>
+                                    <p class="font-bold text-slate-700">Soberanía Alimentaria</p>
+                                    <p class="text-sm text-slate-500">Producción local de alimentos frescos y saludables</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-4 p-4 bg-primary/5 rounded-xl">
+                                <div class="size-12 rounded-lg bg-primary/20 flex items-center justify-center flex-shrink-0">
+                                    <span class="material-symbols-outlined text-primary-dark">school</span>
+                                </div>
+                                <div>
+                                    <p class="font-bold text-slate-700">Educación Ambiental</p>
+                                    <p class="text-sm text-slate-500">Talleres y capacitaciones para todas las edades</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-4 p-4 bg-primary/5 rounded-xl">
+                                <div class="size-12 rounded-lg bg-primary/20 flex items-center justify-center flex-shrink-0">
+                                    <span class="material-symbols-outlined text-primary-dark">diversity_3</span>
+                                </div>
+                                <div>
+                                    <p class="font-bold text-slate-700">Tejido Social</p>
+                                    <p class="text-sm text-slate-500">Encuentro y trabajo colaborativo vecinal</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-4 p-4 bg-primary/5 rounded-xl">
+                                <div class="size-12 rounded-lg bg-primary/20 flex items-center justify-center flex-shrink-0">
+                                    <span class="material-symbols-outlined text-primary-dark">compost</span>
+                                </div>
+                                <div>
+                                    <p class="font-bold text-slate-700">Agroecología</p>
+                                    <p class="text-sm text-slate-500">Prácticas sustentables sin agroquímicos</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="flex flex-wrap gap-2 mb-8">
+                            <span class="px-3 py-1 bg-primary/10 text-primary-darker text-xs font-bold rounded-full">Agricultura Urbana</span>
+                            <span class="px-3 py-1 bg-primary/10 text-primary-darker text-xs font-bold rounded-full">Comunidad</span>
+                            <span class="px-3 py-1 bg-primary/10 text-primary-darker text-xs font-bold rounded-full">Sustentabilidad</span>
+                            <span class="px-3 py-1 bg-primary/10 text-primary-darker text-xs font-bold rounded-full">Alimentación</span>
+                        </div>
+
+                        <div class="flex flex-col sm:flex-row gap-4">
+                            <button class="bg-primary-dark text-white px-6 py-3 rounded-lg font-bold hover:bg-primary-darker transition-all flex items-center justify-center gap-2">
+                                <span class="material-symbols-outlined">map</span>
+                                Ver Ubicaciones
+                            </button>
+                            <button class="border-2 border-primary-dark text-primary-dark px-6 py-3 rounded-lg font-bold hover:bg-primary/10 transition-all flex items-center justify-center gap-2">
+                                <span class="material-symbols-outlined">volunteer_activism</span>
+                                Quiero Participar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Título de Áreas Estratégicas -->
+        <div class="mb-10">
+            <h2 class="text-3xl font-black text-slate-800 mb-2">Áreas Estratégicas</h2>
+            <p class="text-slate-500">Seis dimensiones para transformar el territorio</p>
+        </div>
+
+        <!-- Grid de Proyectos Expandidos -->
+        <div class="space-y-8">
+            
+            <!-- Proyecto 1: Gestión Integral Metropolitana -->
+            <article id="gestion" class="bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden">
+                <div class="grid grid-cols-1 lg:grid-cols-3">
+                    <div class="lg:col-span-2 p-8 md:p-12">
+                        <div class="flex items-center gap-4 mb-6">
+                            <div class="size-14 rounded-xl bg-primary/20 flex items-center justify-center text-primary-dark">
+                                <span class="material-symbols-outlined !text-3xl">hub</span>
+                            </div>
+                            <div>
+                                <span class="text-xs font-bold text-primary-dark uppercase tracking-widest">Área Estratégica 01</span>
+                                <h2 class="text-2xl md:text-3xl font-black text-slate-800">Gestión Integral Metropolitana</h2>
+                            </div>
+                        </div>
+                        <p class="text-slate-600 text-lg leading-relaxed mb-6">
+                            Coordinación, planificación territorial y gobernanza que supere la fragmentación político-administrativa del Área Metropolitana de Tucumán. Trabajamos por una visión unificada que integre a los 7 municipios principales.
+                        </p>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+                            <div class="flex items-start gap-3">
+                                <span class="material-symbols-outlined text-primary-dark mt-0.5">check_circle</span>
+                                <div>
+                                    <p class="font-bold text-slate-700">Consejo Metropolitano</p>
+                                    <p class="text-sm text-slate-500">Espacio de articulación intermunicipal</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-3">
+                                <span class="material-symbols-outlined text-primary-dark mt-0.5">check_circle</span>
+                                <div>
+                                    <p class="font-bold text-slate-700">Plan Director 2030</p>
+                                    <p class="text-sm text-slate-500">Visión estratégica de largo plazo</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-3">
+                                <span class="material-symbols-outlined text-primary-dark mt-0.5">check_circle</span>
+                                <div>
+                                    <p class="font-bold text-slate-700">Observatorio Territorial</p>
+                                    <p class="text-sm text-slate-500">Monitoreo y evaluación continua</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-3">
+                                <span class="material-symbols-outlined text-primary-dark mt-0.5">check_circle</span>
+                                <div>
+                                    <p class="font-bold text-slate-700">Mesas Técnicas</p>
+                                    <p class="text-sm text-slate-500">Coordinación inter-áreas</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-primary/10 text-primary-darker text-xs font-bold rounded-full">Gobernanza</span>
+                            <span class="px-3 py-1 bg-primary/10 text-primary-darker text-xs font-bold rounded-full">Planificación</span>
+                            <span class="px-3 py-1 bg-primary/10 text-primary-darker text-xs font-bold rounded-full">Articulación</span>
+                        </div>
+                    </div>
+                    <div class="bg-primary/10 p-8 flex flex-col justify-center items-center text-center">
+                        <span class="text-6xl font-black text-primary-dark">7</span>
+                        <p class="text-primary-darker font-bold mt-2">Municipios</p>
+                        <p class="text-slate-500 text-sm mt-1">trabajando en conjunto</p>
+                        <button class="mt-6 bg-primary-dark text-white px-6 py-2 rounded-lg font-bold hover:bg-primary-darker transition-all">
+                            Ver Avances
+                        </button>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Proyecto 2: Economía Circular -->
+            <article id="economia" class="bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden">
+                <div class="grid grid-cols-1 lg:grid-cols-3">
+                    <div class="lg:col-span-2 p-8 md:p-12">
+                        <div class="flex items-center gap-4 mb-6">
+                            <div class="size-14 rounded-xl bg-primary/20 flex items-center justify-center text-primary-dark">
+                                <span class="material-symbols-outlined !text-3xl">recycling</span>
+                            </div>
+                            <div>
+                                <span class="text-xs font-bold text-primary-dark uppercase tracking-widest">Área Estratégica 02</span>
+                                <h2 class="text-2xl md:text-3xl font-black text-slate-800">Economía Circular</h2>
+                            </div>
+                        </div>
+                        <p class="text-slate-600 text-lg leading-relaxed mb-6">
+                            Gestión integral de residuos, empleo verde y circuitos de valorización para un desarrollo sostenible. Promovemos la transición hacia un modelo económico regenerativo que minimice el desperdicio.
+                        </p>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+                            <div class="flex items-start gap-3">
+                                <span class="material-symbols-outlined text-primary-dark mt-0.5">check_circle</span>
+                                <div>
+                                    <p class="font-bold text-slate-700">Puntos Verdes</p>
+                                    <p class="text-sm text-slate-500">Red de centros de reciclaje</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-3">
+                                <span class="material-symbols-outlined text-primary-dark mt-0.5">check_circle</span>
+                                <div>
+                                    <p class="font-bold text-slate-700">Cooperativas de Recicladores</p>
+                                    <p class="text-sm text-slate-500">Inclusión social y empleo digno</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-3">
+                                <span class="material-symbols-outlined text-primary-dark mt-0.5">check_circle</span>
+                                <div>
+                                    <p class="font-bold text-slate-700">Compostaje Comunitario</p>
+                                    <p class="text-sm text-slate-500">Reducción de residuos orgánicos</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-3">
+                                <span class="material-symbols-outlined text-primary-dark mt-0.5">check_circle</span>
+                                <div>
+                                    <p class="font-bold text-slate-700">Educación Ambiental</p>
+                                    <p class="text-sm text-slate-500">Capacitación y concientización</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-primary/10 text-primary-darker text-xs font-bold rounded-full">Reciclaje</span>
+                            <span class="px-3 py-1 bg-primary/10 text-primary-darker text-xs font-bold rounded-full">Empleo Verde</span>
+                            <span class="px-3 py-1 bg-primary/10 text-primary-darker text-xs font-bold rounded-full">Sostenibilidad</span>
+                        </div>
+                    </div>
+                    <div class="bg-primary/10 p-8 flex flex-col justify-center items-center text-center">
+                        <span class="text-6xl font-black text-primary-dark">+50</span>
+                        <p class="text-primary-darker font-bold mt-2">Puntos Verdes</p>
+                        <p class="text-slate-500 text-sm mt-1">proyectados en el AMeT</p>
+                        <button class="mt-6 bg-primary-dark text-white px-6 py-2 rounded-lg font-bold hover:bg-primary-darker transition-all">
+                            Ver Mapa
+                        </button>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Proyecto 3: Movilidad Urbana -->
+            <article id="movilidad" class="bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden">
+                <div class="grid grid-cols-1 lg:grid-cols-3">
+                    <div class="lg:col-span-2 p-8 md:p-12">
+                        <div class="flex items-center gap-4 mb-6">
+                            <div class="size-14 rounded-xl bg-primary/20 flex items-center justify-center text-primary-dark">
+                                <span class="material-symbols-outlined !text-3xl">directions_bus</span>
+                            </div>
+                            <div>
+                                <span class="text-xs font-bold text-primary-dark uppercase tracking-widest">Área Estratégica 03</span>
+                                <h2 class="text-2xl md:text-3xl font-black text-slate-800">Movilidad Urbana</h2>
+                            </div>
+                        </div>
+                        <p class="text-slate-600 text-lg leading-relaxed mb-6">
+                            Transporte público eficiente, micromovilidad no motorizada y accesibilidad universal. Diseñamos una red de conectividad que priorice al peatón, la bicicleta y el transporte público de alta frecuencia.
+                        </p>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+                            <div class="flex items-start gap-3">
+                                <span class="material-symbols-outlined text-primary-dark mt-0.5">check_circle</span>
+                                <div>
+                                    <p class="font-bold text-slate-700">Red de Ciclovías</p>
+                                    <p class="text-sm text-slate-500">Infraestructura segura para ciclistas</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-3">
+                                <span class="material-symbols-outlined text-primary-dark mt-0.5">check_circle</span>
+                                <div>
+                                    <p class="font-bold text-slate-700">Nodos de Transferencia</p>
+                                    <p class="text-sm text-slate-500">Intermodalidad eficiente</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-3">
+                                <span class="material-symbols-outlined text-primary-dark mt-0.5">check_circle</span>
+                                <div>
+                                    <p class="font-bold text-slate-700">Calles Completas</p>
+                                    <p class="text-sm text-slate-500">Diseño inclusivo del espacio vial</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-3">
+                                <span class="material-symbols-outlined text-primary-dark mt-0.5">check_circle</span>
+                                <div>
+                                    <p class="font-bold text-slate-700">Transporte Público</p>
+                                    <p class="text-sm text-slate-500">Mejora de frecuencias y cobertura</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-primary/10 text-primary-darker text-xs font-bold rounded-full">Transporte</span>
+                            <span class="px-3 py-1 bg-primary/10 text-primary-darker text-xs font-bold rounded-full">Ciclovías</span>
+                            <span class="px-3 py-1 bg-primary/10 text-primary-darker text-xs font-bold rounded-full">Accesibilidad</span>
+                        </div>
+                    </div>
+                    <div class="bg-primary/10 p-8 flex flex-col justify-center items-center text-center">
+                        <span class="text-6xl font-black text-primary-dark">120</span>
+                        <p class="text-primary-darker font-bold mt-2">Km de Ciclovías</p>
+                        <p class="text-slate-500 text-sm mt-1">planificados para 2030</p>
+                        <button class="mt-6 bg-primary-dark text-white px-6 py-2 rounded-lg font-bold hover:bg-primary-darker transition-all">
+                            Ver Red
+                        </button>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Proyecto 4: Territorio y Hábitat -->
+            <article id="habitat" class="bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden">
+                <div class="grid grid-cols-1 lg:grid-cols-3">
+                    <div class="lg:col-span-2 p-8 md:p-12">
+                        <div class="flex items-center gap-4 mb-6">
+                            <div class="size-14 rounded-xl bg-primary/20 flex items-center justify-center text-primary-dark">
+                                <span class="material-symbols-outlined !text-3xl">home_work</span>
+                            </div>
+                            <div>
+                                <span class="text-xs font-bold text-primary-dark uppercase tracking-widest">Área Estratégica 04</span>
+                                <h2 class="text-2xl md:text-3xl font-black text-slate-800">Territorio y Hábitat</h2>
+                            </div>
+                        </div>
+                        <p class="text-slate-600 text-lg leading-relaxed mb-6">
+                            Asentamientos, vivienda digna e infraestructura básica con atención prioritaria a poblaciones vulnerables. Trabajamos por el acceso universal a servicios esenciales y un hábitat de calidad.
+                        </p>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+                            <div class="flex items-start gap-3">
+                                <span class="material-symbols-outlined text-primary-dark mt-0.5">check_circle</span>
+                                <div>
+                                    <p class="font-bold text-slate-700">Regularización Dominial</p>
+                                    <p class="text-sm text-slate-500">Seguridad jurídica de tenencia</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-3">
+                                <span class="material-symbols-outlined text-primary-dark mt-0.5">check_circle</span>
+                                <div>
+                                    <p class="font-bold text-slate-700">Mejoramiento Barrial</p>
+                                    <p class="text-sm text-slate-500">Infraestructura y servicios básicos</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-3">
+                                <span class="material-symbols-outlined text-primary-dark mt-0.5">check_circle</span>
+                                <div>
+                                    <p class="font-bold text-slate-700">Espacios Verdes</p>
+                                    <p class="text-sm text-slate-500">Parques y plazas accesibles</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-3">
+                                <span class="material-symbols-outlined text-primary-dark mt-0.5">check_circle</span>
+                                <div>
+                                    <p class="font-bold text-slate-700">Gestión del Riesgo</p>
+                                    <p class="text-sm text-slate-500">Prevención de inundaciones</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-primary/10 text-primary-darker text-xs font-bold rounded-full">Vivienda</span>
+                            <span class="px-3 py-1 bg-primary/10 text-primary-darker text-xs font-bold rounded-full">Infraestructura</span>
+                            <span class="px-3 py-1 bg-primary/10 text-primary-darker text-xs font-bold rounded-full">Inclusión</span>
+                        </div>
+                    </div>
+                    <div class="bg-primary/10 p-8 flex flex-col justify-center items-center text-center">
+                        <span class="text-6xl font-black text-primary-dark">+80</span>
+                        <p class="text-primary-darker font-bold mt-2">Barrios</p>
+                        <p class="text-slate-500 text-sm mt-1">en proceso de mejoramiento</p>
+                        <button class="mt-6 bg-primary-dark text-white px-6 py-2 rounded-lg font-bold hover:bg-primary-darker transition-all">
+                            Ver Proyectos
+                        </button>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Proyecto 5: Ciudadanía y Gobierno Abierto -->
+            <article id="ciudadania" class="bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden">
+                <div class="grid grid-cols-1 lg:grid-cols-3">
+                    <div class="lg:col-span-2 p-8 md:p-12">
+                        <div class="flex items-center gap-4 mb-6">
+                            <div class="size-14 rounded-xl bg-primary/20 flex items-center justify-center text-primary-dark">
+                                <span class="material-symbols-outlined !text-3xl">groups</span>
+                            </div>
+                            <div>
+                                <span class="text-xs font-bold text-primary-dark uppercase tracking-widest">Área Estratégica 05</span>
+                                <h2 class="text-2xl md:text-3xl font-black text-slate-800">Ciudadanía y Gobierno Abierto</h2>
+                            </div>
+                        </div>
+                        <p class="text-slate-600 text-lg leading-relaxed mb-6">
+                            Participación activa, transparencia y formación cívica. Nadie puede defender lo que no conoce. Promovemos una ciudadanía informada y comprometida con el desarrollo de su territorio.
+                        </p>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+                            <div class="flex items-start gap-3">
+                                <span class="material-symbols-outlined text-primary-dark mt-0.5">check_circle</span>
+                                <div>
+                                    <p class="font-bold text-slate-700">Foro de Ideas</p>
+                                    <p class="text-sm text-slate-500">Espacios de deliberación ciudadana</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-3">
+                                <span class="material-symbols-outlined text-primary-dark mt-0.5">check_circle</span>
+                                <div>
+                                    <p class="font-bold text-slate-700">Escuela de Ciudadanía</p>
+                                    <p class="text-sm text-slate-500">Formación cívica y urbana</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-3">
+                                <span class="material-symbols-outlined text-primary-dark mt-0.5">check_circle</span>
+                                <div>
+                                    <p class="font-bold text-slate-700">Presupuesto Participativo</p>
+                                    <p class="text-sm text-slate-500">Decisión colectiva de inversiones</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-3">
+                                <span class="material-symbols-outlined text-primary-dark mt-0.5">check_circle</span>
+                                <div>
+                                    <p class="font-bold text-slate-700">Datos Abiertos</p>
+                                    <p class="text-sm text-slate-500">Transparencia y acceso a información</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-primary/10 text-primary-darker text-xs font-bold rounded-full">Participación</span>
+                            <span class="px-3 py-1 bg-primary/10 text-primary-darker text-xs font-bold rounded-full">Transparencia</span>
+                            <span class="px-3 py-1 bg-primary/10 text-primary-darker text-xs font-bold rounded-full">Formación</span>
+                        </div>
+                    </div>
+                    <div class="bg-primary/10 p-8 flex flex-col justify-center items-center text-center">
+                        <span class="text-6xl font-black text-primary-dark">+500</span>
+                        <p class="text-primary-darker font-bold mt-2">Ciudadanos</p>
+                        <p class="text-slate-500 text-sm mt-1">participando activamente</p>
+                        <button class="mt-6 bg-primary-dark text-white px-6 py-2 rounded-lg font-bold hover:bg-primary-darker transition-all">
+                            Sumate
+                        </button>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Proyecto 6: Nuevas Tecnologías -->
+            <article id="tecnologia" class="bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden">
+                <div class="grid grid-cols-1 lg:grid-cols-3">
+                    <div class="lg:col-span-2 p-8 md:p-12">
+                        <div class="flex items-center gap-4 mb-6">
+                            <div class="size-14 rounded-xl bg-primary/20 flex items-center justify-center text-primary-dark">
+                                <span class="material-symbols-outlined !text-3xl">devices</span>
+                            </div>
+                            <div>
+                                <span class="text-xs font-bold text-primary-dark uppercase tracking-widest">Área Estratégica 06</span>
+                                <h2 class="text-2xl md:text-3xl font-black text-slate-800">Nuevas Tecnologías</h2>
+                            </div>
+                        </div>
+                        <p class="text-slate-600 text-lg leading-relaxed mb-6">
+                            Datos abiertos, sistemas de información geográfica y plataformas digitales para una ciudad inteligente. Utilizamos la tecnología como herramienta para mejorar la toma de decisiones y la calidad de vida.
+                        </p>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+                            <div class="flex items-start gap-3">
+                                <span class="material-symbols-outlined text-primary-dark mt-0.5">check_circle</span>
+                                <div>
+                                    <p class="font-bold text-slate-700">Plataforma GIS</p>
+                                    <p class="text-sm text-slate-500">Sistema de información geográfica</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-3">
+                                <span class="material-symbols-outlined text-primary-dark mt-0.5">check_circle</span>
+                                <div>
+                                    <p class="font-bold text-slate-700">Portal de Datos Abiertos</p>
+                                    <p class="text-sm text-slate-500">Información pública accesible</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-3">
+                                <span class="material-symbols-outlined text-primary-dark mt-0.5">check_circle</span>
+                                <div>
+                                    <p class="font-bold text-slate-700">App Ciudadana</p>
+                                    <p class="text-sm text-slate-500">Reportes y participación móvil</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-3">
+                                <span class="material-symbols-outlined text-primary-dark mt-0.5">check_circle</span>
+                                <div>
+                                    <p class="font-bold text-slate-700">Sensores Urbanos</p>
+                                    <p class="text-sm text-slate-500">Monitoreo en tiempo real</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-primary/10 text-primary-darker text-xs font-bold rounded-full">Datos</span>
+                            <span class="px-3 py-1 bg-primary/10 text-primary-darker text-xs font-bold rounded-full">GIS</span>
+                            <span class="px-3 py-1 bg-primary/10 text-primary-darker text-xs font-bold rounded-full">Smart City</span>
+                        </div>
+                    </div>
+                    <div class="bg-primary/10 p-8 flex flex-col justify-center items-center text-center">
+                        <span class="text-6xl font-black text-primary-dark">+100</span>
+                        <p class="text-primary-darker font-bold mt-2">Datasets</p>
+                        <p class="text-slate-500 text-sm mt-1">disponibles públicamente</p>
+                        <button class="mt-6 bg-primary-dark text-white px-6 py-2 rounded-lg font-bold hover:bg-primary-darker transition-all">
+                            Explorar Datos
+                        </button>
+                    </div>
+                </div>
+            </article>
+        </div>
+
+        <!-- CTA Section -->
+        <section class="mt-20 bg-primary-darker rounded-2xl p-8 md:p-12 text-center">
+            <h2 class="text-3xl md:text-4xl font-black text-white mb-4">¿Querés ser parte del cambio?</h2>
+            <p class="text-white/80 text-lg max-w-2xl mx-auto mb-8">
+                Sumate como voluntario, profesional o representante barrial. Juntos podemos transformar el Área Metropolitana de Tucumán.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="../participa/index.html" class="bg-white text-primary-darker px-8 py-3 rounded-lg font-bold hover:bg-primary transition-all">
+                    Participá Ahora
+                </a>
+                <a href="../bitacora/index.html" class="border-2 border-white text-white px-8 py-3 rounded-lg font-bold hover:bg-white/10 transition-all">
+                    Ver Novedades
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="mt-20 border-t border-slate-200 py-10 bg-primary-darker">
+        <div class="mx-auto max-w-[1280px] px-6 text-center">
+            <div class="flex items-center justify-center gap-4 mb-6">
+                <h2 class="text-white text-xl font-black">IBATÍN</h2>
+            </div>
+            <p class="text-sm text-white/70">© 2025 Fundación IBATÍN – Tucumán, Argentina. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const menuBtn = document.getElementById('menuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+        const line1 = document.getElementById('line1');
+        const line2 = document.getElementById('line2');
+        const line3 = document.getElementById('line3');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+            line1.classList.toggle('rotate-45');
+            line1.classList.toggle('translate-y-2');
+            line2.classList.toggle('opacity-0');
+            line3.classList.toggle('-rotate-45');
+            line3.classList.toggle('-translate-y-2');
+        });
+    </script>
+
+    <!-- Asistente Virtual IBATÍN -->
+    <script src="../assets/chatbot.js"></script>
+</body>
+</html>

@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Activá tu Ciudadanía - Fundación Ibatín</title>
+    <link rel="icon" type="image/png" href="../favicon.png"/>
+    <link rel="apple-touch-icon" href="../icon.png"/>
+    <meta name="description" content="Formá parte de la transformación del Área Metropolitana de Tucumán. Tu perspectiva es el motor del cambio urbano."/>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;500;700;900&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700" rel="stylesheet"/>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#9ca87a",
+                        "primary-dark": "#7b8c5e",
+                        "primary-darker": "#5a6b4a",
+                        "accent": "#d5d5a5",
+                        "background-light": "#f6f8f4",
+                        "background-dark": "#1a2418",
+                    },
+                    fontFamily: {
+                        "display": ["Public Sans", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+    <style>
+        body { font-family: 'Public Sans', sans-serif; }
+        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+    </style>
+</head>
+<body class="bg-background-light text-slate-800 min-h-screen">
+
+    <!-- Header -->
+    <header class="fixed top-0 w-full z-50 border-b border-primary-dark/20 bg-white/80 backdrop-blur-md">
+        <div class="max-w-[1280px] mx-auto px-6 h-20 flex items-center justify-between">
+            <a class="flex items-center gap-3" href="../index.html">
+                <h2 class="text-primary-darker text-2xl font-black tracking-tighter uppercase">IBATÍN</h2>
+            </a>
+            <nav class="hidden lg:flex items-center gap-10">
+                <a class="text-sm font-medium text-slate-500 hover:text-primary-dark transition-colors" href="../index.html">Inicio</a>
+                <a class="text-sm font-medium text-slate-500 hover:text-primary-dark transition-colors" href="../seccion 2/index.html">Pensar el AMeT</a>
+                <a class="text-sm font-medium text-slate-500 hover:text-primary-dark transition-colors" href="../proyectos/index.html">Nuestros Proyectos</a>
+                <a class="text-sm font-medium text-slate-500 hover:text-primary-dark transition-colors" href="../bitacora/index.html">Bitácora</a>
+                <a class="text-sm font-bold text-primary-dark border-b-2 border-primary-dark pb-1" href="#">Participá</a>
+            </nav>
+            <!-- Botón Hamburguesa -->
+            <button id="menuBtn" class="lg:hidden flex flex-col gap-1.5 p-2">
+                <span class="block w-6 h-0.5 bg-slate-700 transition-all" id="line1"></span>
+                <span class="block w-6 h-0.5 bg-slate-700 transition-all" id="line2"></span>
+                <span class="block w-6 h-0.5 bg-slate-700 transition-all" id="line3"></span>
+            </button>
+        </div>
+        <!-- Menú Móvil -->
+        <div id="mobileMenu" class="lg:hidden hidden absolute top-20 left-0 w-full bg-white/95 backdrop-blur-md border-b border-primary-dark/20">
+            <nav class="flex flex-col p-6 gap-4">
+                <a class="text-lg font-medium text-slate-600 hover:text-primary-dark transition-colors" href="../index.html">Inicio</a>
+                <a class="text-lg font-medium text-slate-600 hover:text-primary-dark transition-colors" href="../seccion 2/index.html">Pensar el AMeT</a>
+                <a class="text-lg font-medium text-slate-600 hover:text-primary-dark transition-colors" href="../proyectos/index.html">Nuestros Proyectos</a>
+                <a class="text-lg font-medium text-slate-600 hover:text-primary-dark transition-colors" href="../bitacora/index.html">Bitácora</a>
+                <a class="text-lg font-bold text-primary-dark" href="#">Participá</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="mx-auto w-full max-w-[1280px] px-6 pt-28 pb-10 flex flex-col gap-12">
+        
+        <!-- Page Heading -->
+        <section class="flex flex-col md:flex-row justify-between items-start md:items-end gap-6 border-b border-slate-200 pb-8">
+            <div class="max-w-2xl">
+                <h1 class="text-4xl md:text-5xl font-black leading-tight tracking-tight text-slate-800">Activá tu Ciudadanía: <span class="text-primary-dark">Participación Activa</span></h1>
+                <p class="mt-4 text-slate-500 text-lg leading-relaxed">
+                    Formá parte de la transformación del Área Metropolitana de Tucumán (AMeT). Tu perspectiva es el motor del cambio urbano.
+                </p>
+            </div>
+            <button class="bg-primary/20 text-primary-darker px-6 py-3 rounded-lg font-bold flex items-center gap-2 hover:bg-primary/30 transition-all border border-primary-dark/30">
+                <span class="material-symbols-outlined">explore</span>
+                Ver Proyectos Activos
+            </button>
+        </section>
+
+        <!-- Quiz & Progress Section -->
+        <section class="grid grid-cols-1 lg:grid-cols-3 gap-8 items-start">
+            <div class="lg:col-span-2 bg-white rounded-xl shadow-lg overflow-hidden border border-slate-200">
+                <div class="p-8">
+                    <div class="flex items-center gap-2 text-primary-dark mb-4">
+                        <span class="material-symbols-outlined">psychology_alt</span>
+                        <span class="font-bold uppercase tracking-widest text-xs">Onboarding Interactivo</span>
+                    </div>
+                    <h2 class="text-2xl font-bold mb-6 text-slate-800">¿Cómo podés contribuir según tu perfil?</h2>
+                    
+                    <!-- Quiz Step UI -->
+                    <div class="flex flex-col gap-6">
+                        <div class="space-y-4">
+                            <p class="text-lg font-medium text-slate-700">¿Cuál de estas áreas te apasiona más para mejorar tu barrio?</p>
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                <button class="quiz-option flex items-center gap-4 p-4 rounded-lg border-2 border-primary-dark bg-primary/10 text-left transition-all">
+                                    <span class="material-symbols-outlined text-primary-dark">directions_bus</span>
+                                    <div>
+                                        <p class="font-bold text-slate-800">Movilidad Sustentable</p>
+                                        <p class="text-xs text-slate-500">Ciclovías, transporte público, peatonalidad.</p>
+                                    </div>
+                                </button>
+                                <button class="quiz-option flex items-center gap-4 p-4 rounded-lg border-2 border-slate-200 bg-slate-50 hover:border-primary/50 text-left transition-all">
+                                    <span class="material-symbols-outlined text-slate-500">park</span>
+                                    <div>
+                                        <p class="font-bold text-slate-800">Espacios Verdes</p>
+                                        <p class="text-xs text-slate-500">Plazas, parques y biodiversidad urbana.</p>
+                                    </div>
+                                </button>
+                                <button class="quiz-option flex items-center gap-4 p-4 rounded-lg border-2 border-slate-200 bg-slate-50 hover:border-primary/50 text-left transition-all">
+                                    <span class="material-symbols-outlined text-slate-500">home_work</span>
+                                    <div>
+                                        <p class="font-bold text-slate-800">Vivienda y Hábitat</p>
+                                        <p class="text-xs text-slate-500">Acceso a servicios e infraestructura social.</p>
+                                    </div>
+                                </button>
+                                <button class="quiz-option flex items-center gap-4 p-4 rounded-lg border-2 border-slate-200 bg-slate-50 hover:border-primary/50 text-left transition-all">
+                                    <span class="material-symbols-outlined text-slate-500">groups</span>
+                                    <div>
+                                        <p class="font-bold text-slate-800">Cultura y Comunidad</p>
+                                        <p class="text-xs text-slate-500">Identidad local y redes vecinales.</p>
+                                    </div>
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="flex items-center justify-between pt-6 border-t border-slate-200">
+                            <div class="flex-1 max-w-xs">
+                                <div class="flex justify-between text-xs font-bold mb-2 text-slate-600">
+                                    <span>PROGRESO</span>
+                                    <span>33%</span>
+                                </div>
+                                <div class="h-2 w-full bg-slate-200 rounded-full overflow-hidden">
+                                    <div class="h-full bg-primary-dark transition-all duration-500" style="width: 33%"></div>
+                                </div>
+                            </div>
+                            <button class="bg-primary-dark text-white px-8 py-2 rounded-lg font-bold hover:bg-primary-darker transition-all">
+                                Siguiente
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Stakeholder Map Component -->
+            <div class="bg-white rounded-xl shadow-lg border border-slate-200 h-full flex flex-col">
+                <div class="p-6 border-b border-slate-200">
+                    <h3 class="font-bold text-lg flex items-center gap-2 text-slate-800">
+                        <span class="material-symbols-outlined text-primary-dark">map</span>
+                        Mapa de Actores
+                    </h3>
+                </div>
+                <div class="relative flex-1 min-h-[300px] bg-slate-100 overflow-hidden group">
+                    <!-- Mapa iframe -->
+                    <iframe 
+                        src="https://mapa.poblaciones.org/map/96301/?emb=1&co=1#/@-26.918944,-65.24437,10z&l=96302!o1,96303!o0,96304!o0,96305!o0,96306!o0,96307!o0,96308!o0,96309!o0,96310!o0,96311!o0&a1=!v1!t1!i1!m0!c6!e0!w0!s0!p0!fNaN!o1!z0!r0!gNaN"
+                        class="absolute inset-0 w-full h-full"
+                        style="border: none;"
+                        loading="lazy">
+                    </iframe>
+                    
+                    <!-- Map Markers (Floating elements) -->
+                    <div class="absolute top-1/4 left-1/3 group-hover:scale-110 transition-transform pointer-events-none">
+                        <div class="bg-primary-dark p-2 rounded-full shadow-lg">
+                            <span class="material-symbols-outlined text-sm text-white">school</span>
+                        </div>
+                    </div>
+                    <div class="absolute bottom-1/3 right-1/4 group-hover:scale-110 transition-transform pointer-events-none">
+                        <div class="bg-white p-2 rounded-full shadow-lg border-2 border-primary-dark">
+                            <span class="material-symbols-outlined text-sm text-primary-dark">location_city</span>
+                        </div>
+                    </div>
+                    
+                    <div class="absolute bottom-4 left-4 right-4 bg-white/95 p-3 rounded-lg text-xs backdrop-blur-sm shadow-sm">
+                        <p class="font-bold text-slate-800">Ecosistema AMeT</p>
+                        <p class="text-slate-500">Interactúa con ONGs, Universidades y Gobiernos Locales.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Participation Tracks -->
+        <section>
+            <div class="flex items-center gap-3 mb-8">
+                <h2 class="text-2xl font-bold text-slate-800">Vías de Acción</h2>
+                <div class="h-px flex-1 bg-slate-200"></div>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- Volunteers -->
+                <div class="bg-white p-6 rounded-xl border border-slate-200 hover:border-primary-dark transition-all group shadow-sm">
+                    <div class="size-12 rounded-lg bg-primary/20 flex items-center justify-center text-primary-dark mb-4 group-hover:bg-primary-dark group-hover:text-white transition-colors">
+                        <span class="material-symbols-outlined text-3xl">volunteer_activism</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2 text-slate-800">Voluntariado</h3>
+                    <p class="text-slate-500 text-sm mb-6 leading-relaxed">Apoyá la logística de talleres, relevamientos territoriales y acciones de impacto directo.</p>
+                    <button class="w-full py-2 border-2 border-primary-dark text-primary-darker font-bold rounded-lg hover:bg-primary-dark hover:text-white transition-all">Sumarme</button>
+                </div>
+                <!-- Professionals -->
+                <div class="bg-white p-6 rounded-xl border border-slate-200 hover:border-primary-dark transition-all group shadow-sm">
+                    <div class="size-12 rounded-lg bg-primary/20 flex items-center justify-center text-primary-dark mb-4 group-hover:bg-primary-dark group-hover:text-white transition-colors">
+                        <span class="material-symbols-outlined text-3xl">architecture</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2 text-slate-800">Profesionales</h3>
+                    <p class="text-slate-500 text-sm mb-6 leading-relaxed">Urbanistas, sociólogos y expertos. Aportá conocimiento técnico al Consejo Metropolitano.</p>
+                    <button class="w-full py-2 border-2 border-primary-dark text-primary-darker font-bold rounded-lg hover:bg-primary-dark hover:text-white transition-all">Cargar CV</button>
+                </div>
+                <!-- Neighborhood Nodes -->
+                <div class="bg-white p-6 rounded-xl border border-slate-200 hover:border-primary-dark transition-all group shadow-sm">
+                    <div class="size-12 rounded-lg bg-primary/20 flex items-center justify-center text-primary-dark mb-4 group-hover:bg-primary-dark group-hover:text-white transition-colors">
+                        <span class="material-symbols-outlined text-3xl">hub</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2 text-slate-800">Nodos Barriales</h3>
+                    <p class="text-slate-500 text-sm mb-6 leading-relaxed">¿Representás a un centro vecinal? Registrá tu nodo para articular soluciones conjuntas.</p>
+                    <button class="w-full py-2 border-2 border-primary-dark text-primary-darker font-bold rounded-lg hover:bg-primary-dark hover:text-white transition-all">Registrar Nodo</button>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="mt-20 border-t border-slate-200 py-10 bg-primary-darker">
+        <div class="mx-auto max-w-[1280px] px-6 text-center">
+            <div class="flex items-center justify-center gap-4 mb-6">
+                <h2 class="text-white text-xl font-black">IBATÍN</h2>
+            </div>
+            <p class="text-sm text-white/70">© 2025 Fundación IBATÍN – Tucumán, Argentina. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const menuBtn = document.getElementById('menuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+        const line1 = document.getElementById('line1');
+        const line2 = document.getElementById('line2');
+        const line3 = document.getElementById('line3');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+            line1.classList.toggle('rotate-45');
+            line1.classList.toggle('translate-y-2');
+            line2.classList.toggle('opacity-0');
+            line3.classList.toggle('-rotate-45');
+            line3.classList.toggle('-translate-y-2');
+        });
+
+        // Quiz option selection
+        const quizOptions = document.querySelectorAll('.quiz-option');
+        quizOptions.forEach(option => {
+            option.addEventListener('click', () => {
+                quizOptions.forEach(opt => {
+                    opt.classList.remove('border-primary-dark', 'bg-primary/10');
+                    opt.classList.add('border-slate-200', 'bg-slate-50');
+                    opt.querySelector('.material-symbols-outlined').classList.remove('text-primary-dark');
+                    opt.querySelector('.material-symbols-outlined').classList.add('text-slate-500');
+                });
+                option.classList.remove('border-slate-200', 'bg-slate-50');
+                option.classList.add('border-primary-dark', 'bg-primary/10');
+                option.querySelector('.material-symbols-outlined').classList.remove('text-slate-500');
+                option.querySelector('.material-symbols-outlined').classList.add('text-primary-dark');
+            });
+        });
+    </script>
+
+    <!-- Asistente Virtual IBATÍN -->
+    <script src="../assets/chatbot.js"></script>
+</body>
+</html>
