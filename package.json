@@ -1,0 +1,8 @@
+{
+  "name": "ibatin-chatbot",
+  "version": "1.0.0",
+  "description": "IBATIN Chatbot con OpenAI Assistants",
+  "dependencies": {
+    "openai": "^4.28.0"
+  }
+}
