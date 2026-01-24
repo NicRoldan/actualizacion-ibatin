@@ -1,0 +1,11 @@
+# Robots.txt para Fundación IBATÍN
+# https://nicroldan.github.io/actualizacion-ibatin/
+
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://nicroldan.github.io/actualizacion-ibatin/sitemap.xml
+
+# Crawl-delay
+Crawl-delay: 10
