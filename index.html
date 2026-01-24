@@ -107,7 +107,22 @@
             font-family: "Public Sans", sans-serif;
         }
         .hero-overlay {
-            background: linear-gradient(180deg, rgba(51, 60, 31, 0.7) 0%, rgba(51, 60, 31, 0.9) 100%);
+            background: linear-gradient(180deg, rgba(51, 60, 31, 0.75) 0%, rgba(51, 60, 31, 0.85) 100%);
+        }
+        /* Map Background */
+        .map-background {
+            position: absolute;
+            inset: -50px;
+            width: calc(100% + 100px);
+            height: calc(100% + 100px);
+            transition: transform 0.1s ease-out;
+        }
+        .map-background iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+            pointer-events: none;
+            filter: saturate(0.7) brightness(1.1);
         }
         /* Hero Animations */
         @keyframes fadeInUp {
@@ -170,10 +185,18 @@
     </header>
 
     <!-- Hero Section -->
-    <section class="relative h-screen flex flex-col items-center justify-center px-6 overflow-hidden">
-        <div class="absolute inset-0 z-0 bg-cover bg-center" style="background-image: url('assets/fondo-header.png');">
-            <div class="absolute inset-0 hero-overlay"></div>
+    <section id="hero-section" class="relative h-screen flex flex-col items-center justify-center px-6 overflow-hidden">
+        <!-- Mapa Interactivo de Fondo -->
+        <div id="map-container" class="map-background">
+            <iframe 
+                src="https://mapa.poblaciones.org/map/96301/?emb=1&co=1#/@-26.918944,-65.24437,10z&r79092!c-26.843065,-65.201111,0.27241,0.305308/l=265801!v1!w0,0,0,0"
+                title="Mapa interactivo del Área Metropolitana de Tucumán"
+                loading="lazy">
+            </iframe>
         </div>
+        <!-- Overlay -->
+        <div class="absolute inset-0 hero-overlay z-[1]"></div>
+        
         <div class="relative z-10 max-w-[960px] text-center flex flex-col items-center gap-8 pt-20">
             <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-primary/30 bg-primary/10 text-primary text-xs font-bold tracking-widest uppercase mb-4 animate-fade-up delay-100">
                 <span class="relative flex h-2 w-2">
@@ -190,11 +213,35 @@
             </p>
         </div>
         <!-- Scroll Indicator -->
-        <div class="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce flex flex-col items-center gap-2 opacity-50">
-            <span class="text-[10px] font-bold uppercase tracking-widest">Descubrí más</span>
-            <span class="material-symbols-outlined">expand_more</span>
+        <div class="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce flex flex-col items-center gap-2 opacity-50 z-10">
+            <span class="text-[10px] font-bold uppercase tracking-widest text-white">Descubrí más</span>
+            <span class="material-symbols-outlined text-white">expand_more</span>
         </div>
     </section>
+
+    <script>
+        // Efecto parallax del mapa con el mouse
+        const heroSection = document.getElementById('hero-section');
+        const mapContainer = document.getElementById('map-container');
+        
+        if (heroSection && mapContainer) {
+            heroSection.addEventListener('mousemove', (e) => {
+                const rect = heroSection.getBoundingClientRect();
+                const x = (e.clientX - rect.left) / rect.width - 0.5;
+                const y = (e.clientY - rect.top) / rect.height - 0.5;
+                
+                // Movimiento suave del mapa (max 30px)
+                const moveX = x * 30;
+                const moveY = y * 30;
+                
+                mapContainer.style.transform = `translate(${moveX}px, ${moveY}px)`;
+            });
+            
+            heroSection.addEventListener('mouseleave', () => {
+                mapContainer.style.transform = 'translate(0, 0)';
+            });
+        }
+    </script>
 
     <!-- Sección Concurso de Ideas - Ganadores -->
     <section class="bg-gradient-to-br from-primary-darker to-background-dark py-24" id="concurso">
