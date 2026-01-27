@@ -109,21 +109,6 @@
         .hero-overlay {
             background: linear-gradient(180deg, rgba(51, 60, 31, 0.4) 0%, rgba(51, 60, 31, 0.55) 100%);
         }
-        /* Map Background */
-        .map-background {
-            position: absolute;
-            inset: -50px;
-            width: calc(100% + 100px);
-            height: calc(100% + 100px);
-            transition: transform 0.1s ease-out;
-        }
-        .map-background iframe {
-            width: 100%;
-            height: 100%;
-            border: none;
-            pointer-events: none;
-            filter: saturate(0.7) brightness(1.1);
-        }
         /* Hero Animations */
         @keyframes fadeInUp {
             from { opacity: 0; transform: translateY(30px); }
@@ -186,13 +171,17 @@
 
     <!-- Hero Section -->
     <section id="hero-section" class="relative h-screen flex flex-col items-center justify-center px-6 overflow-hidden">
-        <!-- Mapa Interactivo de Fondo -->
-        <div id="map-container" class="map-background">
-            <iframe 
-                src="https://mapa.poblaciones.org/map/96301/?emb=1&co=1#/@-26.918944,-65.24437,10z&r79092!c-26.843065,-65.201111,0.27241,0.305308/l=265801!v1!w0,0,0,0"
-                title="Mapa interactivo del Área Metropolitana de Tucumán"
-                loading="lazy">
-            </iframe>
+        <!-- Video de Fondo -->
+        <div class="absolute inset-0 w-full h-full overflow-hidden">
+            <video 
+                id="heroVideo"
+                autoplay 
+                muted 
+                playsinline
+                class="absolute top-1/2 left-1/2 min-w-full min-h-full w-auto h-auto -translate-x-1/2 -translate-y-1/2 object-cover"
+            >
+                <source src="assets/Amet2.mp4" type="video/mp4">
+            </video>
         </div>
         <!-- Overlay -->
         <div class="absolute inset-0 hero-overlay z-[1]"></div>
@@ -219,28 +208,39 @@
         </div>
     </section>
 
+    <!-- Script para reproducción ping-pong del video -->
     <script>
-        // Efecto parallax del mapa con el mouse
-        const heroSection = document.getElementById('hero-section');
-        const mapContainer = document.getElementById('map-container');
-        
-        if (heroSection && mapContainer) {
-            heroSection.addEventListener('mousemove', (e) => {
-                const rect = heroSection.getBoundingClientRect();
-                const x = (e.clientX - rect.left) / rect.width - 0.5;
-                const y = (e.clientY - rect.top) / rect.height - 0.5;
-                
-                // Movimiento suave del mapa (max 50px)
-                const moveX = x * 50;
-                const moveY = y * 50;
-                
-                mapContainer.style.transform = `translate(${moveX}px, ${moveY}px)`;
+        (function() {
+            const video = document.getElementById('heroVideo');
+            if (!video) return;
+            
+            let playForward = true;
+            const step = 1 / 30; // ~30fps
+            
+            video.addEventListener('loadedmetadata', () => {
+                video.play();
             });
             
-            heroSection.addEventListener('mouseleave', () => {
-                mapContainer.style.transform = 'translate(0, 0)';
+            video.addEventListener('ended', () => {
+                // Cuando termina hacia adelante, reproducir hacia atrás
+                playForward = false;
+                playReverse();
             });
-        }
+            
+            function playReverse() {
+                if (playForward) return;
+                
+                if (video.currentTime <= 0) {
+                    // Llegó al inicio, reproducir hacia adelante
+                    playForward = true;
+                    video.play();
+                    return;
+                }
+                
+                video.currentTime -= step;
+                requestAnimationFrame(playReverse);
+            }
+        })();
     </script>
 
     <!-- Sección Concurso de Ideas - Ganadores -->
