@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Donde Rebrota la Memoria - Premio Revelación | IBATÍN</title>
+    <link rel="icon" type="image/png" href="../favicon.png"/>
+    <link rel="apple-touch-icon" href="../icon.png"/>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Donde Rebrota la Memoria, brota la nueva vida. Modelo de gestión urbana participativa para Villa Muñecas. Premio Revelación Sub 25 del Concurso IBATÍN."/>
+    <meta name="keywords" content="Premio Revelación, Villa Muñecas, hábitat, participación, Gran Tucumán, IBATÍN, urbanismo social"/>
+    <meta name="author" content="Fundación IBATÍN"/>
+    <meta name="robots" content="index, follow"/>
+    <link rel="canonical" href="https://nicroldan.github.io/actualizacion-ibatin/proyectos/donde-rebrota-la-memoria.html"/>
+    
+    <!-- Open Graph -->
+    <meta property="og:type" content="article"/>
+    <meta property="og:url" content="https://nicroldan.github.io/actualizacion-ibatin/proyectos/donde-rebrota-la-memoria.html"/>
+    <meta property="og:title" content="Donde Rebrota la Memoria - Premio Revelación | IBATÍN"/>
+    <meta property="og:description" content="Modelo de gestión urbana participativa para transformar barrios vulnerables."/>
+    <meta property="og:image" content="https://nicroldan.github.io/actualizacion-ibatin/assets/concurso/premiorevelacion.jpg"/>
+    <meta property="og:locale" content="es_AR"/>
+    
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;500;700;900&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700" rel="stylesheet"/>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#B7C781",
+                        "primary-dark": "#606F3C",
+                        "primary-darker": "#333C1F",
+                        "accent": "#D8D8AC",
+                        "background-light": "#FFFFFF",
+                        "background-dark": "#333C1F",
+                    },
+                    fontFamily: {
+                        "display": ["Public Sans", "sans-serif"]
+                    },
+                },
+            },
+        }
+    </script>
+    <style>
+        body { font-family: 'Public Sans', sans-serif; }
+        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+        .editorial-title { letter-spacing: -0.04em; line-height: 1.1; }
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes fadeInLeft {
+            from { opacity: 0; transform: translateX(-30px); }
+            to { opacity: 1; transform: translateX(0); }
+        }
+        @keyframes scaleIn {
+            from { opacity: 0; transform: scale(0.9); }
+            to { opacity: 1; transform: scale(1); }
+        }
+        .animate-fade-up { animation: fadeInUp 0.8s ease-out forwards; opacity: 0; }
+        .animate-fade-left { animation: fadeInLeft 0.8s ease-out forwards; opacity: 0; }
+        .animate-scale { animation: scaleIn 0.8s ease-out forwards; opacity: 0; }
+        .delay-100 { animation-delay: 0.1s; }
+        .delay-200 { animation-delay: 0.2s; }
+        .delay-300 { animation-delay: 0.3s; }
+        .delay-400 { animation-delay: 0.4s; }
+    </style>
+</head>
+<body class="bg-background-light text-slate-800 min-h-screen">
+
+    <a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-[100] focus:bg-primary focus:text-white focus:px-4 focus:py-2 focus:rounded-lg focus:font-bold">Saltar al contenido principal</a>
+
+    <!-- Header -->
+    <header class="fixed top-0 w-full z-50 border-b border-primary-dark/20 bg-white/80 backdrop-blur-md" role="banner">
+        <div class="max-w-[1280px] mx-auto px-6 h-20 flex items-center justify-between">
+            <a class="flex items-center gap-3" href="../index.html">
+                <img src="../assets/logo-ibatin.png" alt="Logo IBATÍN" class="h-10 w-auto">
+            </a>
+            <nav class="hidden lg:flex items-center gap-10">
+                <a class="text-sm font-medium text-slate-500 hover:text-primary-dark transition-colors" href="../index.html">Inicio</a>
+                <a class="text-sm font-medium text-slate-500 hover:text-primary-dark transition-colors" href="../seccion 2/index.html">Pensar el AMeT</a>
+                <a class="text-sm font-bold text-primary-dark border-b-2 border-primary-dark pb-1" href="index.html">Nuestros Proyectos</a>
+                <a class="text-sm font-medium text-slate-500 hover:text-primary-dark transition-colors" href="../bitacora/index.html">Bitácora</a>
+                <a class="text-sm font-medium text-slate-500 hover:text-primary-dark transition-colors" href="../participa/index.html">Participá</a>
+            </nav>
+            <button id="menuBtn" class="lg:hidden flex flex-col gap-1.5 p-2" aria-label="Abrir menú de navegación" aria-expanded="false" aria-controls="mobileMenu">
+                <span class="block w-6 h-0.5 bg-slate-700 transition-all" id="line1"></span>
+                <span class="block w-6 h-0.5 bg-slate-700 transition-all" id="line2"></span>
+                <span class="block w-6 h-0.5 bg-slate-700 transition-all" id="line3"></span>
+            </button>
+        </div>
+        <div id="mobileMenu" class="lg:hidden hidden absolute top-20 left-0 w-full bg-white/95 backdrop-blur-md border-b border-primary-dark/20">
+            <nav class="flex flex-col p-6 gap-4">
+                <a class="text-lg font-medium text-slate-600 hover:text-primary-dark transition-colors" href="../index.html">Inicio</a>
+                <a class="text-lg font-medium text-slate-600 hover:text-primary-dark transition-colors" href="../seccion 2/index.html">Pensar el AMeT</a>
+                <a class="text-lg font-bold text-primary-dark" href="index.html">Nuestros Proyectos</a>
+                <a class="text-lg font-medium text-slate-600 hover:text-primary-dark transition-colors" href="../bitacora/index.html">Bitácora</a>
+                <a class="text-lg font-medium text-slate-600 hover:text-primary-dark transition-colors" href="../participa/index.html">Participá</a>
+            </nav>
+        </div>
+    </header>
+
+    <main id="main-content" role="main">
+        
+        <!-- Hero Section -->
+        <section class="relative min-h-[70vh] flex items-end">
+            <div class="absolute inset-0">
+                <img src="../assets/concurso/premiorevelacion.jpg" alt="Bianca y Bautista Manfredi - Donde Rebrota la Memoria" class="w-full h-full object-cover">
+                <div class="absolute inset-0 bg-gradient-to-t from-primary-darker via-primary-darker/60 to-transparent"></div>
+            </div>
+            <div class="relative z-10 max-w-[1280px] mx-auto px-6 pb-16 pt-32 w-full">
+                <div class="flex items-center gap-2 text-sm text-white/70 mb-6 animate-fade-left delay-100">
+                    <a href="../index.html" class="hover:text-white transition-colors">Inicio</a>
+                    <span>/</span>
+                    <a href="index.html" class="hover:text-white transition-colors">Proyectos</a>
+                    <span>/</span>
+                    <a href="ganadores-concurso.html" class="hover:text-white transition-colors">Ganadores</a>
+                    <span>/</span>
+                    <span class="text-white">Donde Rebrota la Memoria</span>
+                </div>
+                
+                <div class="flex items-center gap-3 mb-4 animate-fade-left delay-200">
+                    <span class="bg-amber-400 text-amber-900 px-4 py-2 rounded-full font-bold text-sm flex items-center gap-2">
+                        <span class="material-symbols-outlined text-lg">star</span>
+                        Premio Revelación Sub 25
+                    </span>
+                </div>
+                
+                <h1 class="text-4xl md:text-6xl font-black editorial-title text-white mb-4 animate-scale delay-300">
+                    Donde Rebrota la Memoria
+                </h1>
+                <p class="text-xl md:text-2xl text-primary font-medium max-w-3xl animate-fade-up delay-400">
+                    Brota la nueva vida: modelo de gestión urbana participativa para Villa Muñecas.
+                </p>
+            </div>
+        </section>
+
+        <!-- Contenido Principal -->
+        <section class="py-16 md:py-24">
+            <div class="max-w-[1280px] mx-auto px-6">
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-12">
+                    
+                    <div class="lg:col-span-2 space-y-12">
+                        
+                        <!-- Descripción -->
+                        <div>
+                            <h2 class="text-3xl font-black text-slate-800 mb-6 flex items-center gap-3">
+                                <span class="material-symbols-outlined text-primary-dark">description</span>
+                                Sobre el Proyecto
+                            </h2>
+                            <p class="text-lg text-slate-600 leading-relaxed mb-4">
+                                Esta propuesta aborda la situación de asentamientos vulnerables del AMeT, tomando Villa Muñecas como ejemplo. Este barrio fue identificado como el segundo más vulnerable de Argentina según TECHO (julio 2019).
+                            </p>
+                            <p class="text-lg text-slate-600 leading-relaxed">
+                                Desarrolla un modelo innovador de gestión urbana integral que combina relocalización segura, espacios verdes, participación comunitaria y construcción colaborativa para transformar realidades urbanas.
+                            </p>
+                        </div>
+
+                        <!-- Diagnóstico -->
+                        <div class="bg-amber-50 rounded-2xl p-6 md:p-8">
+                            <h2 class="text-2xl font-black text-slate-800 mb-4 flex items-center gap-3">
+                                <span class="material-symbols-outlined text-amber-600">analytics</span>
+                                El Diagnóstico: Villa Muñecas
+                            </h2>
+                            <div class="mb-4">
+                                <div class="flex items-center justify-between mb-2">
+                                    <span class="font-bold text-slate-800">Índice de Vulnerabilidad Territorial</span>
+                                    <span class="text-2xl font-black text-amber-600">3.47/4.00</span>
+                                </div>
+                                <div class="w-full bg-amber-200 rounded-full h-3">
+                                    <div class="bg-amber-600 h-3 rounded-full" style="width: 87%"></div>
+                                </div>
+                            </div>
+                            <div class="space-y-3 mt-6">
+                                <div class="flex items-start gap-3 bg-white p-4 rounded-xl">
+                                    <span class="material-symbols-outlined text-red-500">train</span>
+                                    <div>
+                                        <h4 class="font-bold text-slate-800">Cercanía a las Vías</h4>
+                                        <p class="text-slate-600 text-sm">120 familias a menos de medio metro de las vías del tren (4-6 trenes diarios)</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-start gap-3 bg-white p-4 rounded-xl">
+                                    <span class="material-symbols-outlined text-blue-500">water</span>
+                                    <div>
+                                        <h4 class="font-bold text-slate-800">Canal Norte</h4>
+                                        <p class="text-slate-600 text-sm">Riesgo de inundación y desbordamiento constante</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-start gap-3 bg-white p-4 rounded-xl">
+                                    <span class="material-symbols-outlined text-orange-500">gavel</span>
+                                    <div>
+                                        <h4 class="font-bold text-slate-800">Inseguridad Jurídica</h4>
+                                        <p class="text-slate-600 text-sm">Más del 50% de vecinos sin documentación de vivienda</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Los Cuatro Componentes -->
+                        <div>
+                            <h2 class="text-3xl font-black text-slate-800 mb-6 flex items-center gap-3">
+                                <span class="material-symbols-outlined text-primary-dark">apps</span>
+                                Los Cuatro Componentes
+                            </h2>
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                <div class="bg-gradient-to-br from-amber-100 to-amber-50 p-6 rounded-2xl">
+                                    <div class="w-12 h-12 bg-amber-500 text-white rounded-xl flex items-center justify-center mb-4">
+                                        <span class="material-symbols-outlined">home</span>
+                                    </div>
+                                    <h3 class="font-bold text-slate-800 mb-2">Relocalización Segura</h3>
+                                    <p class="text-slate-600 text-sm">Viviendas definitivas con servicios básicos garantizados y seguridad jurídica</p>
+                                </div>
+                                <div class="bg-gradient-to-br from-green-100 to-green-50 p-6 rounded-2xl">
+                                    <div class="w-12 h-12 bg-green-500 text-white rounded-xl flex items-center justify-center mb-4">
+                                        <span class="material-symbols-outlined">park</span>
+                                    </div>
+                                    <h3 class="font-bold text-slate-800 mb-2">Barrio-Parque</h3>
+                                    <p class="text-slate-600 text-sm">Amplios espacios verdes y equipamiento comunitario integrado</p>
+                                </div>
+                                <div class="bg-gradient-to-br from-blue-100 to-blue-50 p-6 rounded-2xl">
+                                    <div class="w-12 h-12 bg-blue-500 text-white rounded-xl flex items-center justify-center mb-4">
+                                        <span class="material-symbols-outlined">groups</span>
+                                    </div>
+                                    <h3 class="font-bold text-slate-800 mb-2">Participación Activa</h3>
+                                    <p class="text-slate-600 text-sm">Vecinos y actores locales involucrados en el proceso constructivo</p>
+                                </div>
+                                <div class="bg-gradient-to-br from-purple-100 to-purple-50 p-6 rounded-2xl">
+                                    <div class="w-12 h-12 bg-purple-500 text-white rounded-xl flex items-center justify-center mb-4">
+                                        <span class="material-symbols-outlined">accessible</span>
+                                    </div>
+                                    <h3 class="font-bold text-slate-800 mb-2">Diseño Universal</h3>
+                                    <p class="text-slate-600 text-sm">Accesibilidad completa e infraestructura sustentable</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Participantes en la Construcción -->
+                        <div>
+                            <h2 class="text-3xl font-black text-slate-800 mb-6 flex items-center gap-3">
+                                <span class="material-symbols-outlined text-primary-dark">construction</span>
+                                Construcción Participativa
+                            </h2>
+                            <p class="text-slate-600 mb-6">
+                                El proyecto propone un modo participativo y formativo de construcción que no depende exclusivamente del estado ni de empresas privadas, sino de la cooperación ciudadana.
+                            </p>
+                            <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                                <div class="bg-slate-50 p-5 rounded-xl text-center">
+                                    <span class="material-symbols-outlined text-primary-dark text-4xl mb-3">school</span>
+                                    <h4 class="font-bold text-slate-800 mb-1">Estudiantes Técnicos</h4>
+                                    <p class="text-slate-600 text-sm">Alumnos de escuelas técnicas adquieren experiencia práctica</p>
+                                </div>
+                                <div class="bg-slate-50 p-5 rounded-xl text-center">
+                                    <span class="material-symbols-outlined text-primary-dark text-4xl mb-3">family_restroom</span>
+                                    <h4 class="font-bold text-slate-800 mb-1">Vecinos Beneficiarios</h4>
+                                    <p class="text-slate-600 text-sm">Participan activamente en la construcción de sus hogares</p>
+                                </div>
+                                <div class="bg-slate-50 p-5 rounded-xl text-center">
+                                    <span class="material-symbols-outlined text-primary-dark text-4xl mb-3">volunteer_activism</span>
+                                    <h4 class="font-bold text-slate-800 mb-1">Reinserción Social</h4>
+                                    <p class="text-slate-600 text-sm">Internos del sistema penal con oportunidad de reinserción laboral</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Impacto -->
+                        <div>
+                            <h2 class="text-3xl font-black text-slate-800 mb-6 flex items-center gap-3">
+                                <span class="material-symbols-outlined text-primary-dark">trending_up</span>
+                                Impacto Esperado
+                            </h2>
+                            <div class="space-y-4">
+                                <div class="flex items-start gap-4 p-4 bg-slate-50 rounded-xl">
+                                    <span class="material-symbols-outlined text-green-600 text-2xl">eco</span>
+                                    <div>
+                                        <h4 class="font-bold text-slate-800">Barrio Sostenible</h4>
+                                        <p class="text-slate-600 text-sm">Ambientalmente sostenible, socialmente inclusivo y económicamente dinámico</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-start gap-4 p-4 bg-slate-50 rounded-xl">
+                                    <span class="material-symbols-outlined text-blue-600 text-2xl">hub</span>
+                                    <div>
+                                        <h4 class="font-bold text-slate-800">Nuevo Tejido Urbano</h4>
+                                        <p class="text-slate-600 text-sm">Tejido urbano vibrante en la periferia integrado a la ciudad</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-start gap-4 p-4 bg-slate-50 rounded-xl">
+                                    <span class="material-symbols-outlined text-purple-600 text-2xl">verified</span>
+                                    <div>
+                                        <h4 class="font-bold text-slate-800">Seguridad Jurídica</h4>
+                                        <p class="text-slate-600 text-sm">Garantizada para todas las familias relocalizadas</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-start gap-4 p-4 bg-slate-50 rounded-xl">
+                                    <span class="material-symbols-outlined text-amber-600 text-2xl">content_copy</span>
+                                    <div>
+                                        <h4 class="font-bold text-slate-800">Modelo Replicable</h4>
+                                        <p class="text-slate-600 text-sm">Precedente de transformación urbana participativa aplicable a otros barrios</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Impacto Socioambiental -->
+                        <div class="bg-gradient-to-br from-green-50 to-primary/10 rounded-2xl p-6 md:p-8">
+                            <h2 class="text-2xl font-black text-slate-800 mb-4 flex items-center gap-3">
+                                <span class="material-symbols-outlined text-green-600">nature</span>
+                                Impacto Socioambiental
+                            </h2>
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                <div class="flex items-start gap-3">
+                                    <span class="material-symbols-outlined text-green-600">check_circle</span>
+                                    <span class="text-slate-700">Reducción de contaminación y mejora del microclima urbano</span>
+                                </div>
+                                <div class="flex items-start gap-3">
+                                    <span class="material-symbols-outlined text-green-600">check_circle</span>
+                                    <span class="text-slate-700">Vegetación nativa y gestión sustentable de agua de lluvia</span>
+                                </div>
+                                <div class="flex items-start gap-3">
+                                    <span class="material-symbols-outlined text-green-600">check_circle</span>
+                                    <span class="text-slate-700">Mitigación de efectos de isla de calor</span>
+                                </div>
+                                <div class="flex items-start gap-3">
+                                    <span class="material-symbols-outlined text-green-600">check_circle</span>
+                                    <span class="text-slate-700">Capacitación laboral a través de participación</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Innovación -->
+                        <div>
+                            <h2 class="text-3xl font-black text-slate-800 mb-6 flex items-center gap-3">
+                                <span class="material-symbols-outlined text-primary-dark">auto_awesome</span>
+                                ¿Por qué es innovador?
+                            </h2>
+                            <ul class="space-y-3">
+                                <li class="flex items-start gap-3">
+                                    <span class="material-symbols-outlined text-primary-dark mt-1">check_circle</span>
+                                    <span class="text-slate-600">Modo participativo y formativo de construcción</span>
+                                </li>
+                                <li class="flex items-start gap-3">
+                                    <span class="material-symbols-outlined text-primary-dark mt-1">check_circle</span>
+                                    <span class="text-slate-600">No depende exclusivamente del estado ni de empresas privadas</span>
+                                </li>
+                                <li class="flex items-start gap-3">
+                                    <span class="material-symbols-outlined text-primary-dark mt-1">check_circle</span>
+                                    <span class="text-slate-600">Cooperación ciudadana como motor del cambio</span>
+                                </li>
+                                <li class="flex items-start gap-3">
+                                    <span class="material-symbols-outlined text-primary-dark mt-1">check_circle</span>
+                                    <span class="text-slate-600">Cada parte del proceso es instancia de integración social</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Sidebar -->
+                    <div class="lg:col-span-1">
+                        <div class="sticky top-28 space-y-6">
+                            
+                            <!-- Equipo -->
+                            <div class="bg-gradient-to-br from-amber-100 to-amber-50 rounded-2xl p-6 ring-2 ring-amber-400">
+                                <div class="flex items-center gap-2 mb-4">
+                                    <span class="material-symbols-outlined text-amber-600">star</span>
+                                    <h3 class="font-bold text-slate-800">Premio Revelación Sub 25</h3>
+                                </div>
+                                <ul class="space-y-3">
+                                    <li class="flex items-center gap-3">
+                                        <div class="w-10 h-10 bg-amber-500 rounded-full flex items-center justify-center text-white font-bold">BM</div>
+                                        <span class="text-slate-700 text-sm">Bianca Manfredi</span>
+                                    </li>
+                                    <li class="flex items-center gap-3">
+                                        <div class="w-10 h-10 bg-amber-500 rounded-full flex items-center justify-center text-white font-bold">BM</div>
+                                        <span class="text-slate-700 text-sm">Bautista Manfredi</span>
+                                    </li>
+                                </ul>
+                                <p class="text-amber-700 text-xs mt-4">Seudónimo: Naturn</p>
+                            </div>
+
+                            <!-- Caso de Estudio -->
+                            <div class="bg-slate-50 rounded-2xl p-6">
+                                <h3 class="font-bold text-slate-800 mb-4 flex items-center gap-2">
+                                    <span class="material-symbols-outlined text-primary-dark">location_on</span>
+                                    Caso de Estudio
+                                </h3>
+                                <div class="text-center">
+                                    <p class="text-2xl font-black text-primary-dark">Villa Muñecas</p>
+                                    <p class="text-slate-500 text-sm">2° barrio más vulnerable de Argentina</p>
+                                    <p class="text-slate-400 text-xs mt-1">Según TECHO (julio 2019)</p>
+                                </div>
+                            </div>
+
+                            <!-- Beneficiarios -->
+                            <div class="bg-slate-50 rounded-2xl p-6">
+                                <h3 class="font-bold text-slate-800 mb-4 flex items-center gap-2">
+                                    <span class="material-symbols-outlined text-primary-dark">diversity_3</span>
+                                    Beneficiarios
+                                </h3>
+                                <ul class="space-y-2 text-sm text-slate-600">
+                                    <li class="flex items-start gap-2">
+                                        <span class="material-symbols-outlined text-primary text-sm mt-0.5">arrow_right</span>
+                                        Familias en situación de vulnerabilidad
+                                    </li>
+                                    <li class="flex items-start gap-2">
+                                        <span class="material-symbols-outlined text-primary text-sm mt-0.5">arrow_right</span>
+                                        Habitantes con déficit habitacional
+                                    </li>
+                                    <li class="flex items-start gap-2">
+                                        <span class="material-symbols-outlined text-primary text-sm mt-0.5">arrow_right</span>
+                                        Estudiantes de escuelas técnicas
+                                    </li>
+                                    <li class="flex items-start gap-2">
+                                        <span class="material-symbols-outlined text-primary text-sm mt-0.5">arrow_right</span>
+                                        Personas en proceso de reinserción
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <!-- Tags -->
+                            <div class="bg-slate-50 rounded-2xl p-6">
+                                <h3 class="font-bold text-slate-800 mb-4 flex items-center gap-2">
+                                    <span class="material-symbols-outlined text-primary-dark">label</span>
+                                    Temáticas
+                                </h3>
+                                <div class="flex flex-wrap gap-2">
+                                    <span class="px-3 py-1 bg-amber-100 text-amber-800 text-xs font-medium rounded-full">Hábitat</span>
+                                    <span class="px-3 py-1 bg-amber-100 text-amber-800 text-xs font-medium rounded-full">Participación</span>
+                                    <span class="px-3 py-1 bg-amber-100 text-amber-800 text-xs font-medium rounded-full">Inclusión</span>
+                                    <span class="px-3 py-1 bg-amber-100 text-amber-800 text-xs font-medium rounded-full">Sustentabilidad</span>
+                                </div>
+                            </div>
+
+                            <a href="ganadores-concurso.html" class="flex items-center justify-center gap-2 w-full bg-primary-dark text-white px-6 py-4 rounded-xl font-bold hover:bg-primary-darker transition-all">
+                                <span class="material-symbols-outlined">arrow_back</span>
+                                Ver todos los ganadores
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA -->
+        <section class="bg-gradient-to-br from-primary to-primary-dark py-16">
+            <div class="max-w-[1280px] mx-auto px-6 text-center">
+                <h2 class="text-3xl md:text-4xl font-black text-white mb-4">¿Te inspiró este proyecto?</h2>
+                <p class="text-white/80 text-lg max-w-2xl mx-auto mb-8">
+                    Sumate a la conversación y conocé más formas de participar en el futuro del Área Metropolitana de Tucumán.
+                </p>
+                <a href="../participa/index.html" class="inline-flex items-center gap-2 bg-white text-primary-dark px-8 py-4 rounded-xl font-bold hover:bg-primary-darker hover:text-white transition-all">
+                    <span class="material-symbols-outlined">volunteer_activism</span>
+                    Participá con IBATÍN
+                </a>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-primary-darker text-white py-16">
+        <div class="max-w-[1280px] mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
+                <div class="md:col-span-2">
+                    <img src="../assets/logo-ibatin.png" alt="Logo IBATÍN" class="h-12 w-auto mb-4 brightness-0 invert">
+                    <p class="text-white/70 leading-relaxed max-w-md">
+                        IBATÍN es un proyecto de la sociedad civil que impulsa la gobernanza del Área Metropolitana de Tucumán, articulando ciudadanía, conocimiento y políticas públicas.
+                    </p>
+                </div>
+                <div>
+                    <h4 class="font-bold text-lg mb-4">Navegación</h4>
+                    <nav class="flex flex-col gap-2">
+                        <a href="../index.html" class="text-white/70 hover:text-primary transition-colors">Inicio</a>
+                        <a href="../seccion 2/index.html" class="text-white/70 hover:text-primary transition-colors">Pensar el AMeT</a>
+                        <a href="index.html" class="text-white/70 hover:text-primary transition-colors">Nuestros Proyectos</a>
+                        <a href="../bitacora/index.html" class="text-white/70 hover:text-primary transition-colors">Bitácora</a>
+                        <a href="../participa/index.html" class="text-white/70 hover:text-primary transition-colors">Participá</a>
+                    </nav>
+                </div>
+                <div>
+                    <h4 class="font-bold text-lg mb-4">Contacto</h4>
+                    <div class="flex flex-col gap-2 text-white/70">
+                        <p>San Miguel de Tucumán</p>
+                        <p>Argentina</p>
+                        <a href="mailto:contacto@ibatin.org" class="hover:text-primary transition-colors">contacto@ibatin.org</a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-white/10 pt-8 text-center">
+                <p class="text-white/50 text-sm">© 2026 Fundación IBATÍN. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const menuBtn = document.getElementById('menuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+        const line1 = document.getElementById('line1');
+        const line2 = document.getElementById('line2');
+        const line3 = document.getElementById('line3');
+        let isMenuOpen = false;
+
+        menuBtn.addEventListener('click', () => {
+            isMenuOpen = !isMenuOpen;
+            mobileMenu.classList.toggle('hidden');
+            menuBtn.setAttribute('aria-expanded', isMenuOpen);
+            
+            if (isMenuOpen) {
+                line1.style.transform = 'rotate(45deg) translate(5px, 5px)';
+                line2.style.opacity = '0';
+                line3.style.transform = 'rotate(-45deg) translate(5px, -5px)';
+            } else {
+                line1.style.transform = '';
+                line2.style.opacity = '1';
+                line3.style.transform = '';
+            }
+        });
+    </script>
+</body>
+</html>

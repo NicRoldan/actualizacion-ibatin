@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Arte que Conecta - Turismo Sostenible | IBATÍN</title>
+    <link rel="icon" type="image/png" href="../favicon.png"/>
+    <link rel="apple-touch-icon" href="../icon.png"/>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Arte que Conecta: Circuitos Urbanos para un AMeT Sostenible. Murales, tecnología y gastronomía local para redistribuir el turismo en el Gran Tucumán."/>
+    <meta name="keywords" content="Arte que Conecta, turismo sostenible, arte urbano, cicloturismo, Gran Tucumán, IBATÍN"/>
+    <meta name="author" content="Fundación IBATÍN"/>
+    <meta name="robots" content="index, follow"/>
+    <link rel="canonical" href="https://nicroldan.github.io/actualizacion-ibatin/proyectos/arte-que-conecta.html"/>
+    
+    <!-- Open Graph -->
+    <meta property="og:type" content="article"/>
+    <meta property="og:url" content="https://nicroldan.github.io/actualizacion-ibatin/proyectos/arte-que-conecta.html"/>
+    <meta property="og:title" content="Arte que Conecta - Turismo Sostenible | IBATÍN"/>
+    <meta property="og:description" content="Circuitos de arte urbano que integran barrios con tecnología, puntos verdes y gastronomía local."/>
+    <meta property="og:image" content="https://nicroldan.github.io/actualizacion-ibatin/assets/concurso/GanadoresTurismoSostenible.jpg"/>
+    <meta property="og:locale" content="es_AR"/>
+    
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;500;700;900&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700" rel="stylesheet"/>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#B7C781",
+                        "primary-dark": "#606F3C",
+                        "primary-darker": "#333C1F",
+                        "accent": "#D8D8AC",
+                        "background-light": "#FFFFFF",
+                        "background-dark": "#333C1F",
+                    },
+                    fontFamily: {
+                        "display": ["Public Sans", "sans-serif"]
+                    },
+                },
+            },
+        }
+    </script>
+    <style>
+        body { font-family: 'Public Sans', sans-serif; }
+        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+        .editorial-title { letter-spacing: -0.04em; line-height: 1.1; }
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes fadeInLeft {
+            from { opacity: 0; transform: translateX(-30px); }
+            to { opacity: 1; transform: translateX(0); }
+        }
+        @keyframes scaleIn {
+            from { opacity: 0; transform: scale(0.9); }
+            to { opacity: 1; transform: scale(1); }
+        }
+        .animate-fade-up { animation: fadeInUp 0.8s ease-out forwards; opacity: 0; }
+        .animate-fade-left { animation: fadeInLeft 0.8s ease-out forwards; opacity: 0; }
+        .animate-scale { animation: scaleIn 0.8s ease-out forwards; opacity: 0; }
+        .delay-100 { animation-delay: 0.1s; }
+        .delay-200 { animation-delay: 0.2s; }
+        .delay-300 { animation-delay: 0.3s; }
+        .delay-400 { animation-delay: 0.4s; }
+    </style>
+</head>
+<body class="bg-background-light text-slate-800 min-h-screen">
+
+    <a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-[100] focus:bg-primary focus:text-white focus:px-4 focus:py-2 focus:rounded-lg focus:font-bold">Saltar al contenido principal</a>
+
+    <!-- Header -->
+    <header class="fixed top-0 w-full z-50 border-b border-primary-dark/20 bg-white/80 backdrop-blur-md" role="banner">
+        <div class="max-w-[1280px] mx-auto px-6 h-20 flex items-center justify-between">
+            <a class="flex items-center gap-3" href="../index.html">
+                <img src="../assets/logo-ibatin.png" alt="Logo IBATÍN" class="h-10 w-auto">
+            </a>
+            <nav class="hidden lg:flex items-center gap-10">
+                <a class="text-sm font-medium text-slate-500 hover:text-primary-dark transition-colors" href="../index.html">Inicio</a>
+                <a class="text-sm font-medium text-slate-500 hover:text-primary-dark transition-colors" href="../seccion 2/index.html">Pensar el AMeT</a>
+                <a class="text-sm font-bold text-primary-dark border-b-2 border-primary-dark pb-1" href="index.html">Nuestros Proyectos</a>
+                <a class="text-sm font-medium text-slate-500 hover:text-primary-dark transition-colors" href="../bitacora/index.html">Bitácora</a>
+                <a class="text-sm font-medium text-slate-500 hover:text-primary-dark transition-colors" href="../participa/index.html">Participá</a>
+            </nav>
+            <button id="menuBtn" class="lg:hidden flex flex-col gap-1.5 p-2" aria-label="Abrir menú de navegación" aria-expanded="false" aria-controls="mobileMenu">
+                <span class="block w-6 h-0.5 bg-slate-700 transition-all" id="line1"></span>
+                <span class="block w-6 h-0.5 bg-slate-700 transition-all" id="line2"></span>
+                <span class="block w-6 h-0.5 bg-slate-700 transition-all" id="line3"></span>
+            </button>
+        </div>
+        <div id="mobileMenu" class="lg:hidden hidden absolute top-20 left-0 w-full bg-white/95 backdrop-blur-md border-b border-primary-dark/20">
+            <nav class="flex flex-col p-6 gap-4">
+                <a class="text-lg font-medium text-slate-600 hover:text-primary-dark transition-colors" href="../index.html">Inicio</a>
+                <a class="text-lg font-medium text-slate-600 hover:text-primary-dark transition-colors" href="../seccion 2/index.html">Pensar el AMeT</a>
+                <a class="text-lg font-bold text-primary-dark" href="index.html">Nuestros Proyectos</a>
+                <a class="text-lg font-medium text-slate-600 hover:text-primary-dark transition-colors" href="../bitacora/index.html">Bitácora</a>
+                <a class="text-lg font-medium text-slate-600 hover:text-primary-dark transition-colors" href="../participa/index.html">Participá</a>
+            </nav>
+        </div>
+    </header>
+
+    <main id="main-content" role="main">
+        
+        <!-- Hero Section -->
+        <section class="relative min-h-[70vh] flex items-end">
+            <div class="absolute inset-0">
+                <img src="../assets/concurso/GanadoresTurismoSostenible.jpg" alt="Julio Middagh y Pedro Albornoz - Arte que Conecta" class="w-full h-full object-cover">
+                <div class="absolute inset-0 bg-gradient-to-t from-primary-darker via-primary-darker/60 to-transparent"></div>
+            </div>
+            <div class="relative z-10 max-w-[1280px] mx-auto px-6 pb-16 pt-32 w-full">
+                <div class="flex items-center gap-2 text-sm text-white/70 mb-6 animate-fade-left delay-100">
+                    <a href="../index.html" class="hover:text-white transition-colors">Inicio</a>
+                    <span>/</span>
+                    <a href="index.html" class="hover:text-white transition-colors">Proyectos</a>
+                    <span>/</span>
+                    <a href="ganadores-concurso.html" class="hover:text-white transition-colors">Ganadores</a>
+                    <span>/</span>
+                    <span class="text-white">Arte que Conecta</span>
+                </div>
+                
+                <div class="flex items-center gap-3 mb-4 animate-fade-left delay-200">
+                    <span class="bg-primary text-primary-darker px-4 py-2 rounded-full font-bold text-sm flex items-center gap-2">
+                        <span class="material-symbols-outlined text-lg">military_tech</span>
+                        Mención de Honor
+                    </span>
+                    <span class="bg-orange-500/30 text-white px-4 py-2 rounded-full font-bold text-sm flex items-center gap-2">
+                        <span class="material-symbols-outlined text-lg">tour</span>
+                        Turismo Sostenible
+                    </span>
+                </div>
+                
+                <h1 class="text-5xl md:text-7xl font-black editorial-title text-white mb-4 animate-scale delay-300">
+                    Arte que Conecta
+                </h1>
+                <p class="text-xl md:text-2xl text-primary font-medium max-w-3xl animate-fade-up delay-400">
+                    Circuitos Urbanos para un AMeT Sostenible: murales, tecnología y gastronomía local.
+                </p>
+            </div>
+        </section>
+
+        <!-- Contenido Principal -->
+        <section class="py-16 md:py-24">
+            <div class="max-w-[1280px] mx-auto px-6">
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-12">
+                    
+                    <div class="lg:col-span-2 space-y-12">
+                        
+                        <!-- Descripción -->
+                        <div>
+                            <h2 class="text-3xl font-black text-slate-800 mb-6 flex items-center gap-3">
+                                <span class="material-symbols-outlined text-primary-dark">description</span>
+                                Sobre el Proyecto
+                            </h2>
+                            <p class="text-lg text-slate-600 leading-relaxed mb-4">
+                                Arte que Conecta es una propuesta para crear circuitos turísticos innovadores que conecten los atractivos culturales, barriales y gastronómicos de los distintos municipios del AMeT.
+                            </p>
+                            <p class="text-lg text-slate-600 leading-relaxed">
+                                El proyecto busca fomentar una circulación más equitativa de visitantes y dinamizar zonas que hoy permanecen fuera del mapa turístico, redistribuyendo los beneficios del turismo en toda el área metropolitana.
+                            </p>
+                        </div>
+
+                        <!-- Diagnóstico -->
+                        <div class="bg-orange-50 rounded-2xl p-6 md:p-8">
+                            <h2 class="text-2xl font-black text-slate-800 mb-4 flex items-center gap-3">
+                                <span class="material-symbols-outlined text-orange-600">analytics</span>
+                                El Diagnóstico
+                            </h2>
+                            <p class="text-slate-600 mb-4">
+                                Existe una marcada disparidad en la distribución de productos turísticos en el AMeT:
+                            </p>
+                            <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                                <div class="bg-white p-4 rounded-xl text-center">
+                                    <span class="text-3xl font-black text-orange-600">61%</span>
+                                    <p class="text-slate-600 text-sm">Ocupación hotelera Yerba Buena</p>
+                                </div>
+                                <div class="bg-white p-4 rounded-xl text-center">
+                                    <span class="text-3xl font-black text-orange-500">55%</span>
+                                    <p class="text-slate-600 text-sm">Ocupación hotelera San Miguel</p>
+                                </div>
+                                <div class="bg-white p-4 rounded-xl text-center">
+                                    <span class="text-3xl font-black text-orange-400">33%</span>
+                                    <p class="text-slate-600 text-sm">Ocupación hotelera Tafí Viejo</p>
+                                </div>
+                            </div>
+                            <p class="text-slate-500 text-sm mt-4 italic">
+                                Municipios como La Banda del Río Salí, Las Talitas, Lules o Alderetes no cuentan con registros turísticos significativos.
+                            </p>
+                        </div>
+
+                        <!-- Objetivos -->
+                        <div>
+                            <h2 class="text-3xl font-black text-slate-800 mb-6 flex items-center gap-3">
+                                <span class="material-symbols-outlined text-primary-dark">target</span>
+                                Objetivos
+                            </h2>
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                <div class="bg-slate-50 p-6 rounded-2xl">
+                                    <span class="material-symbols-outlined text-primary-dark text-3xl mb-3">hub</span>
+                                    <h3 class="font-bold text-slate-800 mb-2">Integración Turística</h3>
+                                    <p class="text-slate-600 text-sm">Integrar turísticamente al AMeT conectando todos los municipios</p>
+                                </div>
+                                <div class="bg-slate-50 p-6 rounded-2xl">
+                                    <span class="material-symbols-outlined text-primary-dark text-3xl mb-3">balance</span>
+                                    <h3 class="font-bold text-slate-800 mb-2">Oportunidades Equitativas</h3>
+                                    <p class="text-slate-600 text-sm">Generar oportunidades de desarrollo para todas las zonas</p>
+                                </div>
+                                <div class="bg-slate-50 p-6 rounded-2xl">
+                                    <span class="material-symbols-outlined text-primary-dark text-3xl mb-3">palette</span>
+                                    <h3 class="font-bold text-slate-800 mb-2">Diversificar Oferta</h3>
+                                    <p class="text-slate-600 text-sm">Diversificar la oferta turística con cultura y arte</p>
+                                </div>
+                                <div class="bg-slate-50 p-6 rounded-2xl">
+                                    <span class="material-symbols-outlined text-primary-dark text-3xl mb-3">schedule</span>
+                                    <h3 class="font-bold text-slate-800 mb-2">Mayor Permanencia</h3>
+                                    <p class="text-slate-600 text-sm">Incrementar la permanencia de visitantes en la región</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Propuesta -->
+                        <div>
+                            <h2 class="text-3xl font-black text-slate-800 mb-6 flex items-center gap-3">
+                                <span class="material-symbols-outlined text-primary-dark">lightbulb</span>
+                                Propuesta Detallada
+                            </h2>
+                            <div class="space-y-4">
+                                <div class="bg-gradient-to-r from-orange-50 to-transparent p-6 rounded-2xl border-l-4 border-orange-500">
+                                    <h3 class="font-bold text-slate-800 mb-2">🎨 Murales como Nodos Culturales</h3>
+                                    <p class="text-slate-600">Creación de circuitos de arte urbano para integrar barrios. Cada mural funciona como un nodo cultural con información interactiva accesible mediante app móvil.</p>
+                                </div>
+                                <div class="bg-gradient-to-r from-orange-50 to-transparent p-6 rounded-2xl border-l-4 border-orange-500">
+                                    <h3 class="font-bold text-slate-800 mb-2">📱 Aplicación Móvil Interactiva</h3>
+                                    <p class="text-slate-600">App con audioguías, relatos, datos históricos y gastronómicos. Evita el uso de papel y difunde contenidos ambientales y culturales.</p>
+                                </div>
+                                <div class="bg-gradient-to-r from-orange-50 to-transparent p-6 rounded-2xl border-l-4 border-orange-500">
+                                    <h3 class="font-bold text-slate-800 mb-2">🌱 Puntos Verdes Educativos</h3>
+                                    <p class="text-slate-600">Instalación de puntos verdes junto a los murales para educación ambiental y sensibilización sobre reciclaje.</p>
+                                </div>
+                                <div class="bg-gradient-to-r from-orange-50 to-transparent p-6 rounded-2xl border-l-4 border-orange-500">
+                                    <h3 class="font-bold text-slate-800 mb-2">🍽️ Gastronomía Local</h3>
+                                    <p class="text-slate-600">Recorridos diseñados para comenzar y finalizar en polos gastronómicos, fortaleciendo comercios locales.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Impacto Primer Año -->
+                        <div>
+                            <h2 class="text-3xl font-black text-slate-800 mb-6 flex items-center gap-3">
+                                <span class="material-symbols-outlined text-primary-dark">trending_up</span>
+                                Impacto Esperado (Primer Año)
+                            </h2>
+                            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                                <div class="text-center p-4 bg-primary-darker rounded-2xl">
+                                    <span class="text-3xl font-black text-primary">70-100</span>
+                                    <p class="text-white/80 text-sm mt-1">Artistas y trabajadores culturales</p>
+                                </div>
+                                <div class="text-center p-4 bg-primary-darker rounded-2xl">
+                                    <span class="text-3xl font-black text-primary">+300</span>
+                                    <p class="text-white/80 text-sm mt-1">Vecinos en talleres</p>
+                                </div>
+                                <div class="text-center p-4 bg-primary-darker rounded-2xl">
+                                    <span class="text-3xl font-black text-primary">1,500</span>
+                                    <p class="text-white/80 text-sm mt-1">Visitantes estimados</p>
+                                </div>
+                                <div class="text-center p-4 bg-primary-darker rounded-2xl">
+                                    <span class="text-3xl font-black text-primary">1,200</span>
+                                    <p class="text-white/80 text-sm mt-1">Actores directos</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Innovación -->
+                        <div>
+                            <h2 class="text-3xl font-black text-slate-800 mb-6 flex items-center gap-3">
+                                <span class="material-symbols-outlined text-primary-dark">auto_awesome</span>
+                                ¿Por qué es innovador?
+                            </h2>
+                            <ul class="space-y-3">
+                                <li class="flex items-start gap-3">
+                                    <span class="material-symbols-outlined text-primary-dark mt-1">check_circle</span>
+                                    <span class="text-slate-600">Integra arte urbano con tecnología, sostenibilidad ambiental y activación comunitaria</span>
+                                </li>
+                                <li class="flex items-start gap-3">
+                                    <span class="material-symbols-outlined text-primary-dark mt-1">check_circle</span>
+                                    <span class="text-slate-600">Movilidad sustentable: recorridos a pie o en cicloturismo</span>
+                                </li>
+                                <li class="flex items-start gap-3">
+                                    <span class="material-symbols-outlined text-primary-dark mt-1">check_circle</span>
+                                    <span class="text-slate-600">Murales con temática ambiental que reducen emisiones y sensibilizan</span>
+                                </li>
+                                <li class="flex items-start gap-3">
+                                    <span class="material-symbols-outlined text-primary-dark mt-1">check_circle</span>
+                                    <span class="text-slate-600">Modelo de turismo sostenible e inclusivo con identidad territorial</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Sidebar -->
+                    <div class="lg:col-span-1">
+                        <div class="sticky top-28 space-y-6">
+                            
+                            <!-- Equipo -->
+                            <div class="bg-slate-50 rounded-2xl p-6">
+                                <h3 class="font-bold text-slate-800 mb-4 flex items-center gap-2">
+                                    <span class="material-symbols-outlined text-primary-dark">group</span>
+                                    Equipo
+                                </h3>
+                                <ul class="space-y-3">
+                                    <li class="flex items-center gap-3">
+                                        <div class="w-10 h-10 bg-primary-dark rounded-full flex items-center justify-center text-white font-bold">JM</div>
+                                        <span class="text-slate-700 text-sm">Julio José Middagh</span>
+                                    </li>
+                                    <li class="flex items-center gap-3">
+                                        <div class="w-10 h-10 bg-primary-dark rounded-full flex items-center justify-center text-white font-bold">PA</div>
+                                        <span class="text-slate-700 text-sm">Pedro Bartolomé Albornoz Piossek</span>
+                                    </li>
+                                </ul>
+                                <p class="text-slate-400 text-xs mt-4">Seudónimo: LOLA MORA</p>
+                            </div>
+
+                            <!-- Beneficiarios -->
+                            <div class="bg-slate-50 rounded-2xl p-6">
+                                <h3 class="font-bold text-slate-800 mb-4 flex items-center gap-2">
+                                    <span class="material-symbols-outlined text-primary-dark">diversity_3</span>
+                                    Beneficiarios
+                                </h3>
+                                <ul class="space-y-2 text-sm text-slate-600">
+                                    <li class="flex items-start gap-2">
+                                        <span class="material-symbols-outlined text-primary text-sm mt-0.5">arrow_right</span>
+                                        Artistas y trabajadores culturales
+                                    </li>
+                                    <li class="flex items-start gap-2">
+                                        <span class="material-symbols-outlined text-primary text-sm mt-0.5">arrow_right</span>
+                                        Comercios gastronómicos locales
+                                    </li>
+                                    <li class="flex items-start gap-2">
+                                        <span class="material-symbols-outlined text-primary text-sm mt-0.5">arrow_right</span>
+                                        Vecinos de barrios seleccionados
+                                    </li>
+                                    <li class="flex items-start gap-2">
+                                        <span class="material-symbols-outlined text-primary text-sm mt-0.5">arrow_right</span>
+                                        Turistas locales, nacionales y extranjeros
+                                    </li>
+                                    <li class="flex items-start gap-2">
+                                        <span class="material-symbols-outlined text-primary text-sm mt-0.5">arrow_right</span>
+                                        Docentes y estudiantes
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <!-- Tags -->
+                            <div class="bg-slate-50 rounded-2xl p-6">
+                                <h3 class="font-bold text-slate-800 mb-4 flex items-center gap-2">
+                                    <span class="material-symbols-outlined text-primary-dark">label</span>
+                                    Temáticas
+                                </h3>
+                                <div class="flex flex-wrap gap-2">
+                                    <span class="px-3 py-1 bg-primary/20 text-primary-dark text-xs font-medium rounded-full">Arte Urbano</span>
+                                    <span class="px-3 py-1 bg-primary/20 text-primary-dark text-xs font-medium rounded-full">App Móvil</span>
+                                    <span class="px-3 py-1 bg-primary/20 text-primary-dark text-xs font-medium rounded-full">Cicloturismo</span>
+                                    <span class="px-3 py-1 bg-primary/20 text-primary-dark text-xs font-medium rounded-full">Gastronomía</span>
+                                    <span class="px-3 py-1 bg-primary/20 text-primary-dark text-xs font-medium rounded-full">Sustentabilidad</span>
+                                </div>
+                            </div>
+
+                            <a href="ganadores-concurso.html" class="flex items-center justify-center gap-2 w-full bg-primary-dark text-white px-6 py-4 rounded-xl font-bold hover:bg-primary-darker transition-all">
+                                <span class="material-symbols-outlined">arrow_back</span>
+                                Ver todos los ganadores
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA -->
+        <section class="bg-gradient-to-br from-primary to-primary-dark py-16">
+            <div class="max-w-[1280px] mx-auto px-6 text-center">
+                <h2 class="text-3xl md:text-4xl font-black text-white mb-4">¿Te inspiró este proyecto?</h2>
+                <p class="text-white/80 text-lg max-w-2xl mx-auto mb-8">
+                    Sumate a la conversación y conocé más formas de participar en el futuro del Área Metropolitana de Tucumán.
+                </p>
+                <a href="../participa/index.html" class="inline-flex items-center gap-2 bg-white text-primary-dark px-8 py-4 rounded-xl font-bold hover:bg-primary-darker hover:text-white transition-all">
+                    <span class="material-symbols-outlined">volunteer_activism</span>
+                    Participá con IBATÍN
+                </a>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-primary-darker text-white py-16">
+        <div class="max-w-[1280px] mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
+                <div class="md:col-span-2">
+                    <img src="../assets/logo-ibatin.png" alt="Logo IBATÍN" class="h-12 w-auto mb-4 brightness-0 invert">
+                    <p class="text-white/70 leading-relaxed max-w-md">
+                        IBATÍN es un proyecto de la sociedad civil que impulsa la gobernanza del Área Metropolitana de Tucumán, articulando ciudadanía, conocimiento y políticas públicas.
+                    </p>
+                </div>
+                <div>
+                    <h4 class="font-bold text-lg mb-4">Navegación</h4>
+                    <nav class="flex flex-col gap-2">
+                        <a href="../index.html" class="text-white/70 hover:text-primary transition-colors">Inicio</a>
+                        <a href="../seccion 2/index.html" class="text-white/70 hover:text-primary transition-colors">Pensar el AMeT</a>
+                        <a href="index.html" class="text-white/70 hover:text-primary transition-colors">Nuestros Proyectos</a>
+                        <a href="../bitacora/index.html" class="text-white/70 hover:text-primary transition-colors">Bitácora</a>
+                        <a href="../participa/index.html" class="text-white/70 hover:text-primary transition-colors">Participá</a>
+                    </nav>
+                </div>
+                <div>
+                    <h4 class="font-bold text-lg mb-4">Contacto</h4>
+                    <div class="flex flex-col gap-2 text-white/70">
+                        <p>San Miguel de Tucumán</p>
+                        <p>Argentina</p>
+                        <a href="mailto:contacto@ibatin.org" class="hover:text-primary transition-colors">contacto@ibatin.org</a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-white/10 pt-8 text-center">
+                <p class="text-white/50 text-sm">© 2026 Fundación IBATÍN. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const menuBtn = document.getElementById('menuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+        const line1 = document.getElementById('line1');
+        const line2 = document.getElementById('line2');
+        const line3 = document.getElementById('line3');
+        let isMenuOpen = false;
+
+        menuBtn.addEventListener('click', () => {
+            isMenuOpen = !isMenuOpen;
+            mobileMenu.classList.toggle('hidden');
+            menuBtn.setAttribute('aria-expanded', isMenuOpen);
+            
+            if (isMenuOpen) {
+                line1.style.transform = 'rotate(45deg) translate(5px, 5px)';
+                line2.style.opacity = '0';
+                line3.style.transform = 'rotate(-45deg) translate(5px, -5px)';
+            } else {
+                line1.style.transform = '';
+                line2.style.opacity = '1';
+                line3.style.transform = '';
+            }
+        });
+    </script>
+</body>
+</html>
