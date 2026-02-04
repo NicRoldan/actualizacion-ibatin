@@ -224,109 +224,608 @@
             </div>
         </div>
 
-        <!-- HUERTAS URBANAS - Proyecto Especial -->
+        <!-- GALERÍA DE FOTOS - Carrusel Estilo Netflix -->
         <section class="mb-16">
-            <div class="bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden">
-                <div class="grid grid-cols-1 lg:grid-cols-5">
-                    <!-- Visual lado izquierdo -->
-                    <div class="lg:col-span-2 bg-gradient-to-br from-primary to-primary-dark p-8 md:p-12 flex flex-col justify-center relative overflow-hidden">
-                        <div class="absolute top-0 right-0 opacity-10">
-                            <span class="material-symbols-outlined !text-[200px]">eco</span>
-                        </div>
-                        <div class="relative z-10">
-                            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/20 text-white text-xs font-bold tracking-widest uppercase mb-6">
-                                <span class="material-symbols-outlined text-sm">park</span>
-                                Proyecto Activo
-                            </div>
-                            <div class="size-20 rounded-2xl bg-white/20 flex items-center justify-center mb-6">
-                                <span class="material-symbols-outlined !text-5xl text-white">grass</span>
-                            </div>
-                            <h2 class="text-3xl md:text-4xl font-black text-white mb-4">Huertas Urbanas</h2>
-                            <p class="text-white/80 text-lg leading-relaxed">
-                                Cultivando comunidad, cosechando futuro.
-                            </p>
-                            <div class="mt-8 flex gap-6">
-                                <div class="text-center">
-                                    <span class="text-4xl font-black text-white">15</span>
-                                    <p class="text-white/70 text-sm">Huertas</p>
-                                </div>
-                                <div class="text-center">
-                                    <span class="text-4xl font-black text-white">+200</span>
-                                    <p class="text-white/70 text-sm">Familias</p>
-                                </div>
-                                <div class="text-center">
-                                    <span class="text-4xl font-black text-white">5</span>
-                                    <p class="text-white/70 text-sm">Barrios</p>
-                                </div>
-                            </div>
-                        </div>
+            <div class="mb-8">
+                <div class="flex items-center gap-4 mb-4">
+                    <div class="size-12 rounded-xl bg-gradient-to-br from-primary to-primary-dark flex items-center justify-center">
+                        <span class="material-symbols-outlined text-white !text-2xl">photo_library</span>
                     </div>
-                    <!-- Contenido lado derecho -->
-                    <div class="lg:col-span-3 p-8 md:p-12">
-                        <p class="text-slate-600 text-lg leading-relaxed mb-8">
-                            Las huertas urbanas comunitarias son espacios de producción agroecológica que promueven la soberanía alimentaria, la educación ambiental y el fortalecimiento del tejido social en los barrios del Área Metropolitana.
-                        </p>
-                        
-                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
-                            <div class="flex items-start gap-4 p-4 bg-primary/5 rounded-xl">
-                                <div class="size-12 rounded-lg bg-primary/20 flex items-center justify-center flex-shrink-0">
-                                    <span class="material-symbols-outlined text-primary-dark">nutrition</span>
-                                </div>
-                                <div>
-                                    <p class="font-bold text-slate-700">Soberanía Alimentaria</p>
-                                    <p class="text-sm text-slate-500">Producción local de alimentos frescos y saludables</p>
-                                </div>
-                            </div>
-                            <div class="flex items-start gap-4 p-4 bg-primary/5 rounded-xl">
-                                <div class="size-12 rounded-lg bg-primary/20 flex items-center justify-center flex-shrink-0">
-                                    <span class="material-symbols-outlined text-primary-dark">school</span>
-                                </div>
-                                <div>
-                                    <p class="font-bold text-slate-700">Educación Ambiental</p>
-                                    <p class="text-sm text-slate-500">Talleres y capacitaciones para todas las edades</p>
-                                </div>
-                            </div>
-                            <div class="flex items-start gap-4 p-4 bg-primary/5 rounded-xl">
-                                <div class="size-12 rounded-lg bg-primary/20 flex items-center justify-center flex-shrink-0">
-                                    <span class="material-symbols-outlined text-primary-dark">diversity_3</span>
-                                </div>
-                                <div>
-                                    <p class="font-bold text-slate-700">Tejido Social</p>
-                                    <p class="text-sm text-slate-500">Encuentro y trabajo colaborativo vecinal</p>
-                                </div>
-                            </div>
-                            <div class="flex items-start gap-4 p-4 bg-primary/5 rounded-xl">
-                                <div class="size-12 rounded-lg bg-primary/20 flex items-center justify-center flex-shrink-0">
-                                    <span class="material-symbols-outlined text-primary-dark">compost</span>
-                                </div>
-                                <div>
-                                    <p class="font-bold text-slate-700">Agroecología</p>
-                                    <p class="text-sm text-slate-500">Prácticas sustentables sin agroquímicos</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="flex flex-wrap gap-2 mb-8">
-                            <span class="px-3 py-1 bg-primary/10 text-primary-darker text-xs font-bold rounded-full">Agricultura Urbana</span>
-                            <span class="px-3 py-1 bg-primary/10 text-primary-darker text-xs font-bold rounded-full">Comunidad</span>
-                            <span class="px-3 py-1 bg-primary/10 text-primary-darker text-xs font-bold rounded-full">Sustentabilidad</span>
-                            <span class="px-3 py-1 bg-primary/10 text-primary-darker text-xs font-bold rounded-full">Alimentación</span>
-                        </div>
-
-                        <div class="flex flex-col sm:flex-row gap-4">
-                            <button onclick="verUbicacionesHuertas()" class="bg-primary-dark text-white px-6 py-3 rounded-lg font-bold hover:bg-primary-darker transition-all flex items-center justify-center gap-2">
-                                <span class="material-symbols-outlined">map</span>
-                                Ver Ubicaciones
-                            </button>
-                            <button onclick="openVoluntarioForm()" class="border-2 border-primary-dark text-primary-dark px-6 py-3 rounded-lg font-bold hover:bg-primary/10 transition-all flex items-center justify-center gap-2">
-                                <span class="material-symbols-outlined">volunteer_activism</span>
-                                Quiero Participar
-                            </button>
-                        </div>
+                    <div>
+                        <h2 class="text-3xl md:text-4xl font-black text-slate-800">Galería de Fotos</h2>
+                        <p class="text-slate-500">Momentos del Concurso de Ideas Metropolitanas</p>
                     </div>
                 </div>
             </div>
+
+            <!-- Carrusel Netflix Style -->
+            <div class="relative group">
+                <!-- Botón Anterior -->
+                <button onclick="scrollGallery(-1)" class="absolute left-0 top-1/2 -translate-y-1/2 z-20 bg-black/70 hover:bg-black/90 text-white p-3 rounded-r-lg opacity-0 group-hover:opacity-100 transition-all duration-300 backdrop-blur-sm">
+                    <span class="material-symbols-outlined !text-3xl">chevron_left</span>
+                </button>
+
+                <!-- Contenedor del Carrusel -->
+                <div id="galleryCarousel" class="flex gap-4 overflow-x-auto scroll-smooth pb-4 px-2 scrollbar-hide" style="scrollbar-width: none; -ms-overflow-style: none;">
+                    <!-- Fila 1: Fotos 1-18 -->
+                    <div class="flex-shrink-0 gallery-item group/item cursor-pointer" onclick="openLightbox(1)">
+                        <div class="w-64 h-44 rounded-xl overflow-hidden shadow-lg transition-all duration-300 group-hover/item:scale-105 group-hover/item:shadow-2xl group-hover/item:z-10 relative">
+                            <img src="../assets/concurso/galeria%20de%20fotos/editadas%20ibatin/1.JPG" alt="Concurso IBATÍN - Foto 1" class="w-full h-full object-cover">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover/item:opacity-100 transition-opacity duration-300 flex items-end p-3">
+                                <span class="text-white text-sm font-medium">Ver foto</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex-shrink-0 gallery-item group/item cursor-pointer" onclick="openLightbox(2)">
+                        <div class="w-64 h-44 rounded-xl overflow-hidden shadow-lg transition-all duration-300 group-hover/item:scale-105 group-hover/item:shadow-2xl group-hover/item:z-10 relative">
+                            <img src="../assets/concurso/galeria%20de%20fotos/editadas%20ibatin/2.JPG" alt="Concurso IBATÍN - Foto 2" class="w-full h-full object-cover">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover/item:opacity-100 transition-opacity duration-300 flex items-end p-3">
+                                <span class="text-white text-sm font-medium">Ver foto</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex-shrink-0 gallery-item group/item cursor-pointer" onclick="openLightbox(3)">
+                        <div class="w-64 h-44 rounded-xl overflow-hidden shadow-lg transition-all duration-300 group-hover/item:scale-105 group-hover/item:shadow-2xl group-hover/item:z-10 relative">
+                            <img src="../assets/concurso/galeria%20de%20fotos/editadas%20ibatin/3.JPG" alt="Concurso IBATÍN - Foto 3" class="w-full h-full object-cover">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover/item:opacity-100 transition-opacity duration-300 flex items-end p-3">
+                                <span class="text-white text-sm font-medium">Ver foto</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex-shrink-0 gallery-item group/item cursor-pointer" onclick="openLightbox(4)">
+                        <div class="w-64 h-44 rounded-xl overflow-hidden shadow-lg transition-all duration-300 group-hover/item:scale-105 group-hover/item:shadow-2xl group-hover/item:z-10 relative">
+                            <img src="../assets/concurso/galeria%20de%20fotos/editadas%20ibatin/4.JPG" alt="Concurso IBATÍN - Foto 4" class="w-full h-full object-cover">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover/item:opacity-100 transition-opacity duration-300 flex items-end p-3">
+                                <span class="text-white text-sm font-medium">Ver foto</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex-shrink-0 gallery-item group/item cursor-pointer" onclick="openLightbox(5)">
+                        <div class="w-64 h-44 rounded-xl overflow-hidden shadow-lg transition-all duration-300 group-hover/item:scale-105 group-hover/item:shadow-2xl group-hover/item:z-10 relative">
+                            <img src="../assets/concurso/galeria%20de%20fotos/editadas%20ibatin/5.JPG" alt="Concurso IBATÍN - Foto 5" class="w-full h-full object-cover">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover/item:opacity-100 transition-opacity duration-300 flex items-end p-3">
+                                <span class="text-white text-sm font-medium">Ver foto</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex-shrink-0 gallery-item group/item cursor-pointer" onclick="openLightbox(6)">
+                        <div class="w-64 h-44 rounded-xl overflow-hidden shadow-lg transition-all duration-300 group-hover/item:scale-105 group-hover/item:shadow-2xl group-hover/item:z-10 relative">
+                            <img src="../assets/concurso/galeria%20de%20fotos/editadas%20ibatin/6.JPG" alt="Concurso IBATÍN - Foto 6" class="w-full h-full object-cover">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover/item:opacity-100 transition-opacity duration-300 flex items-end p-3">
+                                <span class="text-white text-sm font-medium">Ver foto</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex-shrink-0 gallery-item group/item cursor-pointer" onclick="openLightbox(7)">
+                        <div class="w-64 h-44 rounded-xl overflow-hidden shadow-lg transition-all duration-300 group-hover/item:scale-105 group-hover/item:shadow-2xl group-hover/item:z-10 relative">
+                            <img src="../assets/concurso/galeria%20de%20fotos/editadas%20ibatin/7.JPG" alt="Concurso IBATÍN - Foto 7" class="w-full h-full object-cover">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover/item:opacity-100 transition-opacity duration-300 flex items-end p-3">
+                                <span class="text-white text-sm font-medium">Ver foto</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex-shrink-0 gallery-item group/item cursor-pointer" onclick="openLightbox(8)">
+                        <div class="w-64 h-44 rounded-xl overflow-hidden shadow-lg transition-all duration-300 group-hover/item:scale-105 group-hover/item:shadow-2xl group-hover/item:z-10 relative">
+                            <img src="../assets/concurso/galeria%20de%20fotos/editadas%20ibatin/8.JPG" alt="Concurso IBATÍN - Foto 8" class="w-full h-full object-cover">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover/item:opacity-100 transition-opacity duration-300 flex items-end p-3">
+                                <span class="text-white text-sm font-medium">Ver foto</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex-shrink-0 gallery-item group/item cursor-pointer" onclick="openLightbox(9)">
+                        <div class="w-64 h-44 rounded-xl overflow-hidden shadow-lg transition-all duration-300 group-hover/item:scale-105 group-hover/item:shadow-2xl group-hover/item:z-10 relative">
+                            <img src="../assets/concurso/galeria%20de%20fotos/editadas%20ibatin/9.JPG" alt="Concurso IBATÍN - Foto 9" class="w-full h-full object-cover">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover/item:opacity-100 transition-opacity duration-300 flex items-end p-3">
+                                <span class="text-white text-sm font-medium">Ver foto</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex-shrink-0 gallery-item group/item cursor-pointer" onclick="openLightbox(10)">
+                        <div class="w-64 h-44 rounded-xl overflow-hidden shadow-lg transition-all duration-300 group-hover/item:scale-105 group-hover/item:shadow-2xl group-hover/item:z-10 relative">
+                            <img src="../assets/concurso/galeria%20de%20fotos/editadas%20ibatin/10.JPG" alt="Concurso IBATÍN - Foto 10" class="w-full h-full object-cover">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover/item:opacity-100 transition-opacity duration-300 flex items-end p-3">
+                                <span class="text-white text-sm font-medium">Ver foto</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex-shrink-0 gallery-item group/item cursor-pointer" onclick="openLightbox(11)">
+                        <div class="w-64 h-44 rounded-xl overflow-hidden shadow-lg transition-all duration-300 group-hover/item:scale-105 group-hover/item:shadow-2xl group-hover/item:z-10 relative">
+                            <img src="../assets/concurso/galeria%20de%20fotos/editadas%20ibatin/11.JPG" alt="Concurso IBATÍN - Foto 11" class="w-full h-full object-cover">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover/item:opacity-100 transition-opacity duration-300 flex items-end p-3">
+                                <span class="text-white text-sm font-medium">Ver foto</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex-shrink-0 gallery-item group/item cursor-pointer" onclick="openLightbox(12)">
+                        <div class="w-64 h-44 rounded-xl overflow-hidden shadow-lg transition-all duration-300 group-hover/item:scale-105 group-hover/item:shadow-2xl group-hover/item:z-10 relative">
+                            <img src="../assets/concurso/galeria%20de%20fotos/editadas%20ibatin/12.JPG" alt="Concurso IBATÍN - Foto 12" class="w-full h-full object-cover">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover/item:opacity-100 transition-opacity duration-300 flex items-end p-3">
+                                <span class="text-white text-sm font-medium">Ver foto</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex-shrink-0 gallery-item group/item cursor-pointer" onclick="openLightbox(13)">
+                        <div class="w-64 h-44 rounded-xl overflow-hidden shadow-lg transition-all duration-300 group-hover/item:scale-105 group-hover/item:shadow-2xl group-hover/item:z-10 relative">
+                            <img src="../assets/concurso/galeria%20de%20fotos/editadas%20ibatin/13.JPG" alt="Concurso IBATÍN - Foto 13" class="w-full h-full object-cover">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover/item:opacity-100 transition-opacity duration-300 flex items-end p-3">
+                                <span class="text-white text-sm font-medium">Ver foto</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex-shrink-0 gallery-item group/item cursor-pointer" onclick="openLightbox(14)">
+                        <div class="w-64 h-44 rounded-xl overflow-hidden shadow-lg transition-all duration-300 group-hover/item:scale-105 group-hover/item:shadow-2xl group-hover/item:z-10 relative">
+                            <img src="../assets/concurso/galeria%20de%20fotos/editadas%20ibatin/14.JPG" alt="Concurso IBATÍN - Foto 14" class="w-full h-full object-cover">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover/item:opacity-100 transition-opacity duration-300 flex items-end p-3">
+                                <span class="text-white text-sm font-medium">Ver foto</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex-shrink-0 gallery-item group/item cursor-pointer" onclick="openLightbox(15)">
+                        <div class="w-64 h-44 rounded-xl overflow-hidden shadow-lg transition-all duration-300 group-hover/item:scale-105 group-hover/item:shadow-2xl group-hover/item:z-10 relative">
+                            <img src="../assets/concurso/galeria%20de%20fotos/editadas%20ibatin/15.JPG" alt="Concurso IBATÍN - Foto 15" class="w-full h-full object-cover">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover/item:opacity-100 transition-opacity duration-300 flex items-end p-3">
+                                <span class="text-white text-sm font-medium">Ver foto</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex-shrink-0 gallery-item group/item cursor-pointer" onclick="openLightbox(16)">
+                        <div class="w-64 h-44 rounded-xl overflow-hidden shadow-lg transition-all duration-300 group-hover/item:scale-105 group-hover/item:shadow-2xl group-hover/item:z-10 relative">
+                            <img src="../assets/concurso/galeria%20de%20fotos/editadas%20ibatin/16.JPG" alt="Concurso IBATÍN - Foto 16" class="w-full h-full object-cover">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover/item:opacity-100 transition-opacity duration-300 flex items-end p-3">
+                                <span class="text-white text-sm font-medium">Ver foto</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex-shrink-0 gallery-item group/item cursor-pointer" onclick="openLightbox(17)">
+                        <div class="w-64 h-44 rounded-xl overflow-hidden shadow-lg transition-all duration-300 group-hover/item:scale-105 group-hover/item:shadow-2xl group-hover/item:z-10 relative">
+                            <img src="../assets/concurso/galeria%20de%20fotos/editadas%20ibatin/17.JPG" alt="Concurso IBATÍN - Foto 17" class="w-full h-full object-cover">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover/item:opacity-100 transition-opacity duration-300 flex items-end p-3">
+                                <span class="text-white text-sm font-medium">Ver foto</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex-shrink-0 gallery-item group/item cursor-pointer" onclick="openLightbox(18)">
+                        <div class="w-64 h-44 rounded-xl overflow-hidden shadow-lg transition-all duration-300 group-hover/item:scale-105 group-hover/item:shadow-2xl group-hover/item:z-10 relative">
+                            <img src="../assets/concurso/galeria%20de%20fotos/editadas%20ibatin/18.JPG" alt="Concurso IBATÍN - Foto 18" class="w-full h-full object-cover">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover/item:opacity-100 transition-opacity duration-300 flex items-end p-3">
+                                <span class="text-white text-sm font-medium">Ver foto</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex-shrink-0 gallery-item group/item cursor-pointer" onclick="openLightbox(19)">
+                        <div class="w-64 h-44 rounded-xl overflow-hidden shadow-lg transition-all duration-300 group-hover/item:scale-105 group-hover/item:shadow-2xl group-hover/item:z-10 relative">
+                            <img src="../assets/concurso/galeria%20de%20fotos/editadas%20ibatin/19.JPG" alt="Concurso IBATÍN - Foto 19" class="w-full h-full object-cover">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover/item:opacity-100 transition-opacity duration-300 flex items-end p-3">
+                                <span class="text-white text-sm font-medium">Ver foto</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex-shrink-0 gallery-item group/item cursor-pointer" onclick="openLightbox(20)">
+                        <div class="w-64 h-44 rounded-xl overflow-hidden shadow-lg transition-all duration-300 group-hover/item:scale-105 group-hover/item:shadow-2xl group-hover/item:z-10 relative">
+                            <img src="../assets/concurso/galeria%20de%20fotos/editadas%20ibatin/20.JPG" alt="Concurso IBATÍN - Foto 20" class="w-full h-full object-cover">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover/item:opacity-100 transition-opacity duration-300 flex items-end p-3">
+                                <span class="text-white text-sm font-medium">Ver foto</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex-shrink-0 gallery-item group/item cursor-pointer" onclick="openLightbox(21)">
+                        <div class="w-64 h-44 rounded-xl overflow-hidden shadow-lg transition-all duration-300 group-hover/item:scale-105 group-hover/item:shadow-2xl group-hover/item:z-10 relative">
+                            <img src="../assets/concurso/galeria%20de%20fotos/editadas%20ibatin/21.JPG" alt="Concurso IBATÍN - Foto 21" class="w-full h-full object-cover">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover/item:opacity-100 transition-opacity duration-300 flex items-end p-3">
+                                <span class="text-white text-sm font-medium">Ver foto</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex-shrink-0 gallery-item group/item cursor-pointer" onclick="openLightbox(22)">
+                        <div class="w-64 h-44 rounded-xl overflow-hidden shadow-lg transition-all duration-300 group-hover/item:scale-105 group-hover/item:shadow-2xl group-hover/item:z-10 relative">
+                            <img src="../assets/concurso/galeria%20de%20fotos/editadas%20ibatin/22.JPG" alt="Concurso IBATÍN - Foto 22" class="w-full h-full object-cover">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover/item:opacity-100 transition-opacity duration-300 flex items-end p-3">
+                                <span class="text-white text-sm font-medium">Ver foto</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex-shrink-0 gallery-item group/item cursor-pointer" onclick="openLightbox(23)">
+                        <div class="w-64 h-44 rounded-xl overflow-hidden shadow-lg transition-all duration-300 group-hover/item:scale-105 group-hover/item:shadow-2xl group-hover/item:z-10 relative">
+                            <img src="../assets/concurso/galeria%20de%20fotos/editadas%20ibatin/23.JPG" alt="Concurso IBATÍN - Foto 23" class="w-full h-full object-cover">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover/item:opacity-100 transition-opacity duration-300 flex items-end p-3">
+                                <span class="text-white text-sm font-medium">Ver foto</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex-shrink-0 gallery-item group/item cursor-pointer" onclick="openLightbox(24)">
+                        <div class="w-64 h-44 rounded-xl overflow-hidden shadow-lg transition-all duration-300 group-hover/item:scale-105 group-hover/item:shadow-2xl group-hover/item:z-10 relative">
+                            <img src="../assets/concurso/galeria%20de%20fotos/editadas%20ibatin/24.JPG" alt="Concurso IBATÍN - Foto 24" class="w-full h-full object-cover">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover/item:opacity-100 transition-opacity duration-300 flex items-end p-3">
+                                <span class="text-white text-sm font-medium">Ver foto</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex-shrink-0 gallery-item group/item cursor-pointer" onclick="openLightbox(25)">
+                        <div class="w-64 h-44 rounded-xl overflow-hidden shadow-lg transition-all duration-300 group-hover/item:scale-105 group-hover/item:shadow-2xl group-hover/item:z-10 relative">
+                            <img src="../assets/concurso/galeria%20de%20fotos/editadas%20ibatin/25.JPG" alt="Concurso IBATÍN - Foto 25" class="w-full h-full object-cover">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover/item:opacity-100 transition-opacity duration-300 flex items-end p-3">
+                                <span class="text-white text-sm font-medium">Ver foto</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex-shrink-0 gallery-item group/item cursor-pointer" onclick="openLightbox(26)">
+                        <div class="w-64 h-44 rounded-xl overflow-hidden shadow-lg transition-all duration-300 group-hover/item:scale-105 group-hover/item:shadow-2xl group-hover/item:z-10 relative">
+                            <img src="../assets/concurso/galeria%20de%20fotos/editadas%20ibatin/26.JPG" alt="Concurso IBATÍN - Foto 26" class="w-full h-full object-cover">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover/item:opacity-100 transition-opacity duration-300 flex items-end p-3">
+                                <span class="text-white text-sm font-medium">Ver foto</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex-shrink-0 gallery-item group/item cursor-pointer" onclick="openLightbox(27)">
+                        <div class="w-64 h-44 rounded-xl overflow-hidden shadow-lg transition-all duration-300 group-hover/item:scale-105 group-hover/item:shadow-2xl group-hover/item:z-10 relative">
+                            <img src="../assets/concurso/galeria%20de%20fotos/editadas%20ibatin/27..JPG" alt="Concurso IBATÍN - Foto 27" class="w-full h-full object-cover">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover/item:opacity-100 transition-opacity duration-300 flex items-end p-3">
+                                <span class="text-white text-sm font-medium">Ver foto</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex-shrink-0 gallery-item group/item cursor-pointer" onclick="openLightbox(28)">
+                        <div class="w-64 h-44 rounded-xl overflow-hidden shadow-lg transition-all duration-300 group-hover/item:scale-105 group-hover/item:shadow-2xl group-hover/item:z-10 relative">
+                            <img src="../assets/concurso/galeria%20de%20fotos/editadas%20ibatin/28.JPG" alt="Concurso IBATÍN - Foto 28" class="w-full h-full object-cover">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover/item:opacity-100 transition-opacity duration-300 flex items-end p-3">
+                                <span class="text-white text-sm font-medium">Ver foto</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex-shrink-0 gallery-item group/item cursor-pointer" onclick="openLightbox(29)">
+                        <div class="w-64 h-44 rounded-xl overflow-hidden shadow-lg transition-all duration-300 group-hover/item:scale-105 group-hover/item:shadow-2xl group-hover/item:z-10 relative">
+                            <img src="../assets/concurso/galeria%20de%20fotos/editadas%20ibatin/29.JPG" alt="Concurso IBATÍN - Foto 29" class="w-full h-full object-cover">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover/item:opacity-100 transition-opacity duration-300 flex items-end p-3">
+                                <span class="text-white text-sm font-medium">Ver foto</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex-shrink-0 gallery-item group/item cursor-pointer" onclick="openLightbox(30)">
+                        <div class="w-64 h-44 rounded-xl overflow-hidden shadow-lg transition-all duration-300 group-hover/item:scale-105 group-hover/item:shadow-2xl group-hover/item:z-10 relative">
+                            <img src="../assets/concurso/galeria%20de%20fotos/editadas%20ibatin/30.JPG" alt="Concurso IBATÍN - Foto 30" class="w-full h-full object-cover">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover/item:opacity-100 transition-opacity duration-300 flex items-end p-3">
+                                <span class="text-white text-sm font-medium">Ver foto</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex-shrink-0 gallery-item group/item cursor-pointer" onclick="openLightbox(31)">
+                        <div class="w-64 h-44 rounded-xl overflow-hidden shadow-lg transition-all duration-300 group-hover/item:scale-105 group-hover/item:shadow-2xl group-hover/item:z-10 relative">
+                            <img src="../assets/concurso/galeria%20de%20fotos/editadas%20ibatin/31.JPG" alt="Concurso IBATÍN - Foto 31" class="w-full h-full object-cover">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover/item:opacity-100 transition-opacity duration-300 flex items-end p-3">
+                                <span class="text-white text-sm font-medium">Ver foto</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex-shrink-0 gallery-item group/item cursor-pointer" onclick="openLightbox(32)">
+                        <div class="w-64 h-44 rounded-xl overflow-hidden shadow-lg transition-all duration-300 group-hover/item:scale-105 group-hover/item:shadow-2xl group-hover/item:z-10 relative">
+                            <img src="../assets/concurso/galeria%20de%20fotos/editadas%20ibatin/32.JPG" alt="Concurso IBATÍN - Foto 32" class="w-full h-full object-cover">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover/item:opacity-100 transition-opacity duration-300 flex items-end p-3">
+                                <span class="text-white text-sm font-medium">Ver foto</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex-shrink-0 gallery-item group/item cursor-pointer" onclick="openLightbox(33)">
+                        <div class="w-64 h-44 rounded-xl overflow-hidden shadow-lg transition-all duration-300 group-hover/item:scale-105 group-hover/item:shadow-2xl group-hover/item:z-10 relative">
+                            <img src="../assets/concurso/galeria%20de%20fotos/editadas%20ibatin/33.JPG" alt="Concurso IBATÍN - Foto 33" class="w-full h-full object-cover">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover/item:opacity-100 transition-opacity duration-300 flex items-end p-3">
+                                <span class="text-white text-sm font-medium">Ver foto</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex-shrink-0 gallery-item group/item cursor-pointer" onclick="openLightbox(34)">
+                        <div class="w-64 h-44 rounded-xl overflow-hidden shadow-lg transition-all duration-300 group-hover/item:scale-105 group-hover/item:shadow-2xl group-hover/item:z-10 relative">
+                            <img src="../assets/concurso/galeria%20de%20fotos/editadas%20ibatin/34.JPG" alt="Concurso IBATÍN - Foto 34" class="w-full h-full object-cover">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover/item:opacity-100 transition-opacity duration-300 flex items-end p-3">
+                                <span class="text-white text-sm font-medium">Ver foto</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex-shrink-0 gallery-item group/item cursor-pointer" onclick="openLightbox(35)">
+                        <div class="w-64 h-44 rounded-xl overflow-hidden shadow-lg transition-all duration-300 group-hover/item:scale-105 group-hover/item:shadow-2xl group-hover/item:z-10 relative">
+                            <img src="../assets/concurso/galeria%20de%20fotos/editadas%20ibatin/35.JPG" alt="Concurso IBATÍN - Foto 35" class="w-full h-full object-cover">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover/item:opacity-100 transition-opacity duration-300 flex items-end p-3">
+                                <span class="text-white text-sm font-medium">Ver foto</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex-shrink-0 gallery-item group/item cursor-pointer" onclick="openLightbox(36)">
+                        <div class="w-64 h-44 rounded-xl overflow-hidden shadow-lg transition-all duration-300 group-hover/item:scale-105 group-hover/item:shadow-2xl group-hover/item:z-10 relative">
+                            <img src="../assets/concurso/galeria%20de%20fotos/editadas%20ibatin/36.JPG" alt="Concurso IBATÍN - Foto 36" class="w-full h-full object-cover">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover/item:opacity-100 transition-opacity duration-300 flex items-end p-3">
+                                <span class="text-white text-sm font-medium">Ver foto</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex-shrink-0 gallery-item group/item cursor-pointer" onclick="openLightbox(37)">
+                        <div class="w-64 h-44 rounded-xl overflow-hidden shadow-lg transition-all duration-300 group-hover/item:scale-105 group-hover/item:shadow-2xl group-hover/item:z-10 relative">
+                            <img src="../assets/concurso/galeria%20de%20fotos/editadas%20ibatin/37.JPG" alt="Concurso IBATÍN - Foto 37" class="w-full h-full object-cover">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover/item:opacity-100 transition-opacity duration-300 flex items-end p-3">
+                                <span class="text-white text-sm font-medium">Ver foto</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex-shrink-0 gallery-item group/item cursor-pointer" onclick="openLightbox(38)">
+                        <div class="w-64 h-44 rounded-xl overflow-hidden shadow-lg transition-all duration-300 group-hover/item:scale-105 group-hover/item:shadow-2xl group-hover/item:z-10 relative">
+                            <img src="../assets/concurso/galeria%20de%20fotos/editadas%20ibatin/38.JPG" alt="Concurso IBATÍN - Foto 38" class="w-full h-full object-cover">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover/item:opacity-100 transition-opacity duration-300 flex items-end p-3">
+                                <span class="text-white text-sm font-medium">Ver foto</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex-shrink-0 gallery-item group/item cursor-pointer" onclick="openLightbox(39)">
+                        <div class="w-64 h-44 rounded-xl overflow-hidden shadow-lg transition-all duration-300 group-hover/item:scale-105 group-hover/item:shadow-2xl group-hover/item:z-10 relative">
+                            <img src="../assets/concurso/galeria%20de%20fotos/editadas%20ibatin/39.JPG" alt="Concurso IBATÍN - Foto 39" class="w-full h-full object-cover">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover/item:opacity-100 transition-opacity duration-300 flex items-end p-3">
+                                <span class="text-white text-sm font-medium">Ver foto</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex-shrink-0 gallery-item group/item cursor-pointer" onclick="openLightbox(40)">
+                        <div class="w-64 h-44 rounded-xl overflow-hidden shadow-lg transition-all duration-300 group-hover/item:scale-105 group-hover/item:shadow-2xl group-hover/item:z-10 relative">
+                            <img src="../assets/concurso/galeria%20de%20fotos/editadas%20ibatin/40.JPG" alt="Concurso IBATÍN - Foto 40" class="w-full h-full object-cover">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover/item:opacity-100 transition-opacity duration-300 flex items-end p-3">
+                                <span class="text-white text-sm font-medium">Ver foto</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex-shrink-0 gallery-item group/item cursor-pointer" onclick="openLightbox(41)">
+                        <div class="w-64 h-44 rounded-xl overflow-hidden shadow-lg transition-all duration-300 group-hover/item:scale-105 group-hover/item:shadow-2xl group-hover/item:z-10 relative">
+                            <img src="../assets/concurso/galeria%20de%20fotos/editadas%20ibatin/41.JPG" alt="Concurso IBATÍN - Foto 41" class="w-full h-full object-cover">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover/item:opacity-100 transition-opacity duration-300 flex items-end p-3">
+                                <span class="text-white text-sm font-medium">Ver foto</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex-shrink-0 gallery-item group/item cursor-pointer" onclick="openLightbox(42)">
+                        <div class="w-64 h-44 rounded-xl overflow-hidden shadow-lg transition-all duration-300 group-hover/item:scale-105 group-hover/item:shadow-2xl group-hover/item:z-10 relative">
+                            <img src="../assets/concurso/galeria%20de%20fotos/editadas%20ibatin/42.JPG" alt="Concurso IBATÍN - Foto 42" class="w-full h-full object-cover">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover/item:opacity-100 transition-opacity duration-300 flex items-end p-3">
+                                <span class="text-white text-sm font-medium">Ver foto</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex-shrink-0 gallery-item group/item cursor-pointer" onclick="openLightbox(43)">
+                        <div class="w-64 h-44 rounded-xl overflow-hidden shadow-lg transition-all duration-300 group-hover/item:scale-105 group-hover/item:shadow-2xl group-hover/item:z-10 relative">
+                            <img src="../assets/concurso/galeria%20de%20fotos/editadas%20ibatin/43.JPG" alt="Concurso IBATÍN - Foto 43" class="w-full h-full object-cover">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover/item:opacity-100 transition-opacity duration-300 flex items-end p-3">
+                                <span class="text-white text-sm font-medium">Ver foto</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex-shrink-0 gallery-item group/item cursor-pointer" onclick="openLightbox(44)">
+                        <div class="w-64 h-44 rounded-xl overflow-hidden shadow-lg transition-all duration-300 group-hover/item:scale-105 group-hover/item:shadow-2xl group-hover/item:z-10 relative">
+                            <img src="../assets/concurso/galeria%20de%20fotos/editadas%20ibatin/44.JPG" alt="Concurso IBATÍN - Foto 44" class="w-full h-full object-cover">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover/item:opacity-100 transition-opacity duration-300 flex items-end p-3">
+                                <span class="text-white text-sm font-medium">Ver foto</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex-shrink-0 gallery-item group/item cursor-pointer" onclick="openLightbox(45)">
+                        <div class="w-64 h-44 rounded-xl overflow-hidden shadow-lg transition-all duration-300 group-hover/item:scale-105 group-hover/item:shadow-2xl group-hover/item:z-10 relative">
+                            <img src="../assets/concurso/galeria%20de%20fotos/editadas%20ibatin/45.JPG" alt="Concurso IBATÍN - Foto 45" class="w-full h-full object-cover">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover/item:opacity-100 transition-opacity duration-300 flex items-end p-3">
+                                <span class="text-white text-sm font-medium">Ver foto</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex-shrink-0 gallery-item group/item cursor-pointer" onclick="openLightbox(46)">
+                        <div class="w-64 h-44 rounded-xl overflow-hidden shadow-lg transition-all duration-300 group-hover/item:scale-105 group-hover/item:shadow-2xl group-hover/item:z-10 relative">
+                            <img src="../assets/concurso/galeria%20de%20fotos/editadas%20ibatin/46.JPG" alt="Concurso IBATÍN - Foto 46" class="w-full h-full object-cover">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover/item:opacity-100 transition-opacity duration-300 flex items-end p-3">
+                                <span class="text-white text-sm font-medium">Ver foto</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex-shrink-0 gallery-item group/item cursor-pointer" onclick="openLightbox(47)">
+                        <div class="w-64 h-44 rounded-xl overflow-hidden shadow-lg transition-all duration-300 group-hover/item:scale-105 group-hover/item:shadow-2xl group-hover/item:z-10 relative">
+                            <img src="../assets/concurso/galeria%20de%20fotos/editadas%20ibatin/47.JPG" alt="Concurso IBATÍN - Foto 47" class="w-full h-full object-cover">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover/item:opacity-100 transition-opacity duration-300 flex items-end p-3">
+                                <span class="text-white text-sm font-medium">Ver foto</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex-shrink-0 gallery-item group/item cursor-pointer" onclick="openLightbox(48)">
+                        <div class="w-64 h-44 rounded-xl overflow-hidden shadow-lg transition-all duration-300 group-hover/item:scale-105 group-hover/item:shadow-2xl group-hover/item:z-10 relative">
+                            <img src="../assets/concurso/galeria%20de%20fotos/editadas%20ibatin/48.JPG" alt="Concurso IBATÍN - Foto 48" class="w-full h-full object-cover">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover/item:opacity-100 transition-opacity duration-300 flex items-end p-3">
+                                <span class="text-white text-sm font-medium">Ver foto</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex-shrink-0 gallery-item group/item cursor-pointer" onclick="openLightbox(49)">
+                        <div class="w-64 h-44 rounded-xl overflow-hidden shadow-lg transition-all duration-300 group-hover/item:scale-105 group-hover/item:shadow-2xl group-hover/item:z-10 relative">
+                            <img src="../assets/concurso/galeria%20de%20fotos/editadas%20ibatin/49.JPG" alt="Concurso IBATÍN - Foto 49" class="w-full h-full object-cover">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover/item:opacity-100 transition-opacity duration-300 flex items-end p-3">
+                                <span class="text-white text-sm font-medium">Ver foto</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex-shrink-0 gallery-item group/item cursor-pointer" onclick="openLightbox(50)">
+                        <div class="w-64 h-44 rounded-xl overflow-hidden shadow-lg transition-all duration-300 group-hover/item:scale-105 group-hover/item:shadow-2xl group-hover/item:z-10 relative">
+                            <img src="../assets/concurso/galeria%20de%20fotos/editadas%20ibatin/50.JPG" alt="Concurso IBATÍN - Foto 50" class="w-full h-full object-cover">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover/item:opacity-100 transition-opacity duration-300 flex items-end p-3">
+                                <span class="text-white text-sm font-medium">Ver foto</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex-shrink-0 gallery-item group/item cursor-pointer" onclick="openLightbox(51)">
+                        <div class="w-64 h-44 rounded-xl overflow-hidden shadow-lg transition-all duration-300 group-hover/item:scale-105 group-hover/item:shadow-2xl group-hover/item:z-10 relative">
+                            <img src="../assets/concurso/galeria%20de%20fotos/editadas%20ibatin/51.JPG" alt="Concurso IBATÍN - Foto 51" class="w-full h-full object-cover">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover/item:opacity-100 transition-opacity duration-300 flex items-end p-3">
+                                <span class="text-white text-sm font-medium">Ver foto</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex-shrink-0 gallery-item group/item cursor-pointer" onclick="openLightbox(52)">
+                        <div class="w-64 h-44 rounded-xl overflow-hidden shadow-lg transition-all duration-300 group-hover/item:scale-105 group-hover/item:shadow-2xl group-hover/item:z-10 relative">
+                            <img src="../assets/concurso/galeria%20de%20fotos/editadas%20ibatin/52.JPG" alt="Concurso IBATÍN - Foto 52" class="w-full h-full object-cover">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover/item:opacity-100 transition-opacity duration-300 flex items-end p-3">
+                                <span class="text-white text-sm font-medium">Ver foto</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex-shrink-0 gallery-item group/item cursor-pointer" onclick="openLightbox(53)">
+                        <div class="w-64 h-44 rounded-xl overflow-hidden shadow-lg transition-all duration-300 group-hover/item:scale-105 group-hover/item:shadow-2xl group-hover/item:z-10 relative">
+                            <img src="../assets/concurso/galeria%20de%20fotos/editadas%20ibatin/53.JPG" alt="Concurso IBATÍN - Foto 53" class="w-full h-full object-cover">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover/item:opacity-100 transition-opacity duration-300 flex items-end p-3">
+                                <span class="text-white text-sm font-medium">Ver foto</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Botón Siguiente -->
+                <button onclick="scrollGallery(1)" class="absolute right-0 top-1/2 -translate-y-1/2 z-20 bg-black/70 hover:bg-black/90 text-white p-3 rounded-l-lg opacity-0 group-hover:opacity-100 transition-all duration-300 backdrop-blur-sm">
+                    <span class="material-symbols-outlined !text-3xl">chevron_right</span>
+                </button>
+
+                <!-- Gradientes de fade en los bordes -->
+                <div class="absolute left-0 top-0 bottom-4 w-16 bg-gradient-to-r from-slate-50 to-transparent pointer-events-none z-10"></div>
+                <div class="absolute right-0 top-0 bottom-4 w-16 bg-gradient-to-l from-slate-50 to-transparent pointer-events-none z-10"></div>
+            </div>
+
+            <!-- Indicador de scroll -->
+            <div class="flex justify-center mt-6 gap-2">
+                <span class="text-sm text-slate-400 flex items-center gap-2">
+                    <span class="material-symbols-outlined text-lg">swipe</span>
+                    Deslizá para ver más fotos
+                </span>
+            </div>
         </section>
+
+        <!-- Lightbox Modal -->
+        <div id="lightboxModal" class="fixed inset-0 bg-black/95 z-50 hidden items-center justify-center" onclick="closeLightbox(event)">
+            <button onclick="closeLightbox(event)" class="absolute top-4 right-4 text-white/70 hover:text-white transition-colors z-50">
+                <span class="material-symbols-outlined !text-4xl">close</span>
+            </button>
+            <button onclick="event.stopPropagation(); navigateLightbox(-1)" class="absolute left-4 top-1/2 -translate-y-1/2 text-white/70 hover:text-white transition-colors p-2">
+                <span class="material-symbols-outlined !text-5xl">chevron_left</span>
+            </button>
+            <button onclick="event.stopPropagation(); navigateLightbox(1)" class="absolute right-4 top-1/2 -translate-y-1/2 text-white/70 hover:text-white transition-colors p-2">
+                <span class="material-symbols-outlined !text-5xl">chevron_right</span>
+            </button>
+            <img id="lightboxImage" src="" alt="Foto ampliada" class="max-w-[90vw] max-h-[90vh] object-contain rounded-lg shadow-2xl" onclick="event.stopPropagation()">
+            <div class="absolute bottom-4 left-1/2 -translate-x-1/2 text-white/70 text-sm">
+                <span id="lightboxCounter">1 / 53</span>
+            </div>
+        </div>
+
+        <style>
+            #galleryCarousel::-webkit-scrollbar {
+                display: none;
+            }
+        </style>
+
+        <script>
+            // Galería Netflix Style
+            const galleryImages = [
+                '../assets/concurso/galeria%20de%20fotos/editadas%20ibatin/1.JPG',
+                '../assets/concurso/galeria%20de%20fotos/editadas%20ibatin/2.JPG',
+                '../assets/concurso/galeria%20de%20fotos/editadas%20ibatin/3.JPG',
+                '../assets/concurso/galeria%20de%20fotos/editadas%20ibatin/4.JPG',
+                '../assets/concurso/galeria%20de%20fotos/editadas%20ibatin/5.JPG',
+                '../assets/concurso/galeria%20de%20fotos/editadas%20ibatin/6.JPG',
+                '../assets/concurso/galeria%20de%20fotos/editadas%20ibatin/7.JPG',
+                '../assets/concurso/galeria%20de%20fotos/editadas%20ibatin/8.JPG',
+                '../assets/concurso/galeria%20de%20fotos/editadas%20ibatin/9.JPG',
+                '../assets/concurso/galeria%20de%20fotos/editadas%20ibatin/10.JPG',
+                '../assets/concurso/galeria%20de%20fotos/editadas%20ibatin/11.JPG',
+                '../assets/concurso/galeria%20de%20fotos/editadas%20ibatin/12.JPG',
+                '../assets/concurso/galeria%20de%20fotos/editadas%20ibatin/13.JPG',
+                '../assets/concurso/galeria%20de%20fotos/editadas%20ibatin/14.JPG',
+                '../assets/concurso/galeria%20de%20fotos/editadas%20ibatin/15.JPG',
+                '../assets/concurso/galeria%20de%20fotos/editadas%20ibatin/16.JPG',
+                '../assets/concurso/galeria%20de%20fotos/editadas%20ibatin/17.JPG',
+                '../assets/concurso/galeria%20de%20fotos/editadas%20ibatin/18.JPG',
+                '../assets/concurso/galeria%20de%20fotos/editadas%20ibatin/19.JPG',
+                '../assets/concurso/galeria%20de%20fotos/editadas%20ibatin/20.JPG',
+                '../assets/concurso/galeria%20de%20fotos/editadas%20ibatin/21.JPG',
+                '../assets/concurso/galeria%20de%20fotos/editadas%20ibatin/22.JPG',
+                '../assets/concurso/galeria%20de%20fotos/editadas%20ibatin/23.JPG',
+                '../assets/concurso/galeria%20de%20fotos/editadas%20ibatin/24.JPG',
+                '../assets/concurso/galeria%20de%20fotos/editadas%20ibatin/25.JPG',
+                '../assets/concurso/galeria%20de%20fotos/editadas%20ibatin/26.JPG',
+                '../assets/concurso/galeria%20de%20fotos/editadas%20ibatin/27..JPG',
+                '../assets/concurso/galeria%20de%20fotos/editadas%20ibatin/28.JPG',
+                '../assets/concurso/galeria%20de%20fotos/editadas%20ibatin/29.JPG',
+                '../assets/concurso/galeria%20de%20fotos/editadas%20ibatin/30.JPG',
+                '../assets/concurso/galeria%20de%20fotos/editadas%20ibatin/31.JPG',
+                '../assets/concurso/galeria%20de%20fotos/editadas%20ibatin/32.JPG',
+                '../assets/concurso/galeria%20de%20fotos/editadas%20ibatin/33.JPG',
+                '../assets/concurso/galeria%20de%20fotos/editadas%20ibatin/34.JPG',
+                '../assets/concurso/galeria%20de%20fotos/editadas%20ibatin/35.JPG',
+                '../assets/concurso/galeria%20de%20fotos/editadas%20ibatin/36.JPG',
+                '../assets/concurso/galeria%20de%20fotos/editadas%20ibatin/37.JPG',
+                '../assets/concurso/galeria%20de%20fotos/editadas%20ibatin/38.JPG',
+                '../assets/concurso/galeria%20de%20fotos/editadas%20ibatin/39.JPG',
+                '../assets/concurso/galeria%20de%20fotos/editadas%20ibatin/40.JPG',
+                '../assets/concurso/galeria%20de%20fotos/editadas%20ibatin/41.JPG',
+                '../assets/concurso/galeria%20de%20fotos/editadas%20ibatin/42.JPG',
+                '../assets/concurso/galeria%20de%20fotos/editadas%20ibatin/43.JPG',
+                '../assets/concurso/galeria%20de%20fotos/editadas%20ibatin/44.JPG',
+                '../assets/concurso/galeria%20de%20fotos/editadas%20ibatin/45.JPG',
+                '../assets/concurso/galeria%20de%20fotos/editadas%20ibatin/46.JPG',
+                '../assets/concurso/galeria%20de%20fotos/editadas%20ibatin/47.JPG',
+                '../assets/concurso/galeria%20de%20fotos/editadas%20ibatin/48.JPG',
+                '../assets/concurso/galeria%20de%20fotos/editadas%20ibatin/49.JPG',
+                '../assets/concurso/galeria%20de%20fotos/editadas%20ibatin/50.JPG',
+                '../assets/concurso/galeria%20de%20fotos/editadas%20ibatin/51.JPG',
+                '../assets/concurso/galeria%20de%20fotos/editadas%20ibatin/52.JPG',
+                '../assets/concurso/galeria%20de%20fotos/editadas%20ibatin/53.JPG'
+            ];
+            let currentImageIndex = 0;
+
+            function scrollGallery(direction) {
+                const carousel = document.getElementById('galleryCarousel');
+                const scrollAmount = 280 * 3; // 3 items at a time
+                carousel.scrollBy({ left: direction * scrollAmount, behavior: 'smooth' });
+            }
+
+            function openLightbox(imageNumber) {
+                currentImageIndex = imageNumber - 1;
+                const modal = document.getElementById('lightboxModal');
+                const image = document.getElementById('lightboxImage');
+                const counter = document.getElementById('lightboxCounter');
+                
+                image.src = galleryImages[currentImageIndex];
+                counter.textContent = `${currentImageIndex + 1} / ${galleryImages.length}`;
+                modal.classList.remove('hidden');
+                modal.classList.add('flex');
+                document.body.style.overflow = 'hidden';
+            }
+
+            function closeLightbox(event) {
+                if (event.target.id === 'lightboxModal' || event.target.closest('button')) {
+                    const modal = document.getElementById('lightboxModal');
+                    modal.classList.add('hidden');
+                    modal.classList.remove('flex');
+                    document.body.style.overflow = '';
+                }
+            }
+
+            function navigateLightbox(direction) {
+                currentImageIndex = (currentImageIndex + direction + galleryImages.length) % galleryImages.length;
+                const image = document.getElementById('lightboxImage');
+                const counter = document.getElementById('lightboxCounter');
+                
+                image.src = galleryImages[currentImageIndex];
+                counter.textContent = `${currentImageIndex + 1} / ${galleryImages.length}`;
+            }
+
+            // Keyboard navigation
+            document.addEventListener('keydown', function(e) {
+                const modal = document.getElementById('lightboxModal');
+                if (!modal.classList.contains('hidden')) {
+                    if (e.key === 'ArrowLeft') navigateLightbox(-1);
+                    if (e.key === 'ArrowRight') navigateLightbox(1);
+                    if (e.key === 'Escape') {
+                        modal.classList.add('hidden');
+                        modal.classList.remove('flex');
+                        document.body.style.overflow = '';
+                    }
+                }
+            });
+        </script>
 
         <!-- Título de Áreas Estratégicas -->
         <div class="mb-10">
